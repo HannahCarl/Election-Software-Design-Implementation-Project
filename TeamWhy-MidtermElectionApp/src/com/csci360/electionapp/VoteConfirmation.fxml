@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #004166;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#bfbfbf" height="200.0" layoutX="150.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0" />
+      <Label alignment="CENTER" layoutX="201.0" layoutY="141.0" prefHeight="17.0" prefWidth="198.0" text="Please confirm your selection:" wrapText="true" />
+      <Label fx:id="candidate" alignment="CENTER" layoutX="201.0" layoutY="175.0" prefHeight="17.0" prefWidth="198.0" text="candidate" wrapText="true" />
+      <Label alignment="CENTER" layoutX="201.0" layoutY="192.0" prefHeight="17.0" prefWidth="198.0" text="for" wrapText="true" />
+      <Label fx:id="category" alignment="CENTER" layoutX="201.0" layoutY="209.0" prefHeight="17.0" prefWidth="198.0" text="category" wrapText="true" />
+      <ToolBar layoutX="222.0" layoutY="235.0" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #bfbfbf;" AnchorPane.bottomAnchor="125.0">
+        <items>
+            <Button fx:id="cancelButton" mnemonicParsing="false" text="Go Back" />
+          <Button fx:id="confirmButton" mnemonicParsing="false" text="Confirm" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
