@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="UI_skeleton.LoginV">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="624.0001220703125" />
+    <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#bfbfbf" height="213.0" layoutX="175.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="274.0" />
+    <Label alignment="CENTER" contentDisplay="TOP" layoutX="190.0" layoutY="115.0" minHeight="29.0" prefHeight="29.0" prefWidth="139.0" text="Thank You for">
+      <font>
+        <Font size="18.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label alignment="CENTER" contentDisplay="TOP" font="$x1" layoutX="206.0" layoutY="137.0" minHeight="29.0" prefHeight="29.0" prefWidth="76.0" text="for the" />
+    <Label alignment="CENTER" contentDisplay="TOP" font="$x1" layoutX="258.0" layoutY="137.0" minHeight="29.0" prefHeight="29.0" prefWidth="76.0" text="20XX" />
+    <Label alignment="CENTER" contentDisplay="TOP" font="$x1" layoutX="314.0" layoutY="137.0" minHeight="29.0" prefHeight="29.0" prefWidth="81.0" text="Election" />
+    <Button layoutX="272.0" layoutY="265.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="Submit">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <TextField layoutX="231.0" layoutY="234.0" prefWidth="167.0" promptText="Enter ID Here..." />
+    <TextField layoutX="231.0" layoutY="204.0" prefWidth="167.0" promptText="Enter Name Here..." />
+    <Label alignment="CENTER" layoutX="203.0" layoutY="166.0" prefWidth="225.0" text="Please enter your Full Name and" />
+    <Label alignment="CENTER" layoutX="203.0" layoutY="182.0" prefWidth="225.0" text="ID Number to Begin" />
+    <Button layoutX="546.0" layoutY="331.0" mnemonicParsing="false" prefWidth="64.0" text="Admin" />
+    <Button layoutX="546.0" layoutY="365.0" mnemonicParsing="false" prefWidth="64.0" text="Help" />
+    <Label font="$x1" layoutX="319.0" layoutY="118.0" prefWidth="100.0" text="Registering" />
+  </children>
+</AnchorPane>
