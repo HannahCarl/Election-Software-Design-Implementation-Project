@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="336.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ch.makery.address.view.PersonOverviewController">
+  <children>
+    <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="336.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="611.0" />
+    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#cccccc" height="322.0" layoutX="8.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="16.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#efefef" height="37.0" layoutX="16.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="570.0" />
+    <Label text="Registration" AnchorPane.leftAnchor="258.0" AnchorPane.topAnchor="15.0" />
+    <GridPane prefHeight="206.0" prefWidth="594.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+      <children>
+        <Label prefHeight="77.0" prefWidth="374.0" text="  1) Are you a citizen of the United States of America?" wrapText="true">
+          <font>
+            <Font size="14.0" fx:id="x2" />
+          </font>
+        </Label>
+        <Label prefHeight="77.0" prefWidth="374.0" text="  2) Will you be 18 years of age on or before election day?" GridPane.rowIndex="1" />
+        <CheckBox mnemonicParsing="false" text="Yes" GridPane.columnIndex="1">
+          <font>
+            <Font size="18.0" fx:id="x1" />
+          </font>
+        </CheckBox>
+        <CheckBox font="$x1" mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <CheckBox font="$x1" mnemonicParsing="false" text="No" GridPane.columnIndex="2" />
+        <CheckBox font="$x1" mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="385.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="101.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="116.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Button id="submitB" alignment="CENTER" layoutX="498.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Submit" />
+    <Text fill="#e8310d" font="$x2" layoutX="39.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you checked ‘NO’ in response to either of these questions, DO NOT continue." />
+  </children>
+</AnchorPane>
