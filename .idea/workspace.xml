@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eba6c3b0-989e-4637-bb8b-41229b706703" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/Instruction_HowToVote.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/Login_V_Register.fxml" beforeDir="false" />
@@ -18,6 +19,12 @@
       <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/can_select_ui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/can_select_ui.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/un_V_tally.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/un_V_tally.fxml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Voter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Voter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VotingSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VotingSession.java" afterDir="false" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,12 +65,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1788" />
+          <entry key="java" value="2091" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1788" />
+          <entry key="JAVA" value="2091" />
         </counts>
       </usages-collector>
     </session>
@@ -101,16 +108,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Voter.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="17">
               <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+=======
+            <state>
+              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
               <folding>
+                <element signature="e#1092#1093#0" expanded="true" />
                 <element signature="e#1122#1123#0" expanded="true" />
                 <element signature="e#1168#1169#0" expanded="true" />
                 <element signature="e#1206#1207#0" expanded="true" />
                 <element signature="e#1908#1909#0" expanded="true" />
                 <element signature="e#1934#1935#0" expanded="true" />
                 <element signature="e#1972#1973#0" expanded="true" />
+<<<<<<< HEAD
                 <element signature="e#2002#2003#0" expanded="true" />
+=======
+                <element signature="e#2006#2007#0" expanded="true" />
+                <element signature="e#2060#2061#0" expanded="true" />
+                <element signature="e#2106#2107#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2512#2513#0" expanded="true" />
+                <element signature="e#2554#2555#0" expanded="true" />
+                <element signature="e#2144#2145#0" expanded="true" />
+                <element signature="e#2178#2179#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
+                <element signature="e#2278#2279#0" expanded="true" />
+                <element signature="e#2319#2320#0" expanded="true" />
+                <element signature="e#2356#2357#0" expanded="true" />
+                <element signature="e#2416#2417#0" expanded="true" />
+                <element signature="e#2468#2469#0" expanded="true" />
+                <element signature="e#2504#2505#0" expanded="true" />
+                <element signature="e#2535#2536#0" expanded="true" />
+                <element signature="e#2584#2585#0" expanded="true" />
+                <element signature="e#2624#2625#0" expanded="true" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
               </folding>
             </state>
           </provider>
@@ -119,7 +154,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Admin.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="255">
+=======
+            <state relative-caret-position="225">
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
               <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
               <folding>
                 <element signature="e#280#281#0" expanded="true" />
@@ -137,8 +176,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VoterList.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="170">
               <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+=======
+            <state relative-caret-position="-26">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
               <folding>
                 <element signature="e#168#169#0" expanded="true" />
                 <element signature="e#233#234#0" expanded="true" />
@@ -150,12 +194,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VotingSession.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="102">
               <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding>
                 <element signature="e#165#166#0" expanded="true" />
                 <element signature="e#192#193#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="195">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
             </state>
           </provider>
         </entry>
@@ -199,10 +248,14 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Admin.java" />
+        <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VoterList.java" />
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Voter.java" />
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VotingSession.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VoterList.java" />
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/can_select_ui.fxml" />
+=======
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
       </list>
     </option>
   </component>
@@ -226,7 +279,11 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540077523686" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540076642979" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -368,18 +425,72 @@
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Voter.class" />
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/VotingSession.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="e#165#166#0" expanded="true" />
             <element signature="e#192#193#0" expanded="true" />
+=======
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+          <folding>
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1778#1779#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+            <element signature="e#2060#2061#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2512#2513#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2144#2145#0" expanded="true" />
+            <element signature="e#2178#2179#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2278#2279#0" expanded="true" />
+            <element signature="e#2319#2320#0" expanded="true" />
+            <element signature="e#2356#2357#0" expanded="true" />
+            <element signature="e#2416#2417#0" expanded="true" />
+            <element signature="e#2468#2469#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
+            <element signature="e#2624#2625#0" expanded="true" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="255">
+=======
+        <state relative-caret-position="225">
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
           <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
             <element signature="e#280#281#0" expanded="true" />
@@ -395,8 +506,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/model/Voter.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="17">
           <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+=======
+        <state relative-caret-position="-26">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
           <folding>
             <element signature="e#1122#1123#0" expanded="true" />
             <element signature="e#1168#1169#0" expanded="true" />
@@ -411,6 +527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/Instruction_HowToVote.fxml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="51">
           <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
@@ -489,6 +606,10 @@
             <element signature="e#168#169#0" expanded="true" />
             <element signature="e#233#234#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="195">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+>>>>>>> 82270d6f5be8c5fef81e087a702129b8f5ff7fe3
         </state>
       </provider>
     </entry>
