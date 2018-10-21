@@ -46,6 +46,7 @@ public class LoginVoterController {
         return submitClicked;
     }
 
+    @FXML
     private void handleSubmit(){
         if (isInputValid()){
             session = new VotingSession(voterIDField.getText(),socSecField.getText(),voterList);

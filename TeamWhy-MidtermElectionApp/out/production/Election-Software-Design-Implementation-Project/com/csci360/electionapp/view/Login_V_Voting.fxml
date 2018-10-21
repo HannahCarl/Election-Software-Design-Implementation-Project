@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="background" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.LoginVoterController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004166" height="400.0" layoutX="-6.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="624.0001220703125" />
+    <Rectangle id="loginMenu" arcHeight="50.0" arcWidth="50.0" fill="#bfbfbf" height="213.0" layoutX="175.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="274.0" />
+    <Label alignment="CENTER" contentDisplay="TOP" layoutX="190.0" layoutY="115.0" minHeight="29.0" prefHeight="29.0" prefWidth="139.0" text="Thank You for">
+      <font>
+        <Font size="18.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label alignment="CENTER" contentDisplay="TOP" font="$x1" layoutX="206.0" layoutY="137.0" minHeight="29.0" prefHeight="29.0" prefWidth="76.0" text="for the" />
+    <Label alignment="CENTER" contentDisplay="TOP" font="$x1" layoutX="258.0" layoutY="137.0" minHeight="29.0" prefHeight="29.0" prefWidth="76.0" text="20XX" />
+    <Label alignment="CENTER" contentDisplay="TOP" font="$x1" layoutX="314.0" layoutY="137.0" minHeight="29.0" prefHeight="29.0" prefWidth="81.0" text="Election" />
+    <Button id="loginSubmitB" fx:id="submitButton" layoutX="272.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="29.0" prefWidth="81.0" text="Submit">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <TextField fx:id="socSecField" layoutX="220.0" layoutY="234.0" prefWidth="194.0" promptText="Enter Social Security Number.." />
+    <TextField fx:id="voterIDField" layoutX="220.0" layoutY="204.0" prefWidth="194.0" promptText="Enter Voter ID Here..." />
+    <Label alignment="CENTER" layoutX="203.0" layoutY="166.0" prefWidth="225.0" text="Please enter your Voter ID and" />
+    <Label alignment="CENTER" layoutX="203.0" layoutY="182.0" prefWidth="225.0" text="Social Security Number to Begin" />
+    <Button id="adminB" layoutX="546.0" layoutY="331.0" mnemonicParsing="false" prefWidth="64.0" text="Admin" />
+    <Button id="loginHelpB" layoutX="546.0" layoutY="365.0" mnemonicParsing="false" prefWidth="64.0" text="Help" />
+    <Label font="$x1" layoutX="329.0" layoutY="118.0" prefWidth="100.0" text="Voting" />
+  </children>
+</AnchorPane>

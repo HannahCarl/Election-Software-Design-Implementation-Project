@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import
 
 import java.io.IOException;
 import java.util.Date;
@@ -18,10 +19,10 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
-    private VoterList voterList;
+    private VoterList voterList = new VoterList();
 
     public MainApp(){
-        voterList.addVoter(new Voter ("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+        voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     }
 
     public VoterList getVoterList() {
@@ -58,6 +59,14 @@ public class MainApp extends Application {
     }
 
     /**
+     * Returns the main stage.
+     * @return
+     */
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    /**
      * Show LoginVoter Screen
      */
     public void showLoginVoter() {
@@ -67,7 +76,7 @@ public class MainApp extends Application {
             loader.setLocation(MainApp.class.getResource("view/Login_V_Voting.fxml"));
             AnchorPane loginVoter = (AnchorPane) loader.load();
 
-            // Set person overview into the center of root layout.
+            // Set login into the center of root layout.
             rootLayout.setCenter(loginVoter);
 
             // Give the controller access to the main app.

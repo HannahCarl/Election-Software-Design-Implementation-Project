@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="336.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ch.makery.address.view.PersonOverviewController">
+  <children>
+    <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="336.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="611.0" />
+    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="267.0" layoutX="8.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
+    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="42.0" layoutX="11.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
+    <Label text="Registration" AnchorPane.leftAnchor="243.0" AnchorPane.topAnchor="14.0">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Label>
+    <ScrollBar layoutX="535.0" layoutY="77.0" orientation="VERTICAL" prefHeight="204.3" prefWidth="17.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="27.0" layoutX="71.0" layoutY="100.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="68.0">
+      <fill>
+        <Color blue="0.969" green="0.969" red="0.973" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Label layoutX="90.0" layoutY="104.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Sex">
+      <font>
+        <Font size="14.0" fx:id="x2" />
+      </font>
+    </Label>
+    <TextField layoutX="115.0" layoutY="75.0" prefHeight="27.0" prefWidth="206.0" promptText="Last" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="71.0" layoutY="75.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+    <Label layoutX="138.0" layoutY="80.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Label font="$x2" layoutX="83.0" layoutY="79.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Name" />
+    <TextField layoutX="290.0" layoutY="75.0" prefHeight="27.0" prefWidth="144.0" promptText="First" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="420.0" layoutY="74.0" prefHeight="27.0" prefWidth="45.0" promptText="MI" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="457.0" layoutY="74.0" prefHeight="27.0" prefWidth="69.0" promptText="Suffix" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="122.0" layoutY="100.0" prefHeight="27.0" prefWidth="147.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="253.0" layoutY="101.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+    <Label font="$x2" layoutX="271.0" layoutY="105.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Race" />
+    <TextField layoutX="297.0" layoutY="100.0" prefHeight="27.0" prefWidth="245.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="60.0" layoutY="126.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+    <Label font="$x2" layoutX="70.0" layoutY="131.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Social Security Number" />
+    <TextField layoutX="212.0" layoutY="125.0" prefHeight="27.0" prefWidth="114.0" promptText="000-000-0000" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="314.0" layoutY="125.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+    <Label font="$x2" layoutX="320.0" layoutY="129.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Birthdate" />
+    <TextField layoutX="367.0" layoutY="125.0" prefHeight="27.0" prefWidth="168.0" promptText="Month/Day/Year" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="64.0" layoutY="151.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+    <Label font="$x2" layoutX="74.0" layoutY="155.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Physical Address" />
+    <TextField layoutX="157.0" layoutY="151.0" prefHeight="27.0" prefWidth="304.0" promptText="Street" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="429.0" layoutY="151.0" prefHeight="27.0" prefWidth="98.0" promptText="Apt #" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="51.0" layoutY="177.0" prefHeight="27.0" prefWidth="262.0" promptText="City" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="281.0" layoutY="177.0" prefHeight="27.0" prefWidth="149.0" promptText="State" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="410.0" layoutY="177.0" prefHeight="27.0" prefWidth="120.0" promptText="Zip Code" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="408.0" layoutY="229.0" prefHeight="27.0" prefWidth="120.0" promptText="Zip Code" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="280.0" layoutY="229.0" prefHeight="27.0" prefWidth="149.0" promptText="State" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="52.0" layoutY="229.0" prefHeight="27.0" prefWidth="262.0" promptText="City" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="429.0" layoutY="203.0" prefHeight="27.0" prefWidth="98.0" promptText="Apt #" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="157.0" layoutY="203.0" prefHeight="27.0" prefWidth="304.0" promptText="Street" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="65.0" layoutY="203.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+    <Label font="$x2" layoutX="73.0" layoutY="208.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Mailing Address" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="68.0" layoutY="257.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" width="112.0" />
+    <Label font="$x2" layoutX="74.0" layoutY="262.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" text="Phone Number" />
+    <TextField layoutX="156.0" layoutY="257.0" prefHeight="27.0" prefWidth="200.0" promptText="Home 000-000-0000" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <TextField layoutX="321.0" layoutY="257.0" prefHeight="27.0" prefWidth="217.0" promptText="Cell 000-000-0000" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Label layoutX="52.0" layoutY="295.0" text="Please verify this information is correct?">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <Button id="regSubmitB" layoutX="396.0" layoutY="298.0" mnemonicParsing="false" text="Yes, Submit" />
+    <Button id="regCancelB" layoutX="493.0" layoutY="298.0" mnemonicParsing="false" text="No, Go Back" />
+  </children>
+</AnchorPane>
