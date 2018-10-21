@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.csci360.electionapp.view.AdminMenu">
   <children>
     <Rectangle id="background" arcHeight="0.0" arcWidth="0.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-    <Button layoutX="481.0" layoutY="354.0" mnemonicParsing="false" prefHeight="31.999900000002526" prefWidth="99.0" text="Log Out">
+    <Button layoutX="481.0" layoutY="354.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="99.0" text="Log Out">
       <font>
         <Font size="18.0" />
       </font>

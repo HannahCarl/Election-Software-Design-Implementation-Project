@@ -13,7 +13,7 @@
   <children>
     <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
     <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="54.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="572.0" />
-    <Rectangle id="unTallyVR" arcHeight="75.0" arcWidth="75.0" height="298.9999000000025" layoutX="24.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="257.9999694824219">
+    <Rectangle id="unTallyVR" arcHeight="75.0" arcWidth="75.0" height="299.0" layoutX="24.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="257.9999694824219">
       <fill>
         <Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
       </fill>
@@ -52,6 +52,6 @@
     </AnchorPane>
     <ScrollBar layoutX="558.0" layoutY="150.0" orientation="VERTICAL" prefHeight="208.0" />
     <Label alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="361.0" layoutY="100.0" prefHeight="28.0" prefWidth="181.0" text="Total Vote Counts" />
-    <Button layoutX="495.0" layoutY="27.0" mnemonicParsing="false" prefHeight="27.999900000002526" prefWidth="73.0" text="Return" />
+    <Button layoutX="495.0" layoutY="27.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="73.0" text="Return" />
   </children>
 </AnchorPane>

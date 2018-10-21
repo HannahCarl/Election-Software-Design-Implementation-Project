@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="336.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ch.makery.address.view.PersonOverviewController">
   <children>
     <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="336.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="611.0" />
-    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="267.29998779296875" layoutX="8.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
+    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="267.0" layoutX="8.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
     <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="42.0" layoutX="11.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
     <Label text="Registration" AnchorPane.leftAnchor="243.0" AnchorPane.topAnchor="14.0">
       <font>
