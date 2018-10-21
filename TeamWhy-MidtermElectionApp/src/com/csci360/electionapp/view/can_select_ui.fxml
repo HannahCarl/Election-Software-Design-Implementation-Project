@@ -12,14 +12,14 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="CanSelectUi">
   <children>
     <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#005a66" height="400.0" layoutX="1.0" layoutY="0.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" height="107.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="573.0">
+    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" height="84.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="573.0">
       <fill>
         <Color blue="0.875" green="0.875" red="0.875" fx:id="x2" />
       </fill>
     </Rectangle>
-    <Rectangle id="selectCanaditeMid" arcHeight="25.0" arcWidth="25.0" fill="$x2" height="251.0" layoutX="14.0" layoutY="135.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="573.0" />
-    <Rectangle id="selectCanaditeAnchor" arcHeight="25.0" arcWidth="25.0" fill="GREY" height="223.0" layoutX="28.0" layoutY="149.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="545.0" />
-    <AnchorPane layoutX="28.0" layoutY="149.0" prefHeight="223.0" prefWidth="514.0">
+    <Rectangle id="selectCanaditeMid" arcHeight="25.0" arcWidth="25.0" fill="$x2" height="278.0" layoutX="14.0" layoutY="108.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="573.0" />
+    <Rectangle id="selectCanaditeAnchor" arcHeight="25.0" arcWidth="25.0" fill="GREY" height="250.0" layoutX="28.0" layoutY="122.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="545.0" />
+    <AnchorPane layoutX="33.0" layoutY="135.0" prefHeight="223.0" prefWidth="514.0">
       <children>
         <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
         <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="14.0" layoutY="84.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
@@ -57,7 +57,7 @@
       </font>
     </Label>
     <Label font="$x3" layoutX="355.0" layoutY="22.0" prefHeight="38.0" prefWidth="208.0" text="Label" />
-    <Label font="$x3" layoutX="28.0" layoutY="60.0" prefHeight="38.0" prefWidth="496.0" text="Please select who you would like to cast your vote for." />
-    <ScrollBar layoutX="547.0" layoutY="163.0" orientation="VERTICAL" prefHeight="195.0" />
+    <Label font="$x3" layoutX="28.0" layoutY="54.0" prefHeight="38.0" prefWidth="496.0" text="Please select who you would like to cast your vote for." />
+    <ScrollBar layoutX="547.0" layoutY="150.0" orientation="VERTICAL" prefHeight="195.0" />
   </children>
 </AnchorPane>
