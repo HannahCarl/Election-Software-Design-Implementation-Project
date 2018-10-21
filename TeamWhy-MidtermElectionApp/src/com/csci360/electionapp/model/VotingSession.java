@@ -3,7 +3,7 @@ package com.csci360.electionapp.model;
 public class VotingSession {
     private Voter voter;
 
-    public VotingSession() {
+    public VotingSession(String text, String socSecFieldText, VoterList voterList) {
 
     }
 

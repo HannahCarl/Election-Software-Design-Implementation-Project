@@ -49,4 +49,8 @@ public class VoterList {
 
         return desiredVoter;
     }
+
+    public void addVoter(Voter voter) {
+        registeredVoterList.add(voter);
+    }
  }
