@@ -20,19 +20,19 @@
       <children>
         <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="50.0" layoutX="0.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="380.0" />
         <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="168.0" layoutX="2.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="380.0" />
-        <Label layoutX="111.0" layoutY="17.0" text="Admin Menu">
+        <Label layoutX="123.0" layoutY="17.0" text="Admin Menu">
           <font>
             <Font size="24.0" />
           </font>
         </Label>
-        <Button layoutX="26.0" layoutY="98.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Set Up New Election" textAlignment="CENTER" wrapText="true">
+        <Button id="admMenuB" layoutX="213.0" layoutY="98.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" style="&#10;" text="Set Up New Election" textAlignment="CENTER" wrapText="true">
           <font>
             <Font size="14.0" fx:id="x1" />
           </font>
         </Button>
-        <Button font="$x1" layoutX="213.0" layoutY="98.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
-        <Button font="$x1" layoutX="26.0" layoutY="167.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Start New Voting Period" textAlignment="CENTER" wrapText="true" />
-        <Button font="$x1" layoutX="213.0" layoutY="167.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="End Current Voting Period" textAlignment="CENTER" wrapText="true" />
+        <Button id="admMenuB" font="$x1" layoutX="213.0" layoutY="167.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
+        <Button id="admMenuB" font="$x1" layoutX="26.0" layoutY="98.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Start New Voting Period" textAlignment="CENTER" wrapText="true" />
+        <Button id="admMenuB" font="$x1" layoutX="26.0" layoutY="167.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="End Current Voting Period" textAlignment="CENTER" wrapText="true" />
       </children>
     </AnchorPane>
   </children>
