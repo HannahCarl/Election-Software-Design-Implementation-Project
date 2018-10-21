@@ -11,25 +11,29 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.csci360.electionapp.view.AdminMenu">
   <children>
     <Rectangle id="background" arcHeight="0.0" arcWidth="0.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="50.0" layoutX="110.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="380.0" />
-    <Label layoutX="237.0" layoutY="88.0" text="Admin Menu">
-      <font>
-        <Font size="24.0" />
-      </font>
-    </Label>
-    <Button layoutX="476.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.999900000002526" prefWidth="99.0" text="Log Out">
+    <Button layoutX="481.0" layoutY="354.0" mnemonicParsing="false" prefHeight="31.999900000002526" prefWidth="99.0" text="Log Out">
       <font>
         <Font size="18.0" />
       </font>
     </Button>
-    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="168.0" layoutX="110.0" layoutY="137.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="380.0" />
-    <Button layoutX="325.0" layoutY="226.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="End Current Voting Period" textAlignment="CENTER" wrapText="true">
-      <font>
-        <Font size="14.0" fx:id="x1" />
-      </font>
-    </Button>
-    <Button font="$x1" layoutX="147.0" layoutY="226.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Start New Voting Period" textAlignment="CENTER" wrapText="true" />
-    <Button font="$x1" layoutX="147.0" layoutY="163.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Set Up New Election" textAlignment="CENTER" wrapText="true" />
-    <Button font="$x1" layoutX="325.0" layoutY="163.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
+    <AnchorPane layoutX="108.0" layoutY="80.0" prefHeight="241.0" prefWidth="384.0">
+      <children>
+        <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="50.0" layoutX="0.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="380.0" />
+        <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="168.0" layoutX="2.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="380.0" />
+        <Label layoutX="111.0" layoutY="17.0" text="Admin Menu">
+          <font>
+            <Font size="24.0" />
+          </font>
+        </Label>
+        <Button layoutX="26.0" layoutY="98.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Set Up New Election" textAlignment="CENTER" wrapText="true">
+          <font>
+            <Font size="14.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button font="$x1" layoutX="213.0" layoutY="98.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
+        <Button font="$x1" layoutX="26.0" layoutY="167.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="Start New Voting Period" textAlignment="CENTER" wrapText="true" />
+        <Button font="$x1" layoutX="213.0" layoutY="167.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="128.0" text="End Current Voting Period" textAlignment="CENTER" wrapText="true" />
+      </children>
+    </AnchorPane>
   </children>
 </AnchorPane>
