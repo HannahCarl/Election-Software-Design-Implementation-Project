@@ -52,7 +52,8 @@ public class LoginVoterController {
             session = new VotingSession(voterIDField.getText(),socSecField.getText(),voterList);
 
             submitClicked = true;
-            dialogueStage.close();
+            System.out.println("Login successful.");
+
         }
     }
 
@@ -66,7 +67,7 @@ public class LoginVoterController {
         }
 
         if (errorMessage.length() == 0 && (!voterList.checkForVoter(voterIDField.getText(),socSecField.getText()))){
-            errorMessage += "Invalid login. v\n";
+            errorMessage += "Invalid login.\n";
         }
 
         if (errorMessage.length() == 0) {
