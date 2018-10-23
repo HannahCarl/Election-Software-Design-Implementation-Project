@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8506b2eb-2e60-4856-9536-5e43c8c0bdc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/controller/LoginVoterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/controller/LoginVoterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/RootLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_A.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_A.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_V_Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_V_Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_V_Voting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_V_Voting.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,13 +48,33 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-818608161">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="fxml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/LoginVoterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
+            <state relative-caret-position="969">
               <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
               <folding>
                 <element signature="e#865#866#0" expanded="true" />
@@ -66,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
+            <state relative-caret-position="595">
               <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -75,10 +96,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/RootLayout.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Registration01_Question.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Registration03_InfoConfirm.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_A.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -95,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="201" />
     <option name="y" value="70" />
     <option name="width" value="1053" />
@@ -106,8 +149,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,12 +167,6 @@
               <item name="Election-Software-Design-Implementation-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Election-Software-Design-Implementation-Project" type="462c0819:PsiDirectoryNode" />
               <item name="TeamWhy-MidtermElectionApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Election-Software-Design-Implementation-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Election-Software-Design-Implementation-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamWhy-MidtermElectionApp" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Election-Software-Design-Implementation-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -159,7 +196,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540156335245" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540320518831" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -199,10 +236,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="201" y="70" width="1053" height="730" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26409495" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20877458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -211,7 +247,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49950543" visible="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49950543" weight="0.32786885" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -243,7 +279,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/LoginVoterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
+        <state relative-caret-position="969">
           <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
           <folding>
             <element signature="e#865#866#0" expanded="true" />
@@ -254,7 +290,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="595">
           <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -263,8 +299,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/RootLayout.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Registration01_Question.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Registration03_InfoConfirm.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_A.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
