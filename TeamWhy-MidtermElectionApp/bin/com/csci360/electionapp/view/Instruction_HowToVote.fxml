@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="336.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ch.makery.address.view.PersonOverviewController">
+  <children>
+    <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="336.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="611.0" />
+    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" height="264.0" layoutX="18.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="180.0">
+      <fill>
+        <Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="$x1" height="264.0" layoutX="412.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="16.0" />
+    <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="$x1" height="264.0" layoutX="214.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
+    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="48.0" layoutX="15.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="570.0" />
+    <Label alignment="CENTER" prefHeight="44.0" prefWidth="214.0" text="Instructions" textAlignment="LEFT" AnchorPane.leftAnchor="198.0" AnchorPane.topAnchor="12.0">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Label>
+    <Circle layoutX="52.0" layoutY="103.0" radius="28.0" stroke="BLACK" strokeType="INSIDE">
+      <fill>
+        <Color blue="0.890" green="0.878" red="0.816" fx:id="x2" />
+      </fill>
+    </Circle>
+    <Label layoutX="42.0" layoutY="77.0" text="1">
+      <font>
+        <Font size="36.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Circle fill="$x2" layoutX="245.0" layoutY="104.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+    <Label font="$x3" layoutX="235.0" layoutY="78.0" text="2" />
+    <Circle fill="$x2" layoutX="446.0" layoutY="102.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+    <Label font="$x3" layoutX="436.0" layoutY="76.0" text="3" />
+    <Label layoutX="85.0" layoutY="77.0" prefHeight="56.0" prefWidth="105.0" text="Make your selections." wrapText="true">
+      <font>
+        <Font size="18.0" fx:id="x4" />
+      </font>
+    </Label>
+    <Label font="$x4" layoutX="279.0" layoutY="78.0" prefHeight="56.0" prefWidth="105.0" text="Review your selections." wrapText="true" />
+    <Label font="$x4" layoutX="480.0" layoutY="74.0" prefHeight="56.0" prefWidth="105.0" text="Cast your ballot." wrapText="true" />
+    <ImageView fitHeight="101.30730171971672" fitWidth="153.0" layoutX="29.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@VoteImage.png" />
+      </image>
+    </ImageView>
+    <Polygon fill="$x2" layoutX="90.0" layoutY="269.0" scaleX="0.5" scaleY="0.572" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.5">
+      <points>
+        <Double fx:value="-50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="0.0" />
+        <Double fx:value="-60.0" />
+      </points>
+    </Polygon>
+    <ImageView fitHeight="91.90612966579889" fitWidth="163.32484436035156" layoutX="221.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@VoteSelectImage.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="94.0" fitWidth="165.0" layoutX="418.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@VoteConfirmImage.png" />
+      </image>
+    </ImageView>
+    <Polygon fill="$x2" layoutX="527.0" layoutY="268.0" scaleX="0.5" scaleY="0.5483366442258316" scaleZ="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.5">
+      <points>
+        <Double fx:value="-50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="0.0" />
+        <Double fx:value="-60.0" />
+      </points>
+    </Polygon>
+    <Button layoutX="460.0" layoutY="18.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="105.0" text="Continue">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>
