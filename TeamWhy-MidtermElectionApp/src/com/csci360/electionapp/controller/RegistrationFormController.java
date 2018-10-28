@@ -36,7 +36,7 @@ public class RegistrationFormController {
     @FXML
     private ChoiceBox sexChoiceBox;
     @FXML
-    private TextField raceField;
+    private ChoiceBox raceChoiceBox;
     @FXML
     private TextField socSecField;
     @FXML
@@ -119,7 +119,40 @@ public class RegistrationFormController {
         if (socSecField.getText() == null || socSecField.getText().length() == 0){
             errorMessage += "No valid social security number.\n";
         }
-
+        if (birthDateField.getText() == null || birthDateField.getText().length() == 0){
+            errorMessage += "No valid birthdate provided.\n";
+        }
+        if (homeAddStreetField.getText() == null || homeAddStreetField.getText().length() == 0){
+            errorMessage += "No valid home address street provided.\n";
+        }
+        if (homeAddCityField.getText() == null || homeAddCityField.getText().length() == 0){
+            errorMessage += "No valid home address city provided.\n";
+        }
+        if (homeAddStateField.getText() == null || homeAddStateField.getText().length() == 0){
+            errorMessage += "No valid home address state provided.\n";
+        }
+        if (homeAddZipField.getText() == null || homeAddZipField.getText().length() == 0){
+            errorMessage += "No valid home address zip code provided.\n";
+        }
+        if (mailAddStreetField.getText() == null || mailAddStreetField.getText().length() == 0){
+            errorMessage += "No valid mailing address street provided.\n";
+        }
+        if (mailAddCityField.getText() == null || mailAddCityField.getText().length() == 0){
+            errorMessage += "No valid mailing address city provided.\n";
+        }
+        if (mailAddStateField.getText() == null || mailAddStateField.getText().length() == 0){
+            errorMessage += "No valid mailing address state provided.\n";
+        }
+        if (mailAddZipField.getText() == null || mailAddZipField.getText().length() == 0){
+            errorMessage += "No valid mailing address zip code provided.\n";
+        }
+        if (homePhoneField.getText() == null || homePhoneField.getText().length() == 0){
+            errorMessage += "No valid home phone number provided.\n";
+        }
+        if (cellPhoneField.getText() == null || cellPhoneField.getText().length() == 0){
+            errorMessage += "No valid cell phone number provided.\n";
+        }
+        
      
 
         if (errorMessage.length() == 0) {
