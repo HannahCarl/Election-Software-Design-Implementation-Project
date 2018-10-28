@@ -97,19 +97,24 @@ public class RegistrationFormController {
         return submitClicked;
     }
     
-    /*@FXML
+    @FXML
     private void handleSubmit(){
         if (isInputValid()){
-            rSession = new RegisteringSession(firstNameField.getText(),lastNameField.getText(),socSecField.getText(),registrantList);
-
+           
             submitClicked = true;
-            System.out.println("Login successful.");
+            System.out.println("Registration Form submitted successfully.");
 
         }
-    }*/
+    }
     
     private boolean isInputValid(){
         String errorMessage = "";
+        if(usCitizenCheckBoxYes.isSelected() == true && usCitizenCheckBoxNo.isSelected() == true ) {
+        	errorMessage += "Please only check Yes or No.\n";
+        }
+        if(ageCheckBoxYes.isSelected() == true && ageCheckBoxNo.isSelected() == true ) {
+        	errorMessage += "Please only check Yes or No.\n";
+        }
         if (firstNameField.getText() == null || firstNameField.getText().length() == 0){
             errorMessage += "No valid first name provided.\n";
         }
