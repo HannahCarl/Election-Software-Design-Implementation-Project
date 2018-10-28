@@ -8,9 +8,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
-import com.csci360.electionapp.model.Voter;
-import com.csci360.electionapp.model.VoterList;
-import com.csci360.electionapp.model.VotingSession;
 import com.csci360.electionapp.model.RegisteringSession;
 
 public class LoginRegistrantController {
