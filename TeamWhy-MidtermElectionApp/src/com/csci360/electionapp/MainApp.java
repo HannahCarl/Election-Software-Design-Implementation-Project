@@ -3,6 +3,9 @@ package com.csci360.electionapp;
 import com.csci360.electionapp.controller.LoginVoterController;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
+import com.csci360.electionapp.controller.LoginRegistrantController;
+import com.csci360.electionapp.model.Registrant;
+import com.csci360.electionapp.model.RegistrantList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,6 +22,7 @@ public class MainApp extends Application {
     private BorderPane rootLayout;
 
     private VoterList voterList = new VoterList();
+    private RegistrantList registrantList = new RegistrantList();
 
     public MainApp(){
         voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
@@ -26,6 +30,10 @@ public class MainApp extends Application {
 
     public VoterList getVoterList() {
         return voterList;
+    }
+    
+    public RegistrantList getRegistrantList() {
+        return registrantList;
     }
 
     @Override
