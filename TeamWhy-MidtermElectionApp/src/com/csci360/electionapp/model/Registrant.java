@@ -22,7 +22,7 @@ public class Registrant {
     public Registrant() {
     }
 
-    public Registrant(String voterID, String firstname, String lastname, char middleInitial, String socSecNumber, String sex, Date birthDate, String homePhone, String cellPhone, String homeAddress, String mailingAddress) {
+    public Registrant(String voterID, String firstname, String lastname, char middleInitial, String socSecNumber, String sex, Date birthDate, String homePhone, String cellPhone, String homeAddress, String mailingAddress, Boolean ageCheck, Boolean usCitizenCheck) {
         this.voterID = voterID;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -35,8 +35,8 @@ public class Registrant {
         this.homeAddress = homeAddress;
         this.mailingAddress = mailingAddress;
         this.hasRegistered = false;
-        this.usCitizenCheck = false;
-        this.ageCheck = false;
+        this.usCitizenCheck = usCitizenCheck;
+        this.ageCheck = ageCheck;
         
     }
 

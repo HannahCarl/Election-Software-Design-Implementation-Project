@@ -1,6 +1,8 @@
 package com.csci360.electionapp.controller;
 
 import com.csci360.electionapp.MainApp;
+import com.csci360.electionapp.TestDriverRegistrationForm;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -27,7 +29,7 @@ public class LoginRegistrantController {
     private RegisteringSession rSession;
     private boolean submitClicked = false;
 
-    private MainApp mainApp;
+    private TestDriverRegistrationForm testDriveRegForm;
     
     @FXML
     private void initialize(){
@@ -37,11 +39,11 @@ public class LoginRegistrantController {
         this.dialogueStage = dialogueStage;
     }
 
-    public void setMainApp(MainApp mainApp) {
-        this.mainApp = mainApp;
+    public void setTestDriverRegistrationForm(TestDriverRegistrationForm tesDrRegForm) {
+        this.testDriveRegForm = tesDrRegForm;
 
         // Add registrantList data to the controller
-        registrantList = mainApp.getRegistrantList();
+        registrantList = tesDrRegForm.getRegistrantList();
     }
 
     public boolean isSubmitClicked(){
@@ -55,6 +57,7 @@ public class LoginRegistrantController {
 
             submitClicked = true;
             System.out.println("Login successful.");
+            //testDriveRegForm.showForm01Registrant();
 
         }
     }

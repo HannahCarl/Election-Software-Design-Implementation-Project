@@ -1,6 +1,7 @@
 package com.csci360.electionapp.controller;
 
 import com.csci360.electionapp.MainApp;
+import com.csci360.electionapp.TestDriverRegistrationForm;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -76,7 +77,7 @@ public class RegistrationFormController {
     private RegisteringSession rSession;
     private boolean submitClicked = false;
 
-    private MainApp mainApp;
+    private TestDriverRegistrationForm testDriveRegForm;
     
     @FXML
     private void initialize(){
@@ -86,12 +87,12 @@ public class RegistrationFormController {
         this.dialogueStage = dialogueStage;
     }
     
-    /*public void setMainApp(MainApp mainApp) {
-        this.mainApp = mainApp;
+    public void setTestDriverRegistrationForm(TestDriverRegistrationForm tesDrRegForm) {
+        this.testDriveRegForm = tesDrRegForm;
 
         // Add registrantList data to the controller
-        registrantList = mainApp.getRegistrantList();
-    }*/
+        registrantList = tesDrRegForm.getRegistrantList();
+    }
 
     public boolean isSubmitClicked(){
         return submitClicked;
