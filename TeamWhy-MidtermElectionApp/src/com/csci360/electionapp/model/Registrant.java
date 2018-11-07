@@ -7,8 +7,10 @@ public class Registrant {
     private String firstname;
     private String lastname;
     private char middleInitial;
+    private String suffix;
     private String socSecNumber;
     private String sex;
+    private String race;
     private Date birthDate;
     private String homePhone;
     private String cellPhone;
@@ -22,13 +24,15 @@ public class Registrant {
     public Registrant() {
     }
 
-    public Registrant(String voterID, String firstname, String lastname, char middleInitial, String socSecNumber, String sex, Date birthDate, String homePhone, String cellPhone, String homeAddress, String mailingAddress, Boolean ageCheck, Boolean usCitizenCheck) {
+    public Registrant(String voterID, String firstname, String lastname, char middleInitial, String suffix, String socSecNumber, String sex, String race, Date birthDate, String homePhone, String cellPhone, String homeAddress, String mailingAddress, Boolean ageCheck, Boolean usCitizenCheck) {
         this.voterID = voterID;
         this.firstname = firstname;
         this.lastname = lastname;
         this.middleInitial = middleInitial;
+        this.suffix = suffix;
         this.socSecNumber = socSecNumber;
         this.sex = sex;
+        this.race = race;
         this.birthDate = birthDate;
         this.homePhone = homePhone;
         this.cellPhone = cellPhone;
@@ -71,6 +75,14 @@ public class Registrant {
     public void setMiddleInitial(char middleInitial) {
         this.middleInitial = middleInitial;
     }
+    
+    public String getSuffix() {
+        return suffix;
+    }
+
+    public void setSuffix(String suffix) {
+        this.suffix = suffix;
+    }
 
     public String getSocSecNumber() {
         return socSecNumber;
@@ -86,6 +98,14 @@ public class Registrant {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+    
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
     }
 
     public Date getBirthDate() {

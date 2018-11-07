@@ -1,3 +1,3 @@
-Yes, Yes, Smith, John, N, , Male, Asian, 123-456-7890, Dec/26/1993, 123 Peach, , Atlanta, GA, 22456, , , , , , 548-888-8888, 909-999-0000
-Yes, Yes, Don, Jane, T, , Female, Native American, 123-456-7888, Mar/23/1998, 1255 George Street, 2B, Atlanta, GA, 22345, 1234 George Street, , Atlanta, GA, 22131, 540-000-0000, 123-456-7890
-Yes, Yes, Johnny, Bill, , , Male, Hispanic, 222-234-5678, , , , , , , , , , , , , 
+Yes, Yes, James, Ken, N, Jr, Male, Hispanic, 123-455-6678, Dec/23/1998, 123 Street, , Atlanta, GA, 22345, , , , , , 549-000-2222, 123-555-5555
+Yes, Yes, Brown, Betty, , , Female, Asian, 123-566-9999, Mar/03/1997, 111 Brown Street, , Atlanta, GA, 22113, , , , , , 111-111-1111, 222-222-2222
+Yes, Yes, Doe, John, N, Jr, Male, Black/ African American, 123-444-6655, Dec/23/1994, 12 Smith Street, A3, Charleston, GA, 22345, 1234 Work Street, , Charleston, GA, 22345, 111-222-3333, 111-222-5555

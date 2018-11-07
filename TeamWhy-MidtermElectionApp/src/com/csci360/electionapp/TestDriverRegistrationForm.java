@@ -23,7 +23,7 @@ public class TestDriverRegistrationForm extends Application {
     private RegistrantList registrantList = new RegistrantList();
     
     public TestDriverRegistrationForm(){
-        registrantList.addRegistrant(new Registrant("vote123", "John", "Smith", 'M', "1234567890", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress", true, true));
+        registrantList.addRegistrant(new Registrant("vote123", "John", "Smith", 'M', "Jr", "1234567890", "male", "Hispanic",new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress", true, true));
     }
     
     public RegistrantList getRegistrantList() {
