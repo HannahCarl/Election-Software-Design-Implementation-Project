@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="065bd604-e2f9-4288-adcf-90837b38ef6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Election-Software-Design-Implementation-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Election-Software-Design-Implementation-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/controller/LoginVoterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/controller/LoginVoterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/LoginConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/LoginConfirmation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Login_A.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Login_A.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Login_V_Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Login_V_Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Login_V_Voting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Login_V_Voting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Registration01_Question.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Registration01_Question.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Registration02_Form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Registration02_Form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Registration03_InfoConfirm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/Registration03_InfoConfirm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/VoteConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/VoteConfirmation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/can_select_ui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/production/Election-Software-Design-Implementation-Project/com/csci360/electionapp/view/can_select_ui.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/LoginVoterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/LoginVoterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/junit/RegistrantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/junit/RegistrantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/junit/RegistrationFormControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/junit/RegistrationFormControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/LoginConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/LoginConfirmation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_A.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_A.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_V_Voting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/Login_V_Voting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteConfirmation.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/can_select_ui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/can_select_ui.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,25 +24,25 @@
     <session id="-818608161">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="19" />
-          <entry key="java" value="52" />
+          <entry key="fxml" value="20" />
+          <entry key="java" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="52" />
-          <entry key="XML" value="19" />
+          <entry key="JAVA" value="53" />
+          <entry key="XML" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="5180" />
+          <entry key="java" value="5201" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5180" />
+          <entry key="JAVA" value="5201" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -117,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+            <state relative-caret-position="184">
+              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4280#4281#0" expanded="true" />
@@ -129,10 +105,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/CanSelectController.java">
+        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/VoteSubConController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            <state relative-caret-position="366">
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,22 +124,6 @@
               <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteConfirmation.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/LoginConfirmation.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -192,6 +152,7 @@
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/LoginConfirmController.java" />
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java" />
         <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/CanSelectController.java" />
+        <option value="$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/VoteSubConController.java" />
       </list>
     </option>
   </component>
@@ -254,7 +215,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541621188032" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541621489890" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../junit-4.12.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -621,24 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/VoteSubConController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/VoteConfrimationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -657,10 +600,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/view/VoteSubmissionConfirmation.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/controller/VoteSubConController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TeamWhy-MidtermElectionApp/src/com/csci360/electionapp/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+        <state relative-caret-position="184">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4280#4281#0" expanded="true" />
