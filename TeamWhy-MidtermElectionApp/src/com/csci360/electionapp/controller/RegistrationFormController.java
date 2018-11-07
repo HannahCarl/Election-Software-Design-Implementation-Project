@@ -87,8 +87,7 @@ public class RegistrationFormController {
     
     @FXML
     private void initialize(){
-    	
-    	
+	
     }
 
     public void setDialogueStage(Stage dialogueStage){
@@ -188,7 +187,7 @@ public class RegistrationFormController {
         }
     }
     
-    private boolean isInputValid(){
+    public boolean isInputValid(){
         String errorMessage = "";
         /*if(usCitizenCheckBoxYes.isSelected() == true && usCitizenCheckBoxNo.isSelected() == true ) {
         	errorMessage += "Please only check Yes or No.\n";
