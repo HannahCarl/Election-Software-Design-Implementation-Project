@@ -7,7 +7,6 @@ import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import com.csci360.electionapp.model.Registrant;
 
 public class RegistrantTest {
@@ -22,7 +21,6 @@ public class RegistrantTest {
 	public void setup() throws Exception {
 		regTester = new Registrant();
 	}
-	
 	/**
 	 * Test method for voterID
 	 */
@@ -31,7 +29,6 @@ public class RegistrantTest {
 		regTester.setVoterID("123ABC");
 		assertEquals("123ABC", regTester.getVoterID());
 	}
-	
 	/**
 	 * Test method for first name
 	 */
@@ -40,7 +37,6 @@ public class RegistrantTest {
 		regTester.setFirstname("John");
 		assertEquals("John", regTester.getFirstname());
 	}
-	
 	/**
 	 * Test method for last name
 	 */
@@ -49,7 +45,6 @@ public class RegistrantTest {
 		regTester.setLastname("Brown");
 		assertEquals("Brown", regTester.getLastname());
 	}
-
 	/**
 	 * Test method for middle initial
 	 */
