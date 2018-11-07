@@ -1,9 +1,7 @@
 package com.csci360.electionapp;
 
-import com.csci360.electionapp.controller.LoginVoterController;
+
 import com.csci360.electionapp.controller.RegistrationFormController;
-import com.csci360.electionapp.model.Voter;
-import com.csci360.electionapp.model.VoterList;
 import com.csci360.electionapp.controller.LoginRegistrantController;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
@@ -40,6 +38,7 @@ public class TestDriverRegistrationForm extends Application {
         initRootLayout();
 
         showLoginRegistrant();
+        //showForm01Registrant();
 		
 	}
 	
@@ -92,9 +91,12 @@ public class TestDriverRegistrationForm extends Application {
             e.printStackTrace();
         }
     }
-    /*public void showForm01Registrant() {
+    /**
+     * Show Registration01_Question Screen
+     */
+    public void showForm01Registrant() {
         try {
-        	initRootLayout();
+        	
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(TestDriverRegistrationForm.class.getResource("view/Registration01_Question.fxml"));
@@ -106,16 +108,59 @@ public class TestDriverRegistrationForm extends Application {
          // Give the controller access to the reg form
             RegistrationFormController controller = loader.getController();
             controller.setTestDriverRegistrationForm(this);
-            
-         
-
-            
 
         }
         catch (IOException e) {
             e.printStackTrace();
         }
-    }*/
+    }
+    
+    /**
+     * Show Registration02_Form Screen
+     */
+    public void showForm02Registrant() {
+        try {
+        	
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(TestDriverRegistrationForm.class.getResource("view/Registration02_Form.fxml"));
+            AnchorPane regForm02 = (AnchorPane) loader.load();
+
+            // Set form into the center of root layout.
+            rootLayout.setCenter(regForm02);
+            
+         // Give the controller access to the reg form
+            RegistrationFormController controller = loader.getController();
+            controller.setTestDriverRegistrationForm(this);
+
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Show Registration03_InfoConfirm Screen
+     */
+    public void showForm03Registrant() {
+        try {
+        	
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(TestDriverRegistrationForm.class.getResource("view/Registration03_InfoConfirm.fxml"));
+            AnchorPane regForm03 = (AnchorPane) loader.load();
+
+            // Set form into the center of root layout.
+            rootLayout.setCenter(regForm03);
+            
+         // Give the controller access to the reg form
+            RegistrationFormController controller = loader.getController();
+            controller.setTestDriverRegistrationForm(this);
+
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
     public static void main(String[] args) {
         launch(args);

@@ -1,10 +1,16 @@
 package com.csci360.electionapp.controller;
 
-import com.csci360.electionapp.MainApp;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -81,6 +87,8 @@ public class RegistrationFormController {
     
     @FXML
     private void initialize(){
+    	
+    	
     }
 
     public void setDialogueStage(Stage dialogueStage){
@@ -99,18 +107,90 @@ public class RegistrationFormController {
     }
     
     @FXML
-    private void handleSubmit(){
+    private void handleSubmitQuestion(){
+        if (isInputValid()){
+        	boolean willAppend = true;
+        	try(BufferedWriter regQues = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
+           
+            submitClicked = true;
+            System.out.println("Questions submitted successfully.");
+            
+            if(usCitizenCheckBoxYes.isSelected() == true) {
+            	regQues.append("Yes, ");	
+            }
+            else {
+            	regQues.append("No, ");
+            }
+            if(ageCheckBoxYes.isSelected() == true) {
+            	regQues.append("Yes, ");	
+            }
+            else {
+            	regQues.append("No, ");
+            }
+            testDriveRegForm.showForm02Registrant();
+        	}
+        	catch(IOException ex) {
+        		
+        	}
+
+        }
+    }
+    @FXML
+    private void handleSubmitForm() throws Exception{
+        if (isInputValid()){
+        	boolean willAppend = true;
+        	try(BufferedWriter bf = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
+           
+            submitClicked = true;
+            System.out.println("Form submitted successfully.");
+            
+            bf.append(lastNameField.getText() + ", ");
+            bf.append(firstNameField.getText() + ", ");
+            bf.append(midIntField.getText() + ", ");
+            bf.append(suffixField.getText() + ", ");
+            bf.append(sexChoiceBox.getValue() + ", ");
+            bf.append(raceChoiceBox.getValue() + ", ");
+            bf.append(socSecField.getText() + ", ");
+            bf.append(birthDateField.getText() + ", ");
+            bf.append(homeAddStreetField.getText() + ", ");
+            bf.append(homeAddAptNumField.getText() + ", ");
+            bf.append(homeAddCityField.getText() + ", ");
+            bf.append(homeAddStateField.getText() + ", ");
+            bf.append(homeAddZipField.getText() + ", ");
+            bf.append(mailAddStreetField.getText() + ", ");
+            bf.append(mailAddAptNumField.getText() + ", ");
+            bf.append(mailAddCityField.getText() + ", ");
+            bf.append(mailAddStateField.getText() + ", ");
+            bf.append(mailAddZipField.getText() + ", ");
+            bf.append(homePhoneField.getText() + ", ");
+            bf.append(cellPhoneField.getText());
+            bf.newLine();
+            testDriveRegForm.showForm03Registrant();
+            
+            
+        	}
+        	catch(IOException ex) {
+        		
+        	}
+
+        }
+    }
+    @FXML
+    private void handleSubmitInfoConfirm(){
         if (isInputValid()){
            
             submitClicked = true;
-            System.out.println("Registration Form submitted successfully.");
+            System.out.println("Info Confirm submitted successfully.");
+            
+            
+            //testDriveRegForm.showForm03Registrant();
 
         }
     }
     
     private boolean isInputValid(){
         String errorMessage = "";
-        if(usCitizenCheckBoxYes.isSelected() == true && usCitizenCheckBoxNo.isSelected() == true ) {
+        /*if(usCitizenCheckBoxYes.isSelected() == true && usCitizenCheckBoxNo.isSelected() == true ) {
         	errorMessage += "Please only check Yes or No.\n";
         }
         if(ageCheckBoxYes.isSelected() == true && ageCheckBoxNo.isSelected() == true ) {
@@ -157,7 +237,7 @@ public class RegistrationFormController {
         }
         if (cellPhoneField.getText() == null || cellPhoneField.getText().length() == 0){
             errorMessage += "No valid cell phone number provided.\n";
-        }
+        }*/
         
      
 

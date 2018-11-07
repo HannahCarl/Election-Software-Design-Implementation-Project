@@ -57,7 +57,7 @@ public class LoginRegistrantController {
 
             submitClicked = true;
             System.out.println("Login successful.");
-            //testDriveRegForm.showForm01Registrant();
+            testDriveRegForm.showForm01Registrant();
 
         }
     }
