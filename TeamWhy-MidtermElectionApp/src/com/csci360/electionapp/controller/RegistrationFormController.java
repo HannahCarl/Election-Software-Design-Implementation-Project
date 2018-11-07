@@ -139,32 +139,32 @@ public class RegistrationFormController {
     private void handleSubmitForm() throws Exception{
         if (isInputValid()){
         	boolean willAppend = true;
-        	try(BufferedWriter bf = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
+        	try(BufferedWriter regForm = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
            
             submitClicked = true;
             System.out.println("Form submitted successfully.");
             
-            bf.append(lastNameField.getText() + ", ");
-            bf.append(firstNameField.getText() + ", ");
-            bf.append(midIntField.getText() + ", ");
-            bf.append(suffixField.getText() + ", ");
-            bf.append(sexChoiceBox.getValue() + ", ");
-            bf.append(raceChoiceBox.getValue() + ", ");
-            bf.append(socSecField.getText() + ", ");
-            bf.append(birthDateField.getText() + ", ");
-            bf.append(homeAddStreetField.getText() + ", ");
-            bf.append(homeAddAptNumField.getText() + ", ");
-            bf.append(homeAddCityField.getText() + ", ");
-            bf.append(homeAddStateField.getText() + ", ");
-            bf.append(homeAddZipField.getText() + ", ");
-            bf.append(mailAddStreetField.getText() + ", ");
-            bf.append(mailAddAptNumField.getText() + ", ");
-            bf.append(mailAddCityField.getText() + ", ");
-            bf.append(mailAddStateField.getText() + ", ");
-            bf.append(mailAddZipField.getText() + ", ");
-            bf.append(homePhoneField.getText() + ", ");
-            bf.append(cellPhoneField.getText());
-            bf.newLine();
+            regForm.append(lastNameField.getText() + ", ");
+            regForm.append(firstNameField.getText() + ", ");
+            regForm.append(midIntField.getText() + ", ");
+            regForm.append(suffixField.getText() + ", ");
+            regForm.append(sexChoiceBox.getValue() + ", ");
+            regForm.append(raceChoiceBox.getValue() + ", ");
+            regForm.append(socSecField.getText() + ", ");
+            regForm.append(birthDateField.getText() + ", ");
+            regForm.append(homeAddStreetField.getText() + ", ");
+            regForm.append(homeAddAptNumField.getText() + ", ");
+            regForm.append(homeAddCityField.getText() + ", ");
+            regForm.append(homeAddStateField.getText() + ", ");
+            regForm.append(homeAddZipField.getText() + ", ");
+            regForm.append(mailAddStreetField.getText() + ", ");
+            regForm.append(mailAddAptNumField.getText() + ", ");
+            regForm.append(mailAddCityField.getText() + ", ");
+            regForm.append(mailAddStateField.getText() + ", ");
+            regForm.append(mailAddZipField.getText() + ", ");
+            regForm.append(homePhoneField.getText() + ", ");
+            regForm.append(cellPhoneField.getText());
+            regForm.newLine();
             testDriveRegForm.showForm03Registrant();
             
             
