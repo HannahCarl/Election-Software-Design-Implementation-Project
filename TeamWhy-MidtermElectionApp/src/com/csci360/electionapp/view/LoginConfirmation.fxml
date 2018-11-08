@@ -7,11 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #004166;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #004166;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.csci360.electionapp.controller.LoginConfirmController">
   <children>
     <Rectangle id="loginMenu" arcHeight="30.0" arcWidth="30.0" fill="#bfbfbf" height="200.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0" />
     <Label alignment="CENTER" layoutX="224.0" layoutY="141.0" text="Thank you for logging in!" wrapText="true" />
-    <Label alignment="CENTER" layoutX="243.0" layoutY="229.0" text="Identity Confirmed" wrapText="true" />
+    <Label alignment="CENTER" layoutX="243.0" layoutY="192.0" text="Identity Confirmed" wrapText="true" />
+    <Button fx:id="next" layoutX="214.0" layoutY="244.0" mnemonicParsing="false" onAction="#toCanSelect" text="Continue To Election">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
   </children>
 </AnchorPane>

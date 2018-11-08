@@ -17,7 +17,6 @@ public class RegistrationFormControllerTest {
 	public void setup() throws Exception {
 		regFormCont = new RegistrationFormController();
 	}
-	
 	/**
 	 * Test method for isSubmitClicked
 	 */
@@ -25,15 +24,15 @@ public class RegistrationFormControllerTest {
 	public void testIsSubmitClicked(){
 		assertEquals(false, regFormCont.isSubmitClicked());
 	}
-	
+
 	/**
 	 * Test method for isInputValid
 	 */
+
 	@Test
 	public void testIsInputValid(){
 		assertEquals(true, regFormCont.isInputValid());
 	}
-	
-	
+
 
 }

@@ -1,14 +1,23 @@
 package com.csci360.electionapp.controller;
 
 import com.csci360.electionapp.MainApp;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
 import com.csci360.electionapp.model.VotingSession;
+
+import java.io.IOException;
 
 public class LoginVoterController {
 
@@ -18,6 +27,10 @@ public class LoginVoterController {
     private TextField socSecField;
     @FXML
     private Button submitButton;
+    @FXML
+    private Button helpButton;
+    @FXML
+    private Button adminMenu;
 
     private Stage dialogueStage;
     private Voter voter;
@@ -47,14 +60,25 @@ public class LoginVoterController {
     }
 
     @FXML
-    private void handleSubmit(){
+    private void handleSubmit(  ) throws  IOException {
         if (isInputValid()){
-            session = new VotingSession(voterIDField.getText(),socSecField.getText(),voterList);
+                session = new VotingSession(voterIDField.getText(),socSecField.getText(),voterList);
 
-            submitClicked = true;
-            System.out.println("Login successful.");
+                submitClicked = true;
+                System.out.println("Login successful.");
 
-        }
+                // After Log in conformation Sends user to can_select ---- Levi ----
+                mainApp.showLoginConfirm();
+
+            }
+    }
+
+
+    // Sends open request to MainApp To open Help Menu ---- Levi ----
+    public void helpButtonClick(ActionEvent event) throws IOException {
+
+        mainApp.helpButtonClick();
+
     }
 
     private boolean isInputValid(){
@@ -84,6 +108,12 @@ public class LoginVoterController {
 
             return false;
         }
+    }
+
+    public void adminBClick () throws IOException {
+
+        mainApp.showAdminLogin();
+
     }
 
 

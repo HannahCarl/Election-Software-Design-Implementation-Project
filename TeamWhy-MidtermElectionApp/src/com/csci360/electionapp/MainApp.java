@@ -1,10 +1,8 @@
 package com.csci360.electionapp;
 
-import com.csci360.electionapp.controller.LoginVoterController;
+import com.csci360.electionapp.controller.*;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
-import com.csci360.electionapp.controller.LoginRegistrantController;
-import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +16,7 @@ import java.util.Date;
 
 public class MainApp extends Application {
 
-    private Stage primaryStage;
+    public Stage primaryStage; // Changed to Public ---- Levi ----
     private BorderPane rootLayout;
 
     private VoterList voterList = new VoterList();
@@ -80,20 +78,189 @@ public class MainApp extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/Login_V_Voting.fxml"));
+            loader.setLocation( MainApp.class.getResource( "view/Login_V_Voting.fxml" ) );
             AnchorPane loginVoter = (AnchorPane) loader.load();
 
             // Set login into the center of root layout.
-            rootLayout.setCenter(loginVoter);
+            rootLayout.setCenter( loginVoter );
 
             // Give the controller access to the main app.
             LoginVoterController controller = loader.getController();
-            controller.setMainApp(this);
+            controller.setMainApp( this );
 
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    // Show Login Confirm ---- Levi ----
+
+    public void showLoginConfirm () {
+
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation( MainApp.class.getResource( "view/LoginConfirmation.fxml" ) );
+            AnchorPane loginConfirm = (AnchorPane) loader.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( loginConfirm );
+
+            // Give the controller access to the main app.
+            LoginConfirmController controller = loader.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    // Open Admin Login ---- Levi ----
+    public void showAdminLogin () throws IOException {
+
+        try {
+            // Load person overview.
+            FXMLLoader adminLoad = new FXMLLoader();
+            adminLoad.setLocation( MainApp.class.getResource( "view/Login_A.fxml" ) );
+            AnchorPane adminLogin = adminLoad.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( adminLogin );
+
+            // Give the controller access to the main app.
+            AdminLoginController controller = adminLoad.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    // Show Admin Menu
+
+    public void showAdminMenu() {
+
+        try {
+            // Load person overview.
+            FXMLLoader adminMenuLoad = new FXMLLoader();
+            adminMenuLoad.setLocation( MainApp.class.getResource( "view/admin_menu.fxml" ) );
+            AnchorPane adminanchor = adminMenuLoad.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( adminanchor );
+
+            // Give the controller access to the main app.
+            AdminLoginController controller = adminMenuLoad.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    // Show Can_select_ui on Submit ---- Levi ----
+    public void showCanSelect() throws IOException {
+        try {
+            // Load person overview.
+            FXMLLoader can_select_loader = new FXMLLoader();
+            can_select_loader.setLocation( MainApp.class.getResource( "view/can_select_ui.fxml" ) );
+            AnchorPane canSelect = can_select_loader.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( canSelect );
+
+            // Give the controller access to the main app.
+            CanSelectController controller = can_select_loader.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Confirm Single Can Vote ---- Levi ----
+
+    public void showSingleVConfirm () throws IOException{
+        try {
+            // Load person overview.
+            FXMLLoader confirmOne = new FXMLLoader();
+            confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmation.fxml" ) );
+            AnchorPane oneVoteCon = confirmOne.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( oneVoteCon );
+
+            // Give the controller access to the main app.
+            VoteConfrimationController controller = confirmOne.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    // Confirm Vote Submission ---- Levi ----
+
+    public void showVoteConfirm () throws IOException{
+        try {
+            // Load person overview.
+            FXMLLoader confirm = new FXMLLoader();
+            confirm.setLocation( MainApp.class.getResource( "view/VoteSubmissionConfirmation.fxml" ) );
+            AnchorPane voteSubCon = confirm.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( voteSubCon );
+
+            // Give the controller access to the main app.
+            VoteSubConController controller = confirm.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Cancel Vote ---- Levi ----
+    public void voteCancel () throws IOException{
+        try {
+            // Load person overview.
+            FXMLLoader selected = new FXMLLoader();
+            selected.setLocation( MainApp.class.getResource( "view/can_select_ui.fxml" ) );
+            AnchorPane canSelectLoad = selected.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( canSelectLoad );
+
+            // Give the controller access to the main app.
+            VoteConfrimationController controller = selected.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Show Help Menu on Click ---- Levi ----
+
+    public void helpButtonClick() throws IOException {
+
+
+        /*
+        Parent helpButtonParent = FXMLLoader.load(getClass().getResource( "/view/Instruction_HowToVote.fxml" ));
+        Scene helpView = new Scene(helpButtonParent);
+
+        //Gets Stage Info
+        Stage current = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        current.setScene(helpView);
+        current.show();
+        */
     }
 
     public static void main(String[] args) {
