@@ -182,7 +182,7 @@ public class RegistrationFormController {
             System.out.println("Info Confirm submitted successfully.");
             
             
-            //testDriveRegForm.showForm03Registrant();
+            testDriveRegForm.showLoginRegistrant();
 
         }
     }
