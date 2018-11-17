@@ -25,13 +25,9 @@ import com.csci360.electionapp.model.RegisteringSession;
 public class RegistrationFormController {
 	
 	@FXML
-    private CheckBox usCitizenCheckBoxYes;
+    private ChoiceBox usCitizenChoiceBox;
 	@FXML
-    private CheckBox usCitizenCheckBoxNo;
-	@FXML
-    private CheckBox ageCheckBoxYes;
-	@FXML
-    private CheckBox ageCheckBoxNo;
+    private ChoiceBox ageChoiceBox;
     @FXML
     private TextField lastNameField;
     @FXML
@@ -114,18 +110,9 @@ public class RegistrationFormController {
             submitClicked = true;
             System.out.println("Questions submitted successfully.");
             
-            if(usCitizenCheckBoxYes.isSelected() == true) {
-            	regQues.append("Yes, ");	
-            }
-            else {
-            	regQues.append("No, ");
-            }
-            if(ageCheckBoxYes.isSelected() == true) {
-            	regQues.append("Yes, ");	
-            }
-            else {
-            	regQues.append("No, ");
-            }
+            
+            regQues.append(usCitizenChoiceBox.getValue() + ", ");	
+            regQues.append(ageChoiceBox.getValue() + ", ");
             testDriveRegForm.showForm02Registrant();
         	}
         	catch(IOException ex) {
