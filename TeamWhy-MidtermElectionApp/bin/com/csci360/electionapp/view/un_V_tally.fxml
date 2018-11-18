@@ -52,6 +52,6 @@
     </AnchorPane>
     <ScrollBar layoutX="558.0" layoutY="150.0" orientation="VERTICAL" prefHeight="208.0" />
     <Label alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="361.0" layoutY="100.0" prefHeight="28.0" prefWidth="181.0" text="Total Vote Counts" />
-    <Button layoutX="495.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="73.0" text="Back" />
+    <Button fx:id="back" layoutX="495.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="73.0" text="Back" />
   </children>
 </AnchorPane>
