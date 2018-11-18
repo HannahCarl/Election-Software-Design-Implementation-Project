@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.AdminMenuController">
   <children>
     <Rectangle id="background" arcHeight="0.0" arcWidth="0.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-    <Button layoutX="481.0" layoutY="354.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="99.0" text="Log Out">
+    <Button fx:id="logOut" layoutX="481.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="32.0" prefWidth="99.0" text="Log Out">
       <font>
         <Font size="18.0" />
       </font>
@@ -30,7 +30,7 @@
             <Font size="14.0" fx:id="x1" />
           </font>
         </Button>
-        <Button id="admMenuB" fx:id="viewResults" font="$x1" layoutX="342.0" layoutY="157.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
+        <Button id="admMenuB" fx:id="viewResults" font="$x1" layoutX="342.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleViewResults" prefHeight="66.0" prefWidth="159.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
         <Button id="admMenuB" fx:id="startRegistrationPeriod" font="$x1" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" text="Start Registration Period" textAlignment="CENTER" wrapText="true" />
         <Button id="admMenuB" fx:id="endVotingPeriod" font="$x1" layoutX="178.0" layoutY="157.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" text="End Voting Period" textAlignment="CENTER" wrapText="true" />
             <Button id="admMenuB" fx:id="endRegistrationPeriod" layoutX="178.0" layoutY="77.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" style="&#10;" text="End Registration Period" textAlignment="CENTER" wrapText="true">

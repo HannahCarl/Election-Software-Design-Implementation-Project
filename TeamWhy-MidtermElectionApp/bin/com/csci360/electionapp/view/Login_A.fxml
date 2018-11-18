@@ -25,7 +25,7 @@
     <TextField fx:id="nameField" layoutX="231.0" layoutY="204.0" prefWidth="167.0" promptText="Enter Name Here..." />
     <Label alignment="CENTER" layoutX="202.0" layoutY="157.0" prefWidth="225.0" text="Please enter your Full Name and" />
     <Label alignment="CENTER" layoutX="202.0" layoutY="173.0" prefWidth="225.0" text="Administative ID Number" />
-    <Button id="loginBackB" fx:id="back" layoutX="546.0" layoutY="365.0" mnemonicParsing="false" prefWidth="64.0" text="Back" />
+    <Button id="loginBackB" fx:id="back" layoutX="546.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleBack" prefWidth="64.0" text="Back" />
     <PasswordField fx:id="idField" layoutX="231.0" layoutY="233.0" prefWidth="167.0" promptText="Enter ID Here..." />
   </children>
 </AnchorPane>

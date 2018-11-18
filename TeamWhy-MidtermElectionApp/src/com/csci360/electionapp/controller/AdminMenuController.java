@@ -26,6 +26,8 @@ public class AdminMenuController {
 	@FXML
     private Button submit;
     @FXML
+    private Button logOut;
+    @FXML
     private Button back;
     @FXML
     private Button startRegistrationPeriod;
@@ -43,6 +45,9 @@ public class AdminMenuController {
     private Stage dialogueStage;
     private AdminList adminList;
     private boolean submitClicked = false;
+    private boolean logOutClicked = false;
+    private boolean viewResultsClicked = false;
+    private boolean backClicked = false;
     
     private TestDriverAdmin testDriveAdmin;
     private MainApp mainApp;
@@ -50,6 +55,33 @@ public class AdminMenuController {
     @FXML
     private void initialize(){
 	
+    }
+    @FXML
+    private void handleLogOut() throws IOException{
+        
+            logOutClicked = true;
+            //System.out.println("Logout successful.");
+            mainApp.showAdminLogin();
+
+        
+    }
+    @FXML
+    private void handleViewResults() throws IOException{
+        
+            viewResultsClicked = true;
+            
+            mainApp.showViewResults();
+
+        
+    }
+    @FXML
+    private void handleBack() throws IOException{
+        
+            backClicked = true;
+            
+            mainApp.showAdminMenu();
+
+        
     }
     public void setDialogueStage(Stage dialogueStage){
         this.dialogueStage = dialogueStage;

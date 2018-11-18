@@ -189,6 +189,29 @@ public class MainApp extends Application {
         }
 
     }
+    
+ // Show Election results
+
+    public void showViewResults() {
+
+        try {
+        	// Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(TestDriverAdmin.class.getResource("view/un_V_tally.fxml"));
+            AnchorPane adminMenuResults = (AnchorPane) loader.load();
+
+            // Set form into the center of root layout.
+            rootLayout.setCenter(adminMenuResults);
+            
+         // Give the controller access to the admin menu
+            AdminMenuController controller = loader.getController();
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
     // Show Can_select_ui on Submit ---- Levi ----

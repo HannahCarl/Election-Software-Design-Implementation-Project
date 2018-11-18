@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="UI_skeleton.UnVTally">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.AdminMenuController">
   <children>
     <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
     <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="54.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="572.0" />
@@ -52,6 +52,6 @@
     </AnchorPane>
     <ScrollBar layoutX="558.0" layoutY="150.0" orientation="VERTICAL" prefHeight="208.0" />
     <Label alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="361.0" layoutY="100.0" prefHeight="28.0" prefWidth="181.0" text="Total Vote Counts" />
-    <Button layoutX="495.0" layoutY="27.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="73.0" text="Return" />
+    <Button fx:id="back" layoutX="495.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="73.0" text="Back" />
   </children>
 </AnchorPane>

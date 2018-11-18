@@ -39,6 +39,7 @@ public class AdminLoginController {
     private AdminList adminList;
     private AdminSession aSession;
     private boolean submitClicked = false;
+    private boolean backClicked = false;
 
     private TestDriverAdmin testDriveAdmin;
     private MainApp mainApp;
@@ -78,6 +79,15 @@ public class AdminLoginController {
             mainApp.showAdminMenu();
 
         }
+    }
+    @FXML
+    private void handleBack() throws IOException{
+        
+            backClicked = true;
+            //System.out.println("Back successful.");
+            mainApp.showLoginVoter();
+
+        
     }
 
     private boolean isInputValid(){
