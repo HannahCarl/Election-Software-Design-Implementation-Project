@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="336.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ch.makery.address.view.PersonOverviewController">
+<AnchorPane prefHeight="336.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.csci360.electionapp.controller.HelpController">
   <children>
     <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="336.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="611.0" />
     <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" height="264.0" layoutX="18.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="180.0">
@@ -82,7 +82,7 @@
         <Double fx:value="-60.0" />
       </points>
     </Polygon>
-    <Button layoutX="460.0" layoutY="18.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="105.0" text="Continue">
+    <Button fx:id="helpCloseB" layoutX="460.0" layoutY="18.0" mnemonicParsing="false" onAction="#helpClose" prefHeight="33.0" prefWidth="105.0" text="Continue">
       <font>
         <Font size="16.0" />
       </font>

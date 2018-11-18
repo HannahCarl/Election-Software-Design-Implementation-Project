@@ -6,9 +6,11 @@ import com.csci360.electionapp.model.VoterList;
 import com.csci360.electionapp.model.RegistrantList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -224,43 +226,6 @@ public class MainApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    // Cancel Vote ---- Levi ----
-    public void voteCancel () throws IOException{
-        try {
-            // Load person overview.
-            FXMLLoader selected = new FXMLLoader();
-            selected.setLocation( MainApp.class.getResource( "view/can_select_ui.fxml" ) );
-            AnchorPane canSelectLoad = selected.load();
-
-            // Set login into the center of root layout.
-            rootLayout.setCenter( canSelectLoad );
-
-            // Give the controller access to the main app.
-            VoteConfrimationController controller = selected.getController();
-            controller.setMainApp( this );
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Show Help Menu on Click ---- Levi ----
-
-    public void helpButtonClick() throws IOException {
-
-
-        /*
-        Parent helpButtonParent = FXMLLoader.load(getClass().getResource( "/view/Instruction_HowToVote.fxml" ));
-        Scene helpView = new Scene(helpButtonParent);
-
-        //Gets Stage Info
-        Stage current = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-        current.setScene(helpView);
-        current.show();
-        */
     }
 
     public static void main(String[] args) {

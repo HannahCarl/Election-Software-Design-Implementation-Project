@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
@@ -74,13 +75,6 @@ public class LoginVoterController {
     }
 
 
-    // Sends open request to MainApp To open Help Menu ---- Levi ----
-    public void helpButtonClick(ActionEvent event) throws IOException {
-
-        mainApp.helpButtonClick();
-
-    }
-
     private boolean isInputValid(){
         String errorMessage = "";
         if (voterIDField.getText() == null || voterIDField.getText().length() == 0){
@@ -108,6 +102,26 @@ public class LoginVoterController {
 
             return false;
         }
+    }
+
+    // Show Help Menu on Click ---- Levi ----
+
+    public void helpButtonClick(ActionEvent event) throws IOException {
+
+        Stage helpStage;
+        Parent root;
+        if(event.getSource() == helpButton) {
+            root = FXMLLoader.load( getClass().getResource( "view/Instruction_HowToVote.fxml" ) );
+            helpStage = new Stage();
+            helpStage.setScene( new Scene( root ) );
+            helpStage.initModality( Modality.APPLICATION_MODAL );
+            helpStage.initOwner( helpButton.getScene().getWindow() );
+            helpStage.showAndWait();
+        }else {
+            helpStage = (Stage) helpButton.getScene().getWindow();
+            helpStage.close();
+        }
+
     }
 
     public void adminBClick () throws IOException {
