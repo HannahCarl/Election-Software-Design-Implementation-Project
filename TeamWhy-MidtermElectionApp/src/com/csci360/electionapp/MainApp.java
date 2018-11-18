@@ -3,6 +3,8 @@ package com.csci360.electionapp;
 import com.csci360.electionapp.controller.*;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
+import com.csci360.electionapp.model.Admin;
+import com.csci360.electionapp.model.AdminList;
 import com.csci360.electionapp.model.RegistrantList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,9 +23,11 @@ public class MainApp extends Application {
 
     private VoterList voterList = new VoterList();
     private RegistrantList registrantList = new RegistrantList();
+    private AdminList adminList = new AdminList();
 
     public MainApp(){
-        voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	adminList.addAdmin(new Admin("smithJohn", "123ABC"));
+    	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     }
 
     public VoterList getVoterList() {
@@ -138,23 +142,26 @@ public class MainApp extends Application {
         }
 
     }
+    public AdminList getAdminList() {
+        return adminList;
+    }
 
     // Show Admin Menu
 
     public void showAdminMenu() {
 
         try {
-            // Load person overview.
-            FXMLLoader adminMenuLoad = new FXMLLoader();
-            adminMenuLoad.setLocation( MainApp.class.getResource( "view/admin_menu.fxml" ) );
-            AnchorPane adminanchor = adminMenuLoad.load();
+        	// Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(TestDriverAdmin.class.getResource("view/admin_menu.fxml"));
+            AnchorPane adminMenu = (AnchorPane) loader.load();
 
-            // Set login into the center of root layout.
-            rootLayout.setCenter( adminanchor );
-
-            // Give the controller access to the main app.
-            AdminLoginController controller = adminMenuLoad.getController();
-            controller.setMainApp( this );
+            // Set form into the center of root layout.
+            rootLayout.setCenter(adminMenu);
+            
+         // Give the controller access to the admin menu
+            AdminMenuController controller = loader.getController();
+            controller.setMainApp(this);
 
         } catch (IOException e) {
             e.printStackTrace();

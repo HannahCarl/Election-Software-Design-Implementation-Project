@@ -45,6 +45,7 @@ public class AdminMenuController {
     private boolean submitClicked = false;
     
     private TestDriverAdmin testDriveAdmin;
+    private MainApp mainApp;
     
     @FXML
     private void initialize(){
@@ -59,6 +60,12 @@ public class AdminMenuController {
 
         // Add adminList data to the controller
         adminList = tesDrAdForm.getAdminList();
+    }
+    public void setMainApp(MainApp mainA) {
+        this.mainApp = mainA;
+
+        // Add adminList data to the controller
+        adminList = mainA.getAdminList();
     }
 
     public boolean isSubmitClicked(){
