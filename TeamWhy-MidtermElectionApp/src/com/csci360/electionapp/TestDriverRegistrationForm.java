@@ -35,7 +35,7 @@ public class TestDriverRegistrationForm extends Application {
         		String[] regFromList = line.split("[,]");
 
         		registrantList.addRegistrant(new Registrant(regFromList[0],regFromList[1],regFromList[2],regFromList[3],"", regFromList[4],"", "",new Date(), "", "", "", "", true, true));
-        		System.out.println(regFromList[0] +" "+regFromList[1]+" "+regFromList[2]+" "+regFromList[3]+" "+regFromList[4]);
+        		//System.out.println(regFromList[0] +" "+regFromList[1]+" "+regFromList[2]+" "+regFromList[3]+" "+regFromList[4]);
         	}
         	
         	
@@ -57,8 +57,7 @@ public class TestDriverRegistrationForm extends Application {
         initRootLayout();
 
         showLoginRegistrant();
-        //showForm01Registrant();
-		
+        
 	}
 	
 	/**

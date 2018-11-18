@@ -1,27 +1,30 @@
 package com.csci360.electionapp.model;
 
 public class Admin {
-    private String username;
-    private String password;
-
-    public Admin(String username, String password) {
-        this.username = username;
-        this.password = password;
+    private String name;
+    private String id;
+    
+    public Admin() {
+    	
+    }
+    public Admin(String name, String id) {
+        this.name = name;
+        this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getID() {
+        return id;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setID(String id) {
+        this.id = id;
     }
 }

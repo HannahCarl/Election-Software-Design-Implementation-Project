@@ -1,0 +1,68 @@
+package com.csci360.electionapp.controller;
+
+import com.csci360.electionapp.MainApp;
+import com.csci360.electionapp.TestDriverAdmin;
+import com.csci360.electionapp.TestDriverRegistrationForm;
+import com.csci360.electionapp.model.Admin;
+import com.csci360.electionapp.model.AdminList;
+import com.csci360.electionapp.model.AdminSession;
+import com.csci360.electionapp.model.RegisteringSession;
+import com.csci360.electionapp.model.Registrant;
+import com.csci360.electionapp.model.RegistrantList;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+public class AdminMenuController {
+	
+	@FXML
+    private Button submit;
+    @FXML
+    private Button back;
+    @FXML
+    private Button startRegistrationPeriod;
+    @FXML
+    private Button endRegistrationPeriod;
+    @FXML
+    private Button setUpNewElection;
+    @FXML
+    private Button startVotingPeriod;
+    @FXML
+    private Button endVotingPeriod;
+    @FXML
+    private Button viewResults;
+    
+    private Stage dialogueStage;
+    private AdminList adminList;
+    private boolean submitClicked = false;
+    
+    private TestDriverAdmin testDriveAdmin;
+    
+    @FXML
+    private void initialize(){
+	
+    }
+    public void setDialogueStage(Stage dialogueStage){
+        this.dialogueStage = dialogueStage;
+    }
+
+    public void setTestDriverAdmin(TestDriverAdmin tesDrAdForm) {
+        this.testDriveAdmin = tesDrAdForm;
+
+        // Add adminList data to the controller
+        adminList = tesDrAdForm.getAdminList();
+    }
+
+    public boolean isSubmitClicked(){
+        return submitClicked;
+    }
+
+}
