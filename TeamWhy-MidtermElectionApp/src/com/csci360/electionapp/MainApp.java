@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
 
@@ -26,8 +28,27 @@ public class MainApp extends Application {
     private AdminList adminList = new AdminList();
 
     public MainApp(){
-    	adminList.addAdmin(new Admin("smithJohn", "123ABC"));
+    	
+    	buildAdminList();
     	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    }
+    
+    public void buildAdminList() {
+    	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
+    	String line;
+    	while ((line = br.readLine()) != null) {
+    		String[] adminFromList = line.split("[,]");
+
+    		adminList.addAdmin(new Admin(adminFromList[0],adminFromList[1]));
+    		
+    	}
+    	
+    	
+    	}
+    	catch(IOException ex) {
+		
+    	}
+    	
     }
 
     public VoterList getVoterList() {
