@@ -6,7 +6,7 @@ public class Registrant {
     private String voterID;
     private String firstname;
     private String lastname;
-    private char middleInitial;
+    private String middleInitial;
     private String suffix;
     private String socSecNumber;
     private String sex;
@@ -27,7 +27,7 @@ public class Registrant {
 
     //Registrant - Creator (GRASP)
     //This method is a parameterized constructor to build a registrant.
-    public Registrant(String voterID, String firstname, String lastname, char middleInitial, String suffix, String socSecNumber, String sex, String race, Date birthDate, String homePhone, String cellPhone, String homeAddress, String mailingAddress, Boolean ageCheck, Boolean usCitizenCheck) {
+    public Registrant(String voterID, String firstname, String lastname, String middleInitial, String suffix, String socSecNumber, String sex, String race, Date birthDate, String homePhone, String cellPhone, String homeAddress, String mailingAddress, Boolean ageCheck, Boolean usCitizenCheck) {
         this.voterID = voterID;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -46,6 +46,27 @@ public class Registrant {
         this.ageCheck = ageCheck;
         
     }
+  /*//Registrant - Creator (GRASP)
+    //This method is a parameterized constructor to build a registrant.
+    public Registrant(String voterID, String firstname, String lastname, String middleInitial, String socSecNumber) {
+        this.voterID = voterID;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middleInitial = middleInitial;
+        this.suffix = "";
+        this.socSecNumber = "";
+        this.sex = "";
+        this.race = "";
+        this.birthDate = new Date();
+        this.homePhone = "";
+        this.cellPhone = "";
+        this.homeAddress = "";
+        this.mailingAddress = "";
+        this.hasRegistered = false;
+        this.usCitizenCheck = true;
+        this.ageCheck = true;
+        
+    }*/
     //getVoterID - Information Expert (GRASP)
     //This method returns the voterID information.
     public String getVoterID() {
@@ -81,12 +102,12 @@ public class Registrant {
     }
     //getMiddleInitial - Information Expert (GRASP)
     //This method returns the middle initial information.
-    public char getMiddleInitial() {
+    public String getMiddleInitial() {
         return middleInitial;
     }
     //setMiddleInitial - Low Coupling (GRASP)
     //This method sets the middle initial information.
-    public void setMiddleInitial(char middleInitial) {
+    public void setMiddleInitial(String middleInitial) {
         this.middleInitial = middleInitial;
     }
     //getSuffix - Information Expert (GRASP)

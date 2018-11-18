@@ -1,6 +1,11 @@
 package com.csci360.electionapp;
 
-
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import com.csci360.electionapp.controller.RegistrationFormController;
 import com.csci360.electionapp.controller.LoginRegistrantController;
 import com.csci360.electionapp.model.Registrant;
@@ -23,7 +28,21 @@ public class TestDriverRegistrationForm extends Application {
     private RegistrantList registrantList = new RegistrantList();
     
     public TestDriverRegistrationForm(){
-        registrantList.addRegistrant(new Registrant("vote123", "John", "Smith", 'M', "Jr", "1234567890", "male", "Hispanic",new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress", true, true));
+    	registrantList.addRegistrant(new Registrant("vote123", "John", "Smith", "M", "Jr", "1234567890", "male", "Hispanic",new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress", true, true));
+        try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/registrantList.txt"))){
+        	String line;
+        	while ((line = br.readLine()) != null) {
+        		String[] regFromList = line.split("[,]");
+
+        		registrantList.addRegistrant(new Registrant(regFromList[0],regFromList[1],regFromList[2],regFromList[3],"", regFromList[4],"", "",new Date(), "", "", "", "", true, true));
+        		//System.out.println(regFromList[0] +" "+regFromList[1]+" "+regFromList[2]+" "+regFromList[3]+" "+regFromList[4]);
+        	}
+        	
+        	
+        }
+        catch(IOException ex) {
+    		
+    	}
     }
     
     public RegistrantList getRegistrantList() {
@@ -38,8 +57,7 @@ public class TestDriverRegistrationForm extends Application {
         initRootLayout();
 
         showLoginRegistrant();
-        //showForm01Registrant();
-		
+        
 	}
 	
 	/**
@@ -162,6 +180,7 @@ public class TestDriverRegistrationForm extends Application {
         }
     }
     
+   
     public static void main(String[] args) {
         launch(args);
     }

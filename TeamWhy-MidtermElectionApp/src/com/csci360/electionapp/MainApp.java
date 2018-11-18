@@ -3,6 +3,8 @@ package com.csci360.electionapp;
 import com.csci360.electionapp.controller.*;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
+import com.csci360.electionapp.model.Admin;
+import com.csci360.electionapp.model.AdminList;
 import com.csci360.electionapp.model.RegistrantList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +15,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
 
@@ -23,9 +27,30 @@ public class MainApp extends Application {
 
     private VoterList voterList = new VoterList();
     private RegistrantList registrantList = new RegistrantList();
+    private AdminList adminList = new AdminList();
 
     public MainApp(){
-        voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	
+    	buildAdminList();
+    	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    }
+    
+    public void buildAdminList() {
+    	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
+	    	String line;
+	    	while ((line = br.readLine()) != null) {
+	    		String[] adminFromList = line.split("[,]");
+	
+	    		adminList.addAdmin(new Admin(adminFromList[0],adminFromList[1]));
+    		
+    	}
+    	
+    	
+    	}
+    	catch(IOException ex) {
+		
+    	}
+    	
     }
 
     public VoterList getVoterList() {
@@ -140,23 +165,49 @@ public class MainApp extends Application {
         }
 
     }
+    public AdminList getAdminList() {
+        return adminList;
+    }
 
     // Show Admin Menu
 
     public void showAdminMenu() {
 
         try {
-            // Load person overview.
-            FXMLLoader adminMenuLoad = new FXMLLoader();
-            adminMenuLoad.setLocation( MainApp.class.getResource( "view/admin_menu.fxml" ) );
-            AnchorPane adminanchor = adminMenuLoad.load();
+        	// Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(TestDriverAdmin.class.getResource("view/admin_menu.fxml"));
+            AnchorPane adminMenu = (AnchorPane) loader.load();
 
-            // Set login into the center of root layout.
-            rootLayout.setCenter( adminanchor );
+            // Set form into the center of root layout.
+            rootLayout.setCenter(adminMenu);
+            
+         // Give the controller access to the admin menu
+            AdminMenuController controller = loader.getController();
+            controller.setMainApp(this);
 
-            // Give the controller access to the main app.
-            AdminLoginController controller = adminMenuLoad.getController();
-            controller.setMainApp( this );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+ // Show Election results
+
+    public void showViewResults() {
+
+        try {
+        	// Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(TestDriverAdmin.class.getResource("view/un_V_tally.fxml"));
+            AnchorPane adminMenuResults = (AnchorPane) loader.load();
+
+            // Set form into the center of root layout.
+            rootLayout.setCenter(adminMenuResults);
+            
+         // Give the controller access to the admin menu
+            AdminMenuController controller = loader.getController();
+            controller.setMainApp(this);
 
         } catch (IOException e) {
             e.printStackTrace();

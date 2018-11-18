@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="UI_skeleton.LoginV">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.AdminLoginController">
   <children>
     <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="624.0001220703125" />
     <Rectangle id="loginMenu" arcHeight="50.0" arcWidth="50.0" fill="#bfbfbf" height="213.0" layoutX="175.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="274.0" />
@@ -17,15 +17,15 @@
         <Font size="18.0" fx:id="x1" />
       </font>
     </Label>
-    <Button id="loginSubmitB" layoutX="272.0" layoutY="265.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="Submit">
+    <Button id="loginSubmitB" fx:id="submit" layoutX="274.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="29.0" prefWidth="81.0" text="Submit">
       <font>
         <Font size="16.0" />
       </font>
     </Button>
-    <TextField layoutX="231.0" layoutY="204.0" prefWidth="167.0" promptText="Enter Name Here..." />
+    <TextField fx:id="nameField" layoutX="231.0" layoutY="204.0" prefWidth="167.0" promptText="Enter Name Here..." />
     <Label alignment="CENTER" layoutX="202.0" layoutY="157.0" prefWidth="225.0" text="Please enter your Full Name and" />
     <Label alignment="CENTER" layoutX="202.0" layoutY="173.0" prefWidth="225.0" text="Administative ID Number" />
-    <Button id="loginBackB" layoutX="546.0" layoutY="365.0" mnemonicParsing="false" prefWidth="64.0" text="Back" />
-    <PasswordField layoutX="231.0" layoutY="233.0" prefWidth="167.0" promptText="Enter ID Here..." />
+    <Button id="loginBackB" fx:id="back" layoutX="546.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleBack" prefWidth="64.0" text="Back" />
+    <PasswordField fx:id="idField" layoutX="231.0" layoutY="233.0" prefWidth="167.0" promptText="Enter ID Here..." />
   </children>
 </AnchorPane>

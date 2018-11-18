@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
@@ -19,7 +21,7 @@
         <Font size="24.0" />
       </font>
     </Label>
-    <GridPane prefHeight="206.0" prefWidth="594.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="65.0">
+    <GridPane prefHeight="207.0" prefWidth="578.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="65.0">
       <children>
         <Label prefHeight="77.0" prefWidth="374.0" text="  1) Are you a citizen of the United States of America?" wrapText="true">
           <font>
@@ -27,19 +29,26 @@
           </font>
         </Label>
         <Label prefHeight="77.0" prefWidth="374.0" text="  2) Will you be 18 years of age on or before election day?" GridPane.rowIndex="1" />
-        <CheckBox fx:id="usCitizenCheckBoxYes" mnemonicParsing="false" selected="true" text="Yes" GridPane.columnIndex="1">
-          <font>
-            <Font size="18.0" fx:id="x1" />
-          </font>
-        </CheckBox>
-        <CheckBox fx:id="ageCheckBoxYes" font="$x1" mnemonicParsing="false" selected="true" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <CheckBox fx:id="usCitizenCheckBoxNo" font="$x1" mnemonicParsing="false" text="No" GridPane.columnIndex="2" />
-        <CheckBox fx:id="ageCheckBoxNo" font="$x1" mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="usCitizenChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" value="Yes">
+            	<items>
+        			<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Yes" />
+            			<String fx:value="No" />
+        			</FXCollections>
+    			</items>
+    		</ChoiceBox> 
+            <ChoiceBox fx:id="ageChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" value="Yes">
+            	<items>
+        			<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Yes" />
+            			<String fx:value="No" />
+        			</FXCollections>
+    			</items>
+    		</ChoiceBox>     
       </children>
       <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="385.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="101.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="116.0" />
       </columnConstraints>
       <rowConstraints>
         <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
@@ -47,7 +56,7 @@
         <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
-    <Button id="submitB" fx:id="submitButton" alignment="CENTER" layoutX="498.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleSubmitQuestion" text="Submit" />
-    <Text fill="#e8310d" font="$x2" layoutX="39.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you checked ‘NO’ in response to either of these questions, DO NOT continue." />
+    <Text fill="#e8310d" font="$x2" layoutX="39.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you clicked ‘NO’ in response to either of these questions, DO NOT continue." />
+      <Button fx:id="submitButton" layoutX="501.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleSubmitQuestion" text="Submit" />
   </children>
 </AnchorPane>

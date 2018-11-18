@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
@@ -16,6 +17,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Labeled;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Registrant;
@@ -25,13 +28,9 @@ import com.csci360.electionapp.model.RegisteringSession;
 public class RegistrationFormController {
 	
 	@FXML
-    private CheckBox usCitizenCheckBoxYes;
+    private ChoiceBox usCitizenChoiceBox;
 	@FXML
-    private CheckBox usCitizenCheckBoxNo;
-	@FXML
-    private CheckBox ageCheckBoxYes;
-	@FXML
-    private CheckBox ageCheckBoxNo;
+    private ChoiceBox ageChoiceBox;
     @FXML
     private TextField lastNameField;
     @FXML
@@ -76,6 +75,11 @@ public class RegistrationFormController {
     private Button submitButton;
     @FXML
     private Button goBackButton;
+    @FXML
+    private Label lastNameLabel;
+    @FXML
+    private Label firstNameLabel;
+    
     
     private Stage dialogueStage;
     private Registrant registrant;
@@ -114,18 +118,9 @@ public class RegistrationFormController {
             submitClicked = true;
             System.out.println("Questions submitted successfully.");
             
-            if(usCitizenCheckBoxYes.isSelected() == true) {
-            	regQues.append("Yes, ");	
-            }
-            else {
-            	regQues.append("No, ");
-            }
-            if(ageCheckBoxYes.isSelected() == true) {
-            	regQues.append("Yes, ");	
-            }
-            else {
-            	regQues.append("No, ");
-            }
+            
+            regQues.append(usCitizenChoiceBox.getValue() + ", ");	
+            regQues.append(ageChoiceBox.getValue() + ", ");
             testDriveRegForm.showForm02Registrant();
         	}
         	catch(IOException ex) {
@@ -164,6 +159,13 @@ public class RegistrationFormController {
             regForm.append(homePhoneField.getText() + ", ");
             regForm.append(cellPhoneField.getText());
             regForm.newLine();
+            
+            	
+            
+            
+            	
+            	
+            
             testDriveRegForm.showForm03Registrant();
             
             
@@ -182,7 +184,7 @@ public class RegistrationFormController {
             System.out.println("Info Confirm submitted successfully.");
             
             
-            //testDriveRegForm.showForm03Registrant();
+            testDriveRegForm.showLoginRegistrant();
 
         }
     }
