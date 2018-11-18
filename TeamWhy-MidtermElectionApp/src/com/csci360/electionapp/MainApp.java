@@ -35,11 +35,11 @@ public class MainApp extends Application {
     
     public void buildAdminList() {
     	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
-    	String line;
-    	while ((line = br.readLine()) != null) {
-    		String[] adminFromList = line.split("[,]");
-
-    		adminList.addAdmin(new Admin(adminFromList[0],adminFromList[1]));
+	    	String line;
+	    	while ((line = br.readLine()) != null) {
+	    		String[] adminFromList = line.split("[,]");
+	
+	    		adminList.addAdmin(new Admin(adminFromList[0],adminFromList[1]));
     		
     	}
     	

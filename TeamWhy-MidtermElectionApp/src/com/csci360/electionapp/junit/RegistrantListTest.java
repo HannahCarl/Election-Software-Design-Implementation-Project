@@ -21,7 +21,7 @@ public class RegistrantListTest {
 	@Before
 	public void setup() throws Exception {
 		regListTester = new RegistrantList();
-		regTester = new Registrant("vote123", "John", "Smith", 'M', "Jr", "1234567890", "male", "Hispanic",new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress", true, true);
+		regTester = new Registrant("vote123", "John", "Smith", "M", "Jr", "1234567890", "male", "Hispanic",new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress", true, true);
 		regListTester.addRegistrant(regTester);
 	}
 	

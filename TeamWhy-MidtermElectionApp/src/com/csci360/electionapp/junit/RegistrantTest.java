@@ -50,8 +50,8 @@ public class RegistrantTest {
 	 */
 	@Test
 	public void testMiddleInitial(){
-		regTester.setMiddleInitial('L');
-		assertEquals('L', regTester.getMiddleInitial());
+		regTester.setMiddleInitial("L");
+		assertEquals("L", regTester.getMiddleInitial());
 	}
 	
 	/**
