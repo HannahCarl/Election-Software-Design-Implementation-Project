@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="20.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.RegistrationFormController">
+  <children>
+    <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="97.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="611.0" />
+    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="42.0" layoutX="11.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="588.0" />
+    <Label layoutX="138.0" layoutY="80.0" scaleX="0.8" scaleY="0.8" scaleZ="0.8" />
+    <Label layoutX="27.0" layoutY="21.0" text="Please verify this information is correct?">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <Button id="regSubmitB" fx:id="submitButton" layoutX="382.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleSubmitInfoConfirm" text="Yes, Submit" />
+    <Button id="regCancelB" layoutX="486.0" layoutY="19.0" mnemonicParsing="false" text="No, Go Back" />
+  </children>
+</AnchorPane>
