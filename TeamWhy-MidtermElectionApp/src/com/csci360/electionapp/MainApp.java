@@ -23,7 +23,9 @@ import java.util.Date;
 public class MainApp extends Application {
 
     public Stage primaryStage; // Changed to Public ---- Levi ----
+    public Stage helpStage;
     private BorderPane rootLayout;
+    private BorderPane helpLayout;
 
     private VoterList voterList = new VoterList();
     private RegistrantList registrantList = new RegistrantList();
@@ -277,6 +279,25 @@ public class MainApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+    //Opens Help in new Window ---- Levi ----
+    
+    public void showHelp() throws IOException {
+    	
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/Instruction_HowToVote.fxml"));
+    	Parent helpRoot = (Parent) fxmlLoader.load();
+    	helpStage = new Stage();
+    	helpStage.setScene(new Scene(helpRoot));
+    	helpStage.show();
+    	
+    }
+    
+    //Closes Help window ---- Levi ----
+    public void closeHelp() {
+    	
+    	
+    	
     }
 
     public static void main(String[] args) {

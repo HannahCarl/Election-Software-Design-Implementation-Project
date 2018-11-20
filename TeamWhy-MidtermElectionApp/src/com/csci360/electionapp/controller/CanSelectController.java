@@ -83,5 +83,11 @@ public class CanSelectController {
         mainApp.showSingleVConfirm();
 
     }
+    
+    public void helpButtonClick(ActionEvent event) throws IOException {
+
+        mainApp.showHelp();
+
+    }
 
 }
