@@ -9,8 +9,8 @@ public class Ballot {
 	//Constructor
 	//GRASP - Creator
 	public Ballot(Voter voter) {
-		voter = this.voter;
-		voteList = new ArrayList<Candidate>();
+		this.voter = voter;
+		this.voteList = new ArrayList<Candidate>();
 	}
 	
 	//adds a vote selection to the list for the ballot
@@ -38,7 +38,7 @@ public class Ballot {
 	//Sets the list of votes, in case of full edit
 	//GRASP - Creator
 	public void setVoteList(ArrayList<Candidate> voteList) {
-		voteList = this.voteList;
+		this.voteList = voteList;
 	}
 	
 	//Gets the voter casting the ballot

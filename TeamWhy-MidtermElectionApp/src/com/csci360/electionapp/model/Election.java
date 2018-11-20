@@ -2,7 +2,6 @@ package com.csci360.electionapp.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 public class Election {
 	
@@ -25,16 +24,16 @@ public class Election {
 	//Constructor for the election
 	//GRASP - Creator
 	public Election(Date date) {
-		date = this.date;
-		titleList = new ArrayList<String>();
-		selectionList = new ArrayList<ArrayList<Candidate>>();
-		ballotList = new ArrayList<Ballot>();
+		this.date = date;
+		this.titleList = new ArrayList<String>();
+		this.selectionList = new ArrayList<ArrayList<Candidate>>();
+		this.ballotList = new ArrayList<Ballot>();
 	}
 	
 	//Setter for titleList
 	//GRASP - Creator
 	public void setTitleList(ArrayList<String> titleList) {
-		titleList = this.titleList;
+		this.titleList = titleList;
 	}
 	
 	//Getter for titleList
@@ -46,7 +45,7 @@ public class Election {
 	//Setter for selectionList
 	//GRASP - Creator
 	public void setCandidateList(ArrayList<ArrayList<Candidate>> selectionList) {
-		selectionList = this.selectionList;
+		this.selectionList = selectionList;
 	}
 	
 	//Getter for selectionList
