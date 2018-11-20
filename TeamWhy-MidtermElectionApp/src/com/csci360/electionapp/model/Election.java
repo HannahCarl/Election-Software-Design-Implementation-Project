@@ -77,10 +77,45 @@ public class Election {
 			}
 		}
 		
-		Date birthday = ballot.getVoter().getBirthDate();
+		//Date birthday = ballot.getVoter().getBirthDate();
 		//Add a check to make sure the voter is of age here
 		
 		
 		ballotList.add(ballot); //adds the ballot to the list
+	}
+	
+	//finds the title/field being run for by its array id/field number
+	//GRASP - Information Expert
+	public String getTitleByFieldNumber(int fieldNum) {
+		return titleList.get(fieldNum); 
+	}
+	
+	//finds the list of candidates running for a field by its array id/field number
+	//GRASP - Information Expert
+	public ArrayList<Candidate> getCandidateListByFieldNumber(int fieldNum) {
+		return selectionList.get(fieldNum);
+	}
+	
+	//finds the list of candidates running for a field/title by the name of the field or title they're running for
+	//GRASP - Information Expert
+	public ArrayList<Candidate> getCandidateListByFieldTitle(String title) {
+		ArrayList<Candidate> returnList = new ArrayList<Candidate>();
+		
+		int listID = 0; //counter to help find the list of candidates
+		for (String list : titleList) { //loops through the list of titles being run for
+			if (list.equals(title)) { //if a matching name is found, it will set the returned list to be that list
+				returnList = selectionList.get(listID);
+			}
+			listID++;
+		}
+		
+		return returnList;
+	}
+	
+	//INCOMPLETE
+	//A method for ending the election, setting it to null after recording the results to an encrypted file
+	//GRASP - Creator
+	public void endElection() {
+		
 	}
 }
