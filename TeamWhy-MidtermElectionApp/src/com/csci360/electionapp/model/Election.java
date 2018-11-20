@@ -1,0 +1,86 @@
+package com.csci360.electionapp.model;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+public class Election {
+	
+	//A list of each of each position/title being contested in the election
+	private ArrayList<String> titleList;
+	
+	//An array containing the list of candidates for each position/title being contested in the election
+	private ArrayList<ArrayList<Candidate>> selectionList;
+	
+	//A list to hold the results
+	private ArrayList<Ballot> ballotList;
+	
+	//date of the election
+	private Date date;
+	
+	public Election() {
+		
+	}
+	
+	//Constructor for the election
+	//GRASP - Creator
+	public Election(Date date) {
+		date = this.date;
+		titleList = new ArrayList<String>();
+		selectionList = new ArrayList<ArrayList<Candidate>>();
+		ballotList = new ArrayList<Ballot>();
+	}
+	
+	//Setter for titleList
+	//GRASP - Creator
+	public void setTitleList(ArrayList<String> titleList) {
+		titleList = this.titleList;
+	}
+	
+	//Getter for titleList
+	//GRASP - Information Expert
+	public ArrayList<String> getTitleList() {
+		return titleList;
+	}
+	
+	//Setter for selectionList
+	//GRASP - Creator
+	public void setCandidateList(ArrayList<ArrayList<Candidate>> selectionList) {
+		selectionList = this.selectionList;
+	}
+	
+	//Getter for selectionList
+	//GRASP - Information Expert
+	public ArrayList<ArrayList<Candidate>> getSelectionList() {
+		return selectionList;
+	}
+	
+	//Getter for ballotList
+	//GRASP - Information Expert
+	public ArrayList<Ballot> getBallotList() {
+		return ballotList;
+	}
+	
+	//Adds a field to the section with the title being run for and the list of candidates running for it
+	//GRASP - Creator
+	public void addField(String title, ArrayList<Candidate> candidateList) {
+		titleList.add(title);
+		selectionList.add(candidateList);
+	}
+	
+	//A method for casting a ballot, detects if a duplicate vote is attempted
+	//Grasp - Creator
+	public void castBallot(Ballot ballot) {
+		for (Ballot vote : ballotList) { //loops through the list of current votes and makes sure the ballot being cast is not by a voter who has already cast one
+			if (ballot.getVoter().equals(vote.getVoter())) {
+				return; //escapes from the method if a duplicate vote is attempted
+			}
+		}
+		
+		Date birthday = ballot.getVoter().getBirthDate();
+		//Add a check to make sure the voter is of age here
+		
+		
+		ballotList.add(ballot); //adds the ballot to the list
+	}
+}
