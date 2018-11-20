@@ -136,6 +136,15 @@ public class RegistrationFormController {
         	try(BufferedWriter regForm = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
            
             submitClicked = true;
+            
+            /*// Show the error message.
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.initOwner(dialogueStage);
+            alert.setTitle("Confirm Information");
+            alert.setHeaderText("Please confirm information");
+            alert.showAndWait();*/
+            
+            
             System.out.println("Form submitted successfully.");
             
             regForm.append(lastNameField.getText() + ", ");
