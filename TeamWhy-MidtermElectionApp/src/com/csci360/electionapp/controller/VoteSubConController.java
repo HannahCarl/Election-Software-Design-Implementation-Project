@@ -33,7 +33,7 @@ public class VoteSubConController {
 
     // Submits ballot and resets System to Login
     public void finalConfirm() throws IOException {
-
+    	
         mainApp.start( mainApp.primaryStage );
 
     }

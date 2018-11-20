@@ -108,19 +108,7 @@ public class LoginVoterController {
 
     public void helpButtonClick(ActionEvent event) throws IOException {
 
-        Stage helpStage;
-        Parent root;
-        if(event.getSource() == helpButton) {
-            root = FXMLLoader.load( getClass().getResource( "view/Instruction_HowToVote.fxml" ) );
-            helpStage = new Stage();
-            helpStage.setScene( new Scene( root ) );
-            helpStage.initModality( Modality.APPLICATION_MODAL );
-            helpStage.initOwner( helpButton.getScene().getWindow() );
-            helpStage.showAndWait();
-        }else {
-            helpStage = (Stage) helpButton.getScene().getWindow();
-            helpStage.close();
-        }
+        mainApp.showHelp();
 
     }
 

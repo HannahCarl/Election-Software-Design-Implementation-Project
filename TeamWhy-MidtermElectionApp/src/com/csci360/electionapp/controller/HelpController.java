@@ -29,7 +29,7 @@ public class HelpController {
 
     public void helpClose(ActionEvent event) throws IOException {
 
-
+    	
 
     }
 
