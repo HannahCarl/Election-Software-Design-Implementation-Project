@@ -7,25 +7,34 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Date;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
-
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
 import com.csci360.electionapp.model.RegisteringSession;
 
-public class RegistrationFormController {
+public class RegistrationFormController implements Initializable{
 	
 	@FXML
     private ChoiceBox usCitizenChoiceBox;
@@ -37,6 +46,12 @@ public class RegistrationFormController {
     private TextField firstNameField;
     @FXML
     private TextField midIntField;
+    @FXML
+    private TextField lastNameField2;
+    @FXML
+    private TextField firstNameField2;
+    @FXML
+    private TextField midIntField2;
     @FXML
     private TextField suffixField;
     @FXML
@@ -76,9 +91,8 @@ public class RegistrationFormController {
     @FXML
     private Button goBackButton;
     @FXML
-    private Label lastNameLabel;
-    @FXML
-    private Label firstNameLabel;
+    private Button continueButton;
+    
     
     
     private Stage dialogueStage;
@@ -86,13 +100,16 @@ public class RegistrationFormController {
     private RegistrantList registrantList;
     private RegisteringSession rSession;
     private boolean submitClicked = false;
+    
 
     private TestDriverRegistrationForm testDriveRegForm;
     
     @FXML
     private void initialize(){
+    	
 	
     }
+    
 
     public void setDialogueStage(Stage dialogueStage){
         this.dialogueStage = dialogueStage;
@@ -111,6 +128,7 @@ public class RegistrationFormController {
     
     @FXML
     private void handleSubmitQuestion(){
+    	
         if (isInputValid()){
         	boolean willAppend = true;
         	try(BufferedWriter regQues = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
@@ -119,8 +137,7 @@ public class RegistrationFormController {
             System.out.println("Questions submitted successfully.");
             
             
-            regQues.append(usCitizenChoiceBox.getValue() + ", ");	
-            regQues.append(ageChoiceBox.getValue() + ", ");
+            
             testDriveRegForm.showForm02Registrant();
         	}
         	catch(IOException ex) {
@@ -131,63 +148,67 @@ public class RegistrationFormController {
     }
     @FXML
     private void handleSubmitForm() throws Exception{
-        if (isInputValid()){
+        if (isInputValidForm()){
         	boolean willAppend = true;
+        	boolean confirmClicked = false;
         	try(BufferedWriter regForm = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
            
             submitClicked = true;
             
-            /*// Show the error message.
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            
+            // Show the error message.
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.initOwner(dialogueStage);
             alert.setTitle("Confirm Information");
             alert.setHeaderText("Please confirm information");
-            alert.showAndWait();*/
             
             
-            System.out.println("Form submitted successfully.");
-            
-            regForm.append(lastNameField.getText() + ", ");
-            regForm.append(firstNameField.getText() + ", ");
-            regForm.append(midIntField.getText() + ", ");
-            regForm.append(suffixField.getText() + ", ");
-            regForm.append(sexChoiceBox.getValue() + ", ");
-            regForm.append(raceChoiceBox.getValue() + ", ");
-            regForm.append(socSecField.getText() + ", ");
-            regForm.append(birthDateField.getText() + ", ");
-            regForm.append(homeAddStreetField.getText() + ", ");
-            regForm.append(homeAddAptNumField.getText() + ", ");
-            regForm.append(homeAddCityField.getText() + ", ");
-            regForm.append(homeAddStateField.getText() + ", ");
-            regForm.append(homeAddZipField.getText() + ", ");
-            regForm.append(mailAddStreetField.getText() + ", ");
-            regForm.append(mailAddAptNumField.getText() + ", ");
-            regForm.append(mailAddCityField.getText() + ", ");
-            regForm.append(mailAddStateField.getText() + ", ");
-            regForm.append(mailAddZipField.getText() + ", ");
-            regForm.append(homePhoneField.getText() + ", ");
-            regForm.append(cellPhoneField.getText());
-            regForm.newLine();
-            
-            	
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+            	testDriveRegForm.showForm03Registrant();
             
             
-            	
-            	
             
-            testDriveRegForm.showForm03Registrant();
+	            System.out.println("Form submitted successfully.");
+	            
+	            
+	            regForm.append(lastNameField.getText() + ", ");
+	            regForm.append(firstNameField.getText() + ", ");
+	            regForm.append(midIntField.getText() + ", ");
+	            regForm.append(suffixField.getText() + ", ");
+	            regForm.append(sexChoiceBox.getValue() + ", ");
+	            regForm.append(raceChoiceBox.getValue() + ", ");
+	            regForm.append(socSecField.getText() + ", ");
+	            regForm.append(birthDateField.getText() + ", ");
+	            regForm.append(homeAddStreetField.getText() + ", ");
+	            regForm.append(homeAddAptNumField.getText() + ", ");
+	            regForm.append(homeAddCityField.getText() + ", ");
+	            regForm.append(homeAddStateField.getText() + ", ");
+	            regForm.append(homeAddZipField.getText() + ", ");
+	            regForm.append(mailAddStreetField.getText() + ", ");
+	            regForm.append(mailAddAptNumField.getText() + ", ");
+	            regForm.append(mailAddCityField.getText() + ", ");
+	            regForm.append(mailAddStateField.getText() + ", ");
+	            regForm.append(mailAddZipField.getText() + ", ");
+	            regForm.append(homePhoneField.getText() + ", ");
+	            regForm.append(cellPhoneField.getText());
+	            regForm.newLine();
             
+            }
             
-        	}
-        	catch(IOException ex) {
+            }
+            catch(IOException ex) {
         		
         	}
+            
+        	}
+        	
 
         }
-    }
+    
     @FXML
     private void handleSubmitInfoConfirm(){
-        if (isInputValid()){
+        
            
             submitClicked = true;
             System.out.println("Info Confirm submitted successfully.");
@@ -195,18 +216,47 @@ public class RegistrationFormController {
             
             testDriveRegForm.showLoginRegistrant();
 
-        }
+        
     }
     
     public boolean isInputValid(){
+    	
         String errorMessage = "";
-        /*if(usCitizenCheckBoxYes.isSelected() == true && usCitizenCheckBoxNo.isSelected() == true ) {
-        	errorMessage += "Please only check Yes or No.\n";
+        
+        if(usCitizenChoiceBox.getValue().toString().equals("No") ) {
+        	
+        	errorMessage += "You must be a citizen to register. Please check with a staff member to continue.\n";
         }
-        if(ageCheckBoxYes.isSelected() == true && ageCheckBoxNo.isSelected() == true ) {
-        	errorMessage += "Please only check Yes or No.\n";
+        if(ageChoiceBox.getValue().toString().equals("No") ) {
+        	errorMessage += "You must be 18 years old to register. Please check with a staff member to continue.\n";
+        	
         }
-        if (firstNameField.getText() == null || firstNameField.getText().length() == 0){
+        
+        
+     
+
+        if (errorMessage.length() == 0) {
+        	
+            return true;
+        } else {
+            // Show the error message.
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.initOwner(dialogueStage);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            return false;
+        }
+    }
+public boolean isInputValidForm(){
+    	
+        String errorMessage = "";
+        
+        
+        /*if (firstNameField.getText() == null || firstNameField.getText().length() == 0){
             errorMessage += "No valid first name provided.\n";
         }
         if (lastNameField.getText() == null || lastNameField.getText().length() == 0){
@@ -252,6 +302,7 @@ public class RegistrationFormController {
      
 
         if (errorMessage.length() == 0) {
+        	
             return true;
         } else {
             // Show the error message.
@@ -266,5 +317,12 @@ public class RegistrationFormController {
             return false;
         }
     }
+
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

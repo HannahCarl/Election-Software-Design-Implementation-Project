@@ -164,7 +164,7 @@ public class TestDriverRegistrationForm extends Application {
         	
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(TestDriverRegistrationForm.class.getResource("view/Registration03_InfoConfirm.fxml"));
+            loader.setLocation(TestDriverRegistrationForm.class.getResource("view/RegistrationConfirmation.fxml"));
             AnchorPane regForm03 = (AnchorPane) loader.load();
 
             // Set form into the center of root layout.
