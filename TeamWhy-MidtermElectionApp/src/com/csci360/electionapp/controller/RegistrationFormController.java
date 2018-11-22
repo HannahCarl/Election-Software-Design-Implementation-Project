@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
@@ -47,12 +48,6 @@ public class RegistrationFormController implements Initializable{
     @FXML
     private TextField midIntField;
     @FXML
-    private TextField lastNameField2;
-    @FXML
-    private TextField firstNameField2;
-    @FXML
-    private TextField midIntField2;
-    @FXML
     private TextField suffixField;
     @FXML
     private ChoiceBox sexChoiceBox;
@@ -69,7 +64,7 @@ public class RegistrationFormController implements Initializable{
     @FXML
     private TextField homeAddCityField;
     @FXML
-    private TextField homeAddStateField;
+    private ChoiceBox homeAddStateChoiceBox;
     @FXML
     private TextField homeAddZipField;
     @FXML
@@ -79,7 +74,7 @@ public class RegistrationFormController implements Initializable{
     @FXML
     private TextField mailAddCityField;
     @FXML
-    private TextField mailAddStateField;
+    private ChoiceBox mailAddStateChoiceBox;
     @FXML
     private TextField mailAddZipField;
     @FXML
@@ -183,12 +178,12 @@ public class RegistrationFormController implements Initializable{
 	            regForm.append(homeAddStreetField.getText() + ", ");
 	            regForm.append(homeAddAptNumField.getText() + ", ");
 	            regForm.append(homeAddCityField.getText() + ", ");
-	            regForm.append(homeAddStateField.getText() + ", ");
+	            regForm.append(homeAddStateChoiceBox.getValue() + ", ");
 	            regForm.append(homeAddZipField.getText() + ", ");
 	            regForm.append(mailAddStreetField.getText() + ", ");
 	            regForm.append(mailAddAptNumField.getText() + ", ");
 	            regForm.append(mailAddCityField.getText() + ", ");
-	            regForm.append(mailAddStateField.getText() + ", ");
+	            regForm.append(mailAddStateChoiceBox.getValue() + ", ");
 	            regForm.append(mailAddZipField.getText() + ", ");
 	            regForm.append(homePhoneField.getText() + ", ");
 	            regForm.append(cellPhoneField.getText());
@@ -256,17 +251,39 @@ public boolean isInputValidForm(){
         String errorMessage = "";
         
         
-        /*if (firstNameField.getText() == null || firstNameField.getText().length() == 0){
+        if (firstNameField.getText() == null || firstNameField.getText().length() == 0){
             errorMessage += "No valid first name provided.\n";
         }
+        if (firstNameField.getText().toString().matches("[a-zA-Z]+") == false) {
+        	errorMessage += "Please enter a first name with letters only and no spaces.\n";
+        }
         if (lastNameField.getText() == null || lastNameField.getText().length() == 0){
-            errorMessage += "No valid last name provided.\n";
+            errorMessage += "No valid first name provided.\n";
+        }
+        if (lastNameField.getText().toString().matches("[a-zA-Z]+") == false) {
+        	errorMessage += "Please enter a last name with letters only and no spaces.\n";
+        }
+        if (midIntField.getText() != null && midIntField.getText().length() != 0){  
+        	if (midIntField.getText().toString().matches("[a-zA-Z]+") == false) {
+	        	errorMessage += "Please enter a middle initial with a letter only and no spaces.\n";
+	        }
+        }
+        if (suffixField.getText() != null && suffixField.getText().length() != 0){ 
+	        if (suffixField.getText().toString().matches("[a-zA-Z]+") == false) {
+	        	errorMessage += "Please enter a suffix with letters only and no spaces.\n";
+	        }
         }
         if (socSecField.getText() == null || socSecField.getText().length() == 0){
-            errorMessage += "No valid social security number.\n";
+            errorMessage += "No valid social security number provided.\n";
+        }
+        if (socSecField.getText().toString().matches("\\d{3}-\\d{2}-\\d{4}") == false){
+            errorMessage += "Please enter a social security formatted 000-00-0000 with numbers only.\n";
         }
         if (birthDateField.getText() == null || birthDateField.getText().length() == 0){
             errorMessage += "No valid birthdate provided.\n";
+        }
+        if(birthDateField.getText().toString().matches("\\d{2}/\\d{2}/\\d{4}") == false) {
+        	errorMessage += "Please enter a birth date formatted 00/00/0000 with numbers only.\n";
         }
         if (homeAddStreetField.getText() == null || homeAddStreetField.getText().length() == 0){
             errorMessage += "No valid home address street provided.\n";
@@ -274,11 +291,15 @@ public boolean isInputValidForm(){
         if (homeAddCityField.getText() == null || homeAddCityField.getText().length() == 0){
             errorMessage += "No valid home address city provided.\n";
         }
-        if (homeAddStateField.getText() == null || homeAddStateField.getText().length() == 0){
-            errorMessage += "No valid home address state provided.\n";
+        if (homeAddCityField.getText().toString().matches("[a-zA-Z]+") == false) {
+        	errorMessage += "Please enter a home address city with letters only and no spaces.\n";
         }
+        
         if (homeAddZipField.getText() == null || homeAddZipField.getText().length() == 0){
             errorMessage += "No valid home address zip code provided.\n";
+        }
+        if (homeAddZipField.getText().toString().matches("\\d{5}") == false){
+            errorMessage += "Please enter a home address zip code formatted 00000 with numbers only.\n";
         }
         if (mailAddStreetField.getText() == null || mailAddStreetField.getText().length() == 0){
             errorMessage += "No valid mailing address street provided.\n";
@@ -286,18 +307,28 @@ public boolean isInputValidForm(){
         if (mailAddCityField.getText() == null || mailAddCityField.getText().length() == 0){
             errorMessage += "No valid mailing address city provided.\n";
         }
-        if (mailAddStateField.getText() == null || mailAddStateField.getText().length() == 0){
-            errorMessage += "No valid mailing address state provided.\n";
+        if (mailAddCityField.getText().toString().matches("[a-zA-Z]+") == false) {
+        	errorMessage += "Please enter a mailing address city with letters only and no spaces.\n";
         }
+        
         if (mailAddZipField.getText() == null || mailAddZipField.getText().length() == 0){
             errorMessage += "No valid mailing address zip code provided.\n";
         }
-        if (homePhoneField.getText() == null || homePhoneField.getText().length() == 0){
-            errorMessage += "No valid home phone number provided.\n";
+        if (mailAddZipField.getText().toString().matches("\\d{5}") == false){
+            errorMessage += "Please enter a mailing address zip code formatted 00000 with numbers only.\n";
+        }
+        if (homePhoneField.getText() == null || homePhoneField.getText().length() == 0){ 
+        	errorMessage += "No valid home phone number provided.\n";
+        }
+        if (homePhoneField.getText().toString().matches("\\d{3}-\\d{3}-\\d{4}") == false){
+            errorMessage += "Please enter a home phone number formatted 000-000-0000 with numbers only.\n";
         }
         if (cellPhoneField.getText() == null || cellPhoneField.getText().length() == 0){
             errorMessage += "No valid cell phone number provided.\n";
-        }*/
+        }
+        if (cellPhoneField.getText().toString().matches("\\d{3}-\\d{3}-\\d{4}") == false){
+            errorMessage += "Please enter a home phone number formatted 000-000-0000 with numbers only.\n";
+        }
         
      
 
