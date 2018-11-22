@@ -30,6 +30,8 @@ public class AdminMenuController {
     @FXML
     private Button back;
     @FXML
+    private Button recount;
+    @FXML
     private Button startRegistrationPeriod;
     @FXML
     private Button endRegistrationPeriod;
