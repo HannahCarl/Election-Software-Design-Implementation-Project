@@ -56,7 +56,11 @@ public class RegistrationFormController implements Initializable{
     @FXML
     private TextField socSecField;
     @FXML
-    private TextField birthDateField;
+    private ChoiceBox birthMonthChoiceBox;
+    @FXML
+    private ChoiceBox birthDayChoiceBox;
+    @FXML
+    private ChoiceBox birthYearChoiceBox;
     @FXML
     private TextField homeAddStreetField;
     @FXML
@@ -146,6 +150,7 @@ public class RegistrationFormController implements Initializable{
         if (isInputValidForm()){
         	boolean willAppend = true;
         	boolean confirmClicked = false;
+        	String birthDate = "";
         	try(BufferedWriter regForm = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
            
             submitClicked = true;
@@ -163,7 +168,9 @@ public class RegistrationFormController implements Initializable{
             	testDriveRegForm.showForm03Registrant();
             
             
-            
+            	birthDate += birthMonthChoiceBox.getValue().toString() + " ";
+            	birthDate += birthDayChoiceBox.getValue().toString() + " ";
+            	birthDate += birthYearChoiceBox.getValue().toString();
 	            System.out.println("Form submitted successfully.");
 	            
 	            
@@ -174,7 +181,7 @@ public class RegistrationFormController implements Initializable{
 	            regForm.append(sexChoiceBox.getValue() + ", ");
 	            regForm.append(raceChoiceBox.getValue() + ", ");
 	            regForm.append(socSecField.getText() + ", ");
-	            regForm.append(birthDateField.getText() + ", ");
+	            regForm.append(birthDate + ", ");
 	            regForm.append(homeAddStreetField.getText() + ", ");
 	            regForm.append(homeAddAptNumField.getText() + ", ");
 	            regForm.append(homeAddCityField.getText() + ", ");
@@ -279,12 +286,7 @@ public boolean isInputValidForm(){
         if (socSecField.getText().toString().matches("\\d{3}-\\d{2}-\\d{4}") == false){
             errorMessage += "Please enter a social security formatted 000-00-0000 with numbers only.\n";
         }
-        if (birthDateField.getText() == null || birthDateField.getText().length() == 0){
-            errorMessage += "No valid birthdate provided.\n";
-        }
-        if(birthDateField.getText().toString().matches("\\d{2}/\\d{2}/\\d{4}") == false) {
-        	errorMessage += "Please enter a birth date formatted 00/00/0000 with numbers only.\n";
-        }
+        
         if (homeAddStreetField.getText() == null || homeAddStreetField.getText().length() == 0){
             errorMessage += "No valid home address street provided.\n";
         }

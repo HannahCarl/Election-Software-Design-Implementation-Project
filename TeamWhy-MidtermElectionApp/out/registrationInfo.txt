@@ -1,6 +1,2 @@
-JimJon, Jonny, , , Male, White, , , , , , , , , , , , , , 
-JohnT, Bob, , , Male, White, , , , , , , , , , , , , , 
-John, Jim, , , Male, White, , , , , , , , , , , , , , 
-John, Bob, , , Male, White, 222-22-2222, 11/22/1999, , , , , , , , , , , , 
-Johny, Timmy, , , Male, White, 111-22-4444, 11/30/2000, 34 Peach Street, 2B, Columbia, SC, 22122, 34 Peach Street, 2B, Columbia, SC, 22122, 333-444-5555, 333-444-5555
-Carlos, Tom, , Jr, Male, Native American, 111-00-0000, 10/12/1990, 12 Rabbit Lane, 1A, Charleston, South Carolina, 11122, 12 Rabbit Lane, 1A, Charleston, South Carolina, 11122, 111-222-2222, 111-222-2222
+Butler, Mary, , , Female, Asian, 222-55-6666, Oct 01 1993, 13 Lane, , Charleston, South Carolina, 55555, 13 Lane, , Charleston, South Carolina, 55555, 111-222-3333, 111-222-3333
+Clooney, George, M, , Male, White, 667-77-9999, Jan 01 1966, 45 George Street, , Charleston, South Carolina, 22222, 45 George Street, , Charleston, South Carolina, 22222, 111-333-9999, 111-444-4444

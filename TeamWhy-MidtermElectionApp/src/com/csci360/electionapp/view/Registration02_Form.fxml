@@ -39,12 +39,11 @@
     <TextField fx:id="suffixField" layoutX="491.0" layoutY="50.0" prefHeight="27.0" prefWidth="69.0" promptText="Suffix" />
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="243.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
     <Label font="$x2" layoutX="261.0" layoutY="86.0" text="Race" />
-    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="16.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" width="175.0" />
-    <Label font="$x2" layoutX="25.0" layoutY="119.0" text="Social Security Number" />
-    <TextField fx:id="socSecField" layoutX="196.0" layoutY="114.0" prefHeight="27.0" prefWidth="114.0" promptText="000-000-0000" />
-    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="315.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-    <Label font="$x2" layoutX="321.0" layoutY="118.0" text="Birthdate" />
-    <TextField fx:id="birthDateField" layoutX="391.0" layoutY="113.0" prefHeight="27.0" prefWidth="168.0" promptText="00/00/0000" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="16.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+    <Label font="$x2" layoutX="21.0" layoutY="119.0" text="Social Security #" />
+    <TextField fx:id="socSecField" layoutX="142.0" layoutY="114.0" prefHeight="27.0" prefWidth="112.0" promptText="000-000-0000" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="259.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+    <Label font="$x2" layoutX="265.0" layoutY="119.0" text="Birthdate" />
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="27.0" layoutX="16.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
     <Label font="$x2" layoutX="26.0" layoutY="149.0" text="Home Address" />
     <TextField fx:id="homeAddStreetField" layoutX="151.0" layoutY="145.0" prefHeight="27.0" prefWidth="304.0" promptText="Street" />
@@ -82,7 +81,7 @@
         	</FXCollections>
     	</items>
     </ChoiceBox>
-      <ChoiceBox fx:id="homeAddStateChoiceBox" layoutX="284.0" layoutY="176.0" prefWidth="150.0" value="South Carolina" >
+      <ChoiceBox fx:id="homeAddStateChoiceBox" layoutX="284.0" layoutY="176.0" prefWidth="150.0" value="South Carolina">
       <items>
         	<FXCollections fx:factory="observableArrayList">
             	<String fx:value="South Carolina" />
@@ -95,6 +94,168 @@
         	<FXCollections fx:factory="observableArrayList">
             	<String fx:value="South Carolina" />
             	
+        	</FXCollections>
+    	</items>
+    </ChoiceBox>
+      <ChoiceBox fx:id="birthMonthChoiceBox" layoutX="334.0" layoutY="114.0" prefHeight="27.0" prefWidth="68.0" value="Jan">
+      <items>
+        	<FXCollections fx:factory="observableArrayList">
+            	<String fx:value="Jan" />
+            	<String fx:value="Feb" />
+            	<String fx:value="Mar" />
+            	<String fx:value="Apr" />
+            	<String fx:value="May" />
+            	<String fx:value="Jun" />
+            	<String fx:value="Jul" />
+            	<String fx:value="Aug" />
+            	<String fx:value="Sep" />
+            	<String fx:value="Oct" />
+            	<String fx:value="Nov" />
+            	<String fx:value="Dec" />
+        	</FXCollections>
+    	</items>
+    </ChoiceBox>
+      <ChoiceBox fx:id="birthDayChoiceBox" layoutX="409.0" layoutY="114.0" prefHeight="27.0" prefWidth="51.0" value="01">
+      <items>
+        	<FXCollections fx:factory="observableArrayList">
+            	<String fx:value="01" />
+            	<String fx:value="02" />
+            	<String fx:value="03" />
+            	<String fx:value="04" />
+            	<String fx:value="05" />
+            	<String fx:value="06" />
+            	<String fx:value="07" />
+            	<String fx:value="08" />
+            	<String fx:value="09" />
+            	<String fx:value="10" />
+            	<String fx:value="11" />
+            	<String fx:value="12" />
+            	<String fx:value="13" />
+            	<String fx:value="14" />
+            	<String fx:value="15" />
+            	<String fx:value="16" />
+            	<String fx:value="17" />
+            	<String fx:value="18" />
+            	<String fx:value="19" />
+            	<String fx:value="20" />
+            	<String fx:value="21" />
+            	<String fx:value="22" />
+            	<String fx:value="23" />
+            	<String fx:value="24" />
+            	<String fx:value="25" />
+            	<String fx:value="26" />
+            	<String fx:value="27" />
+            	<String fx:value="28" />
+            	<String fx:value="29" />
+            	<String fx:value="30" />
+            	<String fx:value="31" />
+        	</FXCollections>
+    	</items>
+    </ChoiceBox>
+      <ChoiceBox fx:id="birthYearChoiceBox" layoutX="467.0" layoutY="114.0" prefHeight="27.0" prefWidth="89.0" value="1900">
+      <items>
+        	<FXCollections fx:factory="observableArrayList">
+            	<String fx:value="1900" />
+            	<String fx:value="1901" />
+            	<String fx:value="1902" />
+            	<String fx:value="1903" />
+            	<String fx:value="1904" />
+            	<String fx:value="1905" />
+            	<String fx:value="1906" />
+            	<String fx:value="1907" />
+            	<String fx:value="1908" />
+            	<String fx:value="1909" />
+            	<String fx:value="1910" />
+            	<String fx:value="1911" />
+            	<String fx:value="1912" />
+            	<String fx:value="1913" />
+            	<String fx:value="1914" />
+            	<String fx:value="1915" />
+            	<String fx:value="1916" />
+            	<String fx:value="1917" />
+            	<String fx:value="1918" />
+            	<String fx:value="1919" />
+            	<String fx:value="1920" />
+            	<String fx:value="1921" />
+            	<String fx:value="1922" />
+            	<String fx:value="1923" />
+            	<String fx:value="1924" />
+            	<String fx:value="1925" />
+            	<String fx:value="1926" />
+            	<String fx:value="1927" />
+            	<String fx:value="1928" />
+            	<String fx:value="1929" />
+            	<String fx:value="1930" />
+            	<String fx:value="1931" />
+            	<String fx:value="1932" />
+            	<String fx:value="1933" />
+            	<String fx:value="1934" />
+            	<String fx:value="1935" />
+            	<String fx:value="1936" />
+            	<String fx:value="1937" />
+            	<String fx:value="1938" />
+            	<String fx:value="1939" />
+            	<String fx:value="1940" />
+            	<String fx:value="1941" />
+            	<String fx:value="1942" />
+            	<String fx:value="1943" />
+            	<String fx:value="1944" />
+            	<String fx:value="1945" />
+            	<String fx:value="1946" />
+            	<String fx:value="1947" />
+            	<String fx:value="1948" />
+            	<String fx:value="1949" />
+            	<String fx:value="1950" />
+            	<String fx:value="1951" />
+            	<String fx:value="1952" />
+            	<String fx:value="1953" />
+            	<String fx:value="1954" />
+            	<String fx:value="1955" />
+            	<String fx:value="1956" />
+            	<String fx:value="1957" />
+            	<String fx:value="1958" />
+            	<String fx:value="1959" />
+            	<String fx:value="1960" />
+            	<String fx:value="1961" />
+            	<String fx:value="1962" />
+            	<String fx:value="1963" />
+            	<String fx:value="1964" />
+            	<String fx:value="1965" />
+            	<String fx:value="1966" />
+            	<String fx:value="1967" />
+            	<String fx:value="1968" />
+            	<String fx:value="1969" />
+            	<String fx:value="1970" />
+            	<String fx:value="1971" />
+            	<String fx:value="1972" />
+            	<String fx:value="1973" />
+            	<String fx:value="1974" />
+            	<String fx:value="1975" />
+            	<String fx:value="1976" />
+            	<String fx:value="1977" />
+            	<String fx:value="1978" />
+            	<String fx:value="1979" />
+            	<String fx:value="1980" />
+            	<String fx:value="1981" />
+            	<String fx:value="1982" />
+            	<String fx:value="1983" />
+            	<String fx:value="1984" />
+            	<String fx:value="1985" />
+            	<String fx:value="1986" />
+            	<String fx:value="1987" />
+            	<String fx:value="1988" />
+            	<String fx:value="1989" />
+            	<String fx:value="1990" />
+            	<String fx:value="1991" />
+            	<String fx:value="1992" />
+            	<String fx:value="1993" />
+            	<String fx:value="1994" />
+            	<String fx:value="1995" />
+            	<String fx:value="1996" />
+            	<String fx:value="1997" />
+            	<String fx:value="1998" />
+            	<String fx:value="1999" />
+            	<String fx:value="2000" />
         	</FXCollections>
     	</items>
     </ChoiceBox>
