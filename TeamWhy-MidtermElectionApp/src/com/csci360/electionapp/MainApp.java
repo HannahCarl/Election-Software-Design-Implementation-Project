@@ -34,6 +34,7 @@ import javafx.stage.Stage;
 import java.awt.Font;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -65,14 +66,17 @@ public class MainApp extends Application {
     	String hashPassword;
     	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
 	    	String line;
+	    	File file = new File("out/salt.txt");
+    		file.delete();
 	    	while ((line = br.readLine()) != null) {
 	    		String[] adminFromList = line.split("[,]");
+	    		
 	    		hashPassword = adminList.generatePasswordID(adminFromList[1].toString());
+	    		
 	    		
 	    		adminList.addAdmin(new Admin(adminFromList[0],hashPassword));
     		
     	}
-    	
     	
     	}
     	catch (NoSuchAlgorithmException e)

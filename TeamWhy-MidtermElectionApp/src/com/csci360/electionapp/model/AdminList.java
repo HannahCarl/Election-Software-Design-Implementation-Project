@@ -2,6 +2,11 @@ package com.csci360.electionapp.model;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 
@@ -22,7 +27,7 @@ public class AdminList {
         boolean adminExists = false;
         String hashID = "";
         try{
-        	hashID = generatePasswordID(id);
+        	hashID = findPasswordID(name,id);
         }
         catch (NoSuchAlgorithmException e) {
         	 e.printStackTrace();
@@ -47,7 +52,7 @@ public class AdminList {
         Admin desiredAdmin = null;
         String hashID = "";
         try{
-        	hashID = generatePasswordID(id);
+        	hashID = findPasswordID(name,id);
         }
         catch (NoSuchAlgorithmException e) {
         	 e.printStackTrace();
@@ -74,8 +79,60 @@ public class AdminList {
     public String generatePasswordID(String password) throws NoSuchAlgorithmException {
     	//byte[] salt = getSalt();
     	String salt = "dog";
+    	boolean willAppend = true;
+    	
+    	try(BufferedWriter saltDoc = new BufferedWriter(new FileWriter("out/salt.txt", willAppend))){
+    		
+    		saltDoc.append(salt);
+    		saltDoc.newLine();
+    	
+    	}
+    	
+    	
+    	catch(IOException ex) {
+    	
+    	ex.printStackTrace();
+		
+		}
     	
     	String securePassword = get_SHA_512_SecurePassword(password, salt);
+    	
+    	return securePassword;
+    }
+    
+    public String findPasswordID(String name, String password) throws NoSuchAlgorithmException {
+    	String salt = "";
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
+	    	String line;
+	    	int counter = 1;
+	    	while ((line = br.readLine()) != null) {
+	    		String[] adminFromList = line.split("[,]");
+	    		if(adminFromList[0] != name) {
+	    			counter += counter;
+	    		}
+    		
+    	}
+	    	try(BufferedReader br2 = new BufferedReader(new FileReader("out/salt.txt"))){
+		    	String line2;
+		    	for(int i = 0; i<counter; i++) {
+		    		line2 = br.readLine();
+		    		salt = line2;
+		    		
+		    	}
+		    	
+		    }
+    	}
+    	
+    	catch(IOException ex) {
+    		ex.printStackTrace();
+    	}
+    	
+    	
+    	String securePassword = get_SHA_512_SecurePassword(password, salt);
+    	
+    	
+    	
     	
     	return securePassword;
     }
@@ -85,7 +142,7 @@ public class AdminList {
     {
     	String generatedPassword = null;
         try {
-            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
             //md.update(salt);
             byte[] bytes = md.digest(passwordToHash.getBytes());
             StringBuilder sb = new StringBuilder();

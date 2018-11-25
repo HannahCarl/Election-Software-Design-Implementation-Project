@@ -200,6 +200,8 @@ public class RegistrationFormController implements Initializable{
             
             }
             catch(IOException ex) {
+            	
+            	ex.printStackTrace();
         		
         	}
             
