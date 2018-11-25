@@ -5,19 +5,38 @@ import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
 import com.csci360.electionapp.model.Admin;
 import com.csci360.electionapp.model.AdminList;
+import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
+import com.csci360.electionapp.model.ResultsDisplay;
+import com.csci360.electionapp.model.MachineDisplay;
+
+
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.awt.Font;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 
 public class MainApp extends Application {
@@ -30,6 +49,11 @@ public class MainApp extends Application {
     private VoterList voterList = new VoterList();
     private RegistrantList registrantList = new RegistrantList();
     private AdminList adminList = new AdminList();
+    private ResultsDisplay resDisplay = new ResultsDisplay("","");
+    private MachineDisplay macDisplay = new MachineDisplay("","");
+    private TableView<ResultsDisplay> tableVotes = new TableView<ResultsDisplay>();
+    private TableView<MachineDisplay> macVotes = new TableView<MachineDisplay>();
+   
 
     public MainApp(){
     	
@@ -38,19 +62,25 @@ public class MainApp extends Application {
     }
     
     public void buildAdminList() {
+    	String hashPassword;
     	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
 	    	String line;
 	    	while ((line = br.readLine()) != null) {
 	    		String[] adminFromList = line.split("[,]");
-	
-	    		adminList.addAdmin(new Admin(adminFromList[0],adminFromList[1]));
+	    		hashPassword = adminList.generatePasswordID(adminFromList[1].toString());
+	    		
+	    		adminList.addAdmin(new Admin(adminFromList[0],hashPassword));
     		
     	}
     	
     	
     	}
+    	catch (NoSuchAlgorithmException e)
+        {
+            e.printStackTrace();
+        }
     	catch(IOException ex) {
-		
+    		ex.printStackTrace();
     	}
     	
     }
@@ -197,24 +227,54 @@ public class MainApp extends Application {
  // Show Election results
 
     public void showViewResults() {
-
-        try {
-        	// Load person overview.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(TestDriverAdmin.class.getResource("view/un_V_tally.fxml"));
-            AnchorPane adminMenuResults = (AnchorPane) loader.load();
-
-            // Set form into the center of root layout.
-            rootLayout.setCenter(adminMenuResults);
-            
-         // Give the controller access to the admin menu
-            AdminMenuController controller = loader.getController();
-            controller.setMainApp(this);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+    	Stage stage = new Stage();
+    	Scene scene = new Scene(new Group());
+    	stage.setTitle("Voting Results");
+    	stage.setWidth(500);
+    	stage.setHeight(400);
+    	//final Label label = new Label("Vote Results");
+    	
+    	ObservableList<ResultsDisplay> resultsArrayList = resDisplay.buildList();
+    	ObservableList<MachineDisplay> machineArrayList = macDisplay.buildList();
+    			
+    	tableVotes.setEditable(true);
+    	macVotes.setEditable(true);
+    	
+    	TableColumn candCol = new TableColumn("Candidate");
+    	candCol.setMinWidth(150);
+    	candCol.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candName"));
+    	
+    	TableColumn candVotesCol = new TableColumn("# of Votes");
+    	candVotesCol.setMinWidth(100);
+    	candVotesCol.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candVotes"));
+    	
+    	TableColumn macCol = new TableColumn("Machine");
+    	macCol.setMinWidth(100);
+    	macCol.setCellValueFactory(new PropertyValueFactory<MachineDisplay, String>("machineNum"));
+    	
+    	TableColumn macVoteCol = new TableColumn("# of Votes");
+    	macVoteCol.setMinWidth(100);
+    	macVoteCol.setCellValueFactory(new PropertyValueFactory<MachineDisplay, String>("machineVotes"));
+    	
+    	tableVotes.getColumns().clear();
+    	macVotes.getColumns().clear();
+    	
+    	tableVotes.setItems(resultsArrayList);
+    	tableVotes.getColumns().addAll(candCol, candVotesCol);
+    	
+    	macVotes.setItems(machineArrayList);
+    	macVotes.getColumns().addAll(macCol,macVoteCol);
+    	
+    	GridPane gridPane = new GridPane();
+    	gridPane.setHgap(10);
+    	gridPane.setVgap(10);
+    	gridPane.add(tableVotes, 0, 0, 1, 1);
+    	gridPane.add(macVotes, 1, 0, 1, 1);
+    	((Group) scene.getRoot()).getChildren().addAll(gridPane);
+    	
+    	stage.setScene(scene);
+    	stage.show();
+    
     }
 
 

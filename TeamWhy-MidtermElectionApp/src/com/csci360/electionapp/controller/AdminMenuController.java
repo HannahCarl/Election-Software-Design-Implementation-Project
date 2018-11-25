@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 
@@ -43,6 +44,10 @@ public class AdminMenuController {
     private Button endVotingPeriod;
     @FXML
     private Button viewResults;
+    @FXML
+    private TableView voteResults;
+    @FXML
+    private TableView totalVotes;
     
     private Stage dialogueStage;
     private AdminList adminList;
@@ -53,6 +58,7 @@ public class AdminMenuController {
     
     private TestDriverAdmin testDriveAdmin;
     private MainApp mainApp;
+    
     
     @FXML
     private void initialize(){
@@ -71,6 +77,8 @@ public class AdminMenuController {
     private void handleViewResults() throws IOException{
         
             viewResultsClicked = true;
+            
+            
             
             mainApp.showViewResults();
 
