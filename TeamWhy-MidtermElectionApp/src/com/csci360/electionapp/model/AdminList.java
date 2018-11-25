@@ -4,6 +4,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -33,6 +35,10 @@ public class AdminList {
         	 e.printStackTrace();
         	
         }
+        catch (IOException e) {
+          	 e.printStackTrace();
+          	
+          }
         //System.out.println(hashID);
 
         for (Admin admin: adminPersonList) {
@@ -58,6 +64,10 @@ public class AdminList {
         	 e.printStackTrace();
         	
         }
+        catch (IOException e) {
+       	 e.printStackTrace();
+       	
+       }
         for (Admin admin: adminPersonList) {
             if (admin.getName().equals(name) && admin.getID().equals(hashID)) {
                 desiredAdmin = admin;
@@ -76,14 +86,20 @@ public class AdminList {
     }
     
     //Hash password
-    public String generatePasswordID(String password) throws NoSuchAlgorithmException {
-    	//byte[] salt = getSalt();
-    	String salt = "dog";
+    public String generatePasswordID(String password) throws NoSuchAlgorithmException, FileNotFoundException {
+    	byte[] salt = getSalt();
+    	
     	boolean willAppend = true;
+    	
+    	
+    	StringBuilder sb = new StringBuilder();
+    	for(byte b : salt) {
+    		sb.append(String.format("%02X", b));
+    	}
     	
     	try(BufferedWriter saltDoc = new BufferedWriter(new FileWriter("out/salt.txt", willAppend))){
     		
-    		saltDoc.append(salt);
+    		saltDoc.append(sb);
     		saltDoc.newLine();
     	
     	}
@@ -95,55 +111,61 @@ public class AdminList {
 		
 		}
     	
+    	
     	String securePassword = get_SHA_512_SecurePassword(password, salt);
     	
     	return securePassword;
     }
     
-    public String findPasswordID(String name, String password) throws NoSuchAlgorithmException {
-    	String salt = "";
+    public String findPasswordID(String name, String password) throws NoSuchAlgorithmException, IOException {
     	
-    	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
+    	//System.out.println(name);
+    	BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"));
 	    	String line;
-	    	int counter = 1;
+	    	int counterA = 1;
+	    	int counterB = 1;
 	    	while ((line = br.readLine()) != null) {
 	    		String[] adminFromList = line.split("[,]");
-	    		if(adminFromList[0] != name) {
-	    			counter += counter;
+	    		//System.out.println("AdminList: " + adminFromList[0]);
+	    		if(adminFromList[0].toString().equals(name)) {
+	    			counterB = counterA;
+	    			
+	    		}
+	    		if(adminFromList[0].toString().equals(name) == false) {
+	    			counterA += 1;
 	    		}
     		
-    	}
-	    	try(BufferedReader br2 = new BufferedReader(new FileReader("out/salt.txt"))){
-		    	String line2;
-		    	for(int i = 0; i<counter; i++) {
-		    		line2 = br.readLine();
-		    		salt = line2;
+	    	}
+	    	//System.out.println("Counter: " + counterB);
+	    BufferedReader br2 = new BufferedReader(new FileReader("out/salt.txt"));
+		    	String line2 = "";
+		    	for(int i = 0; i<counterB; i++) {
 		    		
+		    		line2 = br2.readLine();
+		    		
+		    		//System.out.println(line2);
+	
 		    	}
 		    	
-		    }
-    	}
-    	
-    	catch(IOException ex) {
-    		ex.printStackTrace();
-    	}
-    	
-    	
+		    	byte[] salt = new byte[line2.length() / 2];
+	    		for(int j = 0; j < line2.length(); j+=2 ) {
+	    			int firstDig = Character.digit(line2.substring(j, j+2).charAt(0),16);
+	    			int secondDig = Character.digit(line2.substring(j, j+2).charAt(1),16);
+	    			salt[j/2] = (byte) ((firstDig << 4) + secondDig);
+	    		}
+		    	
+		 
     	String securePassword = get_SHA_512_SecurePassword(password, salt);
-    	
-    	
-    	
     	
     	return securePassword;
     }
     
     //From practice example done in class
-    private static String get_SHA_512_SecurePassword(String passwordToHash, String salt)
-    {
+    private static String get_SHA_512_SecurePassword(String passwordToHash, byte[] salt){
     	String generatedPassword = null;
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
-            //md.update(salt);
+            md.update(salt);
             byte[] bytes = md.digest(passwordToHash.getBytes());
             StringBuilder sb = new StringBuilder();
             for(int i=0; i< bytes.length ;i++)
