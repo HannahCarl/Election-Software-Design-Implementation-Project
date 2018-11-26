@@ -96,7 +96,7 @@ public class AdminList {
     		sb.append(String.format("%02X", b));
     	}
     	
-    	try(BufferedWriter saltDoc = new BufferedWriter(new FileWriter("out/salt.txt", willAppend))){
+    	try(BufferedWriter saltDoc = new BufferedWriter(new FileWriter("out/saltA.txt", willAppend))){
     		
     		saltDoc.append(sb);
     		saltDoc.newLine();
@@ -137,7 +137,7 @@ public class AdminList {
 	    	}
 	    	br.close();
 	    	//System.out.println("Counter: " + counterB);
-	    BufferedReader br2 = new BufferedReader(new FileReader("out/salt.txt"));
+	    BufferedReader br2 = new BufferedReader(new FileReader("out/saltA.txt"));
 		    	String line2 = "";
 		    	for(int i = 0; i<counterB; i++) {
 		    		
