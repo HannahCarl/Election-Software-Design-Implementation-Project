@@ -90,12 +90,12 @@ public class AdminList {
     	
     	boolean willAppend = true;
     	
-    	
+    	//Convert byte array to a Hexadecimal string
     	StringBuilder sb = new StringBuilder();
     	for(byte b : salt) {
     		sb.append(String.format("%02X", b));
     	}
-    	
+    	//Store salt in saltA file
     	try(BufferedWriter saltDoc = new BufferedWriter(new FileWriter("out/saltA.txt", willAppend))){
     		
     		saltDoc.append(sb);
@@ -137,6 +137,8 @@ public class AdminList {
 	    	}
 	    	br.close();
 	    	//System.out.println("Counter: " + counterB);
+	    	
+	    //Extract salt from saltA.txt
 	    BufferedReader br2 = new BufferedReader(new FileReader("out/saltA.txt"));
 		    	String line2 = "";
 		    	for(int i = 0; i<counterB; i++) {
@@ -146,7 +148,7 @@ public class AdminList {
 		    		//System.out.println(line2);
 	
 		    	}
-		    	
+		    	//Convert hexadecimal string back to byte array
 		    	byte[] salt = new byte[line2.length() / 2];
 	    		for(int j = 0; j < line2.length(); j+=2 ) {
 	    			int firstDig = Character.digit(line2.substring(j, j+2).charAt(0),16);
