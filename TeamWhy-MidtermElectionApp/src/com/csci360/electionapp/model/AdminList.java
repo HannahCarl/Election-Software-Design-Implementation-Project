@@ -5,7 +5,6 @@ import java.security.SecureRandom;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -112,7 +111,7 @@ public class AdminList {
 		}
     	
     	
-    	String securePassword = get_SHA_512_SecurePassword(password, salt);
+    	String securePassword = get_SHA_256_SecurePassword(password, salt);
     	
     	return securePassword;
     }
@@ -136,6 +135,7 @@ public class AdminList {
 	    		}
     		
 	    	}
+	    	br.close();
 	    	//System.out.println("Counter: " + counterB);
 	    BufferedReader br2 = new BufferedReader(new FileReader("out/salt.txt"));
 		    	String line2 = "";
@@ -154,14 +154,14 @@ public class AdminList {
 	    			salt[j/2] = (byte) ((firstDig << 4) + secondDig);
 	    		}
 		    	
-		 
-    	String securePassword = get_SHA_512_SecurePassword(password, salt);
+		 br2.close();
+    	String securePassword = get_SHA_256_SecurePassword(password, salt);
     	
     	return securePassword;
     }
-    
-    //From practice example done in class
-    private static String get_SHA_512_SecurePassword(String passwordToHash, byte[] salt){
+    //get_SHA_256_Secure Password
+    //From practice example code done in class, SHAExample.java
+    private static String get_SHA_256_SecurePassword(String passwordToHash, byte[] salt){
     	String generatedPassword = null;
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -181,9 +181,9 @@ public class AdminList {
         return generatedPassword;
         
     }
-    
-    //From example practice code done in class
-  //Add salt
+    //getSalt()
+    //From example practice code done in class, SHAExample.java - used to generate initial salt for Admin hashed password
+    //Add salt
     private static byte[] getSalt() throws NoSuchAlgorithmException
     {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");

@@ -63,29 +63,31 @@ public class MainApp extends Application {
     }
     
     public void buildAdminList() {
-    	String hashPassword;
+    	//String hashPassword;
     	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
 	    	String line;
-	    	File file = new File("out/salt.txt");
-    		file.delete();
+	    	//File file = new File("out/salt.txt");
+    		//file.delete();
 	    	while ((line = br.readLine()) != null) {
 	    		String[] adminFromList = line.split("[,]");
 	    		
-	    		hashPassword = adminList.generatePasswordID(adminFromList[1].toString());
+	    		//hashPassword = adminList.generatePasswordID(adminFromList[1].toString());
+	    		//System.out.println(hashPassword);
 	    		
-	    		
-	    		adminList.addAdmin(new Admin(adminFromList[0],hashPassword));
-    		
+	    		adminList.addAdmin(new Admin(adminFromList[0],adminFromList[1]));
     	}
+	    	
+	    	br.close();
     	
     	}
-    	catch (NoSuchAlgorithmException e)
+    	/*catch (NoSuchAlgorithmException e)
         {
             e.printStackTrace();
-        }
+        }*/
     	catch(IOException ex) {
     		ex.printStackTrace();
     	}
+    	
     	
     }
 
