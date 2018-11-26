@@ -52,7 +52,9 @@ public class MainApp extends Application {
     private AdminList adminList = new AdminList();
     private ResultsDisplay resDisplay = new ResultsDisplay("","");
     private MachineDisplay macDisplay = new MachineDisplay("","");
-    private TableView<ResultsDisplay> tableVotes = new TableView<ResultsDisplay>();
+    private TableView<ResultsDisplay> tableVotesSenate = new TableView<ResultsDisplay>();
+    private TableView<ResultsDisplay> tableVotesHouse = new TableView<ResultsDisplay>();
+    private TableView<ResultsDisplay> tableVotesPresident = new TableView<ResultsDisplay>();
     private TableView<MachineDisplay> macVotes = new TableView<MachineDisplay>();
    
 
@@ -236,23 +238,43 @@ public class MainApp extends Application {
     	Stage stage = new Stage();
     	Scene scene = new Scene(new Group());
     	stage.setTitle("Voting Results");
-    	stage.setWidth(500);
+    	stage.setWidth(1100);
     	stage.setHeight(400);
     	//final Label label = new Label("Vote Results");
     	
-    	ObservableList<ResultsDisplay> resultsArrayList = resDisplay.buildList();
+    	ObservableList<ResultsDisplay> resultsArrayListSenate = resDisplay.buildListSenate();
+    	ObservableList<ResultsDisplay> resultsArrayListHouse = resDisplay.buildListHouse();
+    	ObservableList<ResultsDisplay> resultsArrayListPresident = resDisplay.buildListPresident();
     	ObservableList<MachineDisplay> machineArrayList = macDisplay.buildList();
     			
-    	tableVotes.setEditable(true);
+    	tableVotesSenate.setEditable(true);
+    	tableVotesHouse.setEditable(true);
+    	tableVotesPresident.setEditable(true);
     	macVotes.setEditable(true);
     	
-    	TableColumn candCol = new TableColumn("Candidate");
-    	candCol.setMinWidth(150);
-    	candCol.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candName"));
+    	TableColumn candColSenate = new TableColumn("Senate Candidate");
+    	candColSenate.setMinWidth(150);
+    	candColSenate.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candName"));
     	
-    	TableColumn candVotesCol = new TableColumn("# of Votes");
-    	candVotesCol.setMinWidth(100);
-    	candVotesCol.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candVotes"));
+    	TableColumn candVotesColSenate = new TableColumn("# of Votes");
+    	candVotesColSenate.setMinWidth(100);
+    	candVotesColSenate.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candVotes"));
+    	
+    	TableColumn candColHouse = new TableColumn("House Candidate");
+    	candColHouse.setMinWidth(150);
+    	candColHouse.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candName"));
+    	
+    	TableColumn candVotesColHouse = new TableColumn("# of Votes");
+    	candVotesColHouse.setMinWidth(100);
+    	candVotesColHouse.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candVotes"));
+    	
+    	TableColumn candColPresident = new TableColumn("Presidential Candidate");
+    	candColPresident.setMinWidth(150);
+    	candColPresident.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candName"));
+    	
+    	TableColumn candVotesColPresident = new TableColumn("# of Votes");
+    	candVotesColPresident.setMinWidth(100);
+    	candVotesColPresident.setCellValueFactory(new PropertyValueFactory<ResultsDisplay, String>("candVotes"));
     	
     	TableColumn macCol = new TableColumn("Machine");
     	macCol.setMinWidth(100);
@@ -262,11 +284,19 @@ public class MainApp extends Application {
     	macVoteCol.setMinWidth(100);
     	macVoteCol.setCellValueFactory(new PropertyValueFactory<MachineDisplay, String>("machineVotes"));
     	
-    	tableVotes.getColumns().clear();
+    	tableVotesSenate.getColumns().clear();
+    	tableVotesHouse.getColumns().clear();
+    	tableVotesPresident.getColumns().clear();
     	macVotes.getColumns().clear();
     	
-    	tableVotes.setItems(resultsArrayList);
-    	tableVotes.getColumns().addAll(candCol, candVotesCol);
+    	tableVotesSenate.setItems(resultsArrayListSenate);
+    	tableVotesSenate.getColumns().addAll(candColSenate, candVotesColSenate);
+    	
+    	tableVotesHouse.setItems(resultsArrayListHouse);
+    	tableVotesHouse.getColumns().addAll(candColHouse, candVotesColHouse);
+    	
+    	tableVotesPresident.setItems(resultsArrayListPresident);
+    	tableVotesPresident.getColumns().addAll(candColPresident, candVotesColPresident);
     	
     	macVotes.setItems(machineArrayList);
     	macVotes.getColumns().addAll(macCol,macVoteCol);
@@ -274,8 +304,10 @@ public class MainApp extends Application {
     	GridPane gridPane = new GridPane();
     	gridPane.setHgap(10);
     	gridPane.setVgap(10);
-    	gridPane.add(tableVotes, 0, 0, 1, 1);
-    	gridPane.add(macVotes, 1, 0, 1, 1);
+    	gridPane.add(tableVotesSenate, 0, 0, 1, 1);
+    	gridPane.add(tableVotesHouse, 1, 0, 1, 1);
+    	gridPane.add(tableVotesPresident, 2, 0, 1, 1);
+    	gridPane.add(macVotes, 3, 0, 1, 1);
     	((Group) scene.getRoot()).getChildren().addAll(gridPane);
     	
     	stage.setScene(scene);

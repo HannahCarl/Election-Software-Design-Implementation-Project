@@ -35,9 +35,46 @@ public class ResultsDisplay {
     	candVotes.set(cVotes);
     }
     
-    public ObservableList<ResultsDisplay> buildList(){
+    public ObservableList<ResultsDisplay> buildListSenate(){
     	ObservableList<ResultsDisplay> resultsArrayList = FXCollections.observableArrayList();
-		try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/voteResults.txt"))){
+		try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/voteResultsSenate.txt"))){
+        	String line;
+        	while ((line = br.readLine()) != null) {
+        		String[] resultFromList = line.split("[,]");
+
+        		resultsArrayList.add(new ResultsDisplay(resultFromList[0],resultFromList[1].toString()));
+        		//System.out.println(resultFromList[1]);
+        	}
+        	
+        	
+        }
+        catch(IOException ex) {
+    		
+    	}
+		return resultsArrayList;
+    }
+    public ObservableList<ResultsDisplay> buildListHouse(){
+    	ObservableList<ResultsDisplay> resultsArrayList = FXCollections.observableArrayList();
+		try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/voteResultsHouse.txt"))){
+        	String line;
+        	while ((line = br.readLine()) != null) {
+        		String[] resultFromList = line.split("[,]");
+
+        		resultsArrayList.add(new ResultsDisplay(resultFromList[0],resultFromList[1].toString()));
+        		//System.out.println(resultFromList[1]);
+        	}
+        	
+        	
+        }
+        catch(IOException ex) {
+    		
+    	}
+		return resultsArrayList;
+    }
+    
+    public ObservableList<ResultsDisplay> buildListPresident(){
+    	ObservableList<ResultsDisplay> resultsArrayList = FXCollections.observableArrayList();
+		try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/voteResultsPresident.txt"))){
         	String line;
         	while ((line = br.readLine()) != null) {
         		String[] resultFromList = line.split("[,]");
