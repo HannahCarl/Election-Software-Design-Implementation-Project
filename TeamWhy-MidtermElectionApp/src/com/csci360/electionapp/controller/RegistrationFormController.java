@@ -34,6 +34,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
+import com.csci360.electionapp.model.AESEncryption;
 import com.csci360.electionapp.model.RegisteringSession;
 
 public class RegistrationFormController implements Initializable{
@@ -103,6 +104,7 @@ public class RegistrationFormController implements Initializable{
     
 
     private TestDriverRegistrationForm testDriveRegForm;
+    private AESEncryption aesObject = new AESEncryption();
     private MainApp mainApp;
     
     @FXML
@@ -159,6 +161,24 @@ public class RegistrationFormController implements Initializable{
         if (isInputValidForm()){
         	boolean willAppend = true;
         	boolean confirmClicked = false;
+        	String encryptedLastName = "";
+        	String encryptedFirstName = "";
+        	String encryptedSocialSecurity = "";
+        	String encryptedBirthDate = "";
+        	String encryptedHomeAddStreet = "";
+        	String encryptedHomeAptNum = "";
+        	String encryptedHomeCity = "";
+        	String encryptedHomeState = "";
+        	String encryptedHomeZip = "";
+        	String encryptedMailAddStreet = "";
+        	String encryptedMailAptNum = "";
+        	String encryptedMailCity = "";
+        	String encryptedMailState = "";
+        	String encryptedMailZip = "";
+        	String encryptedHomePhone = "";
+        	String encryptedCellPhone = "";
+        	
+        	final String secretKey = "Registrant2018AZTREQW";
         	String birthDate = "";
         	try(BufferedWriter regForm = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
            
@@ -171,38 +191,57 @@ public class RegistrationFormController implements Initializable{
             alert.setTitle("Confirm Information");
             alert.setHeaderText("Please confirm information");
             
-            
+            //Confirmation message
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
             	mainApp.showForm03Registrant();
             
-            
+            	//Format birthdate to one string
             	birthDate += birthMonthChoiceBox.getValue().toString() + " ";
             	birthDate += birthDayChoiceBox.getValue().toString() + " ";
             	birthDate += birthYearChoiceBox.getValue().toString();
 	            System.out.println("Form submitted successfully.");
 	            
+	            //Encrypt personal information
+	            encryptedLastName = AESEncryption.encrypt(lastNameField.getText().toString(), secretKey);
+	            encryptedFirstName = AESEncryption.encrypt(firstNameField.getText().toString(), secretKey);
+	            encryptedSocialSecurity = AESEncryption.encrypt(socSecField.getText().toString(), secretKey);
+	            encryptedHomeAddStreet = AESEncryption.encrypt(homeAddStreetField.getText().toString(), secretKey);
+	            encryptedHomeAptNum = AESEncryption.encrypt(homeAddAptNumField.getText().toString(), secretKey);
+	            encryptedHomeCity = AESEncryption.encrypt(homeAddCityField.getText().toString(), secretKey);
+	            encryptedHomeState = AESEncryption.encrypt(homeAddStateChoiceBox.getValue().toString(), secretKey);
+	            encryptedHomeZip = AESEncryption.encrypt(homeAddZipField.getText().toString(), secretKey);
+	            encryptedMailAddStreet = AESEncryption.encrypt(mailAddStreetField.getText().toString(), secretKey);
+	            encryptedMailAptNum = AESEncryption.encrypt(mailAddAptNumField.getText().toString(), secretKey);
+	            encryptedMailCity = AESEncryption.encrypt(mailAddCityField.getText().toString(), secretKey);
+	            encryptedMailState = AESEncryption.encrypt(mailAddStateChoiceBox.getValue().toString(), secretKey);
+	            encryptedMailZip = AESEncryption.encrypt(mailAddZipField.getText().toString(), secretKey);
+	            encryptedHomePhone = AESEncryption.encrypt(homePhoneField.getText().toString(), secretKey);
+	            encryptedCellPhone = AESEncryption.encrypt(cellPhoneField.getText().toString(), secretKey);
+	            encryptedBirthDate = AESEncryption.encrypt(birthDate, secretKey);
 	            
-	            regForm.append(lastNameField.getText() + ", ");
-	            regForm.append(firstNameField.getText() + ", ");
+	            
+	            //Add information to registration form
+	            regForm.append(encryptedLastName + ", ");
+	            regForm.append(encryptedFirstName + ", ");
 	            regForm.append(midIntField.getText() + ", ");
 	            regForm.append(suffixField.getText() + ", ");
 	            regForm.append(sexChoiceBox.getValue() + ", ");
 	            regForm.append(raceChoiceBox.getValue() + ", ");
-	            regForm.append(socSecField.getText() + ", ");
-	            regForm.append(birthDate + ", ");
-	            regForm.append(homeAddStreetField.getText() + ", ");
-	            regForm.append(homeAddAptNumField.getText() + ", ");
-	            regForm.append(homeAddCityField.getText() + ", ");
-	            regForm.append(homeAddStateChoiceBox.getValue() + ", ");
-	            regForm.append(homeAddZipField.getText() + ", ");
-	            regForm.append(mailAddStreetField.getText() + ", ");
-	            regForm.append(mailAddAptNumField.getText() + ", ");
-	            regForm.append(mailAddCityField.getText() + ", ");
-	            regForm.append(mailAddStateChoiceBox.getValue() + ", ");
-	            regForm.append(mailAddZipField.getText() + ", ");
-	            regForm.append(homePhoneField.getText() + ", ");
-	            regForm.append(cellPhoneField.getText());
+	            regForm.append(encryptedSocialSecurity + ", ");
+	            regForm.append(encryptedBirthDate + ", ");
+	            regForm.append(encryptedHomeAddStreet + ", ");
+	            regForm.append(encryptedHomeAptNum + ", ");
+	            regForm.append(encryptedHomeCity + ", ");
+	            regForm.append(encryptedHomeState + ", ");
+	            regForm.append(encryptedHomeZip + ", ");
+	            regForm.append(encryptedMailAddStreet + ", ");
+	            regForm.append(encryptedMailAptNum + ", ");
+	            regForm.append(encryptedMailCity + ", ");
+	            regForm.append(encryptedMailState + ", ");
+	            regForm.append(encryptedMailZip + ", ");
+	            regForm.append(encryptedHomePhone + ", ");
+	            regForm.append(encryptedCellPhone);
 	            regForm.newLine();
             
             }
