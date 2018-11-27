@@ -1,5 +1,0 @@
-smithJ,123ABC
-fanningD,111BBB
-ferrelW,222WWW
-kutcherA,333QWE
-pittB,456uiY
