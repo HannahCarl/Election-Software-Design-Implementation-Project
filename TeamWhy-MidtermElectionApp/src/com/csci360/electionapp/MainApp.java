@@ -123,6 +123,11 @@ public class MainApp extends Application {
     public void setVoter(Voter voter) {
     	this.voter = voter;
     }
+    
+    public Voter getVoter() {
+    	return this.voter;
+    }
+
 
     public VoterList getVoterList() {
         return voterList;
