@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
+import com.csci360.electionapp.model.AESEncryption;
 import com.csci360.electionapp.model.RegisteringSession;
 
 public class LoginRegistrantController {
@@ -76,6 +77,11 @@ public class LoginRegistrantController {
     }
 
     private boolean isInputValid(){
+    	final String secretKey = "Registrant2018AZTREQW";
+    	String encryptedFirstName = AESEncryption.encrypt(firstNameField.getText().toString(), secretKey);
+    	String encryptedLastName = AESEncryption.encrypt(lastNameField.getText().toString(), secretKey);
+    	String encryptedSocSecNum = AESEncryption.encrypt(socSecField.getText().toString(), secretKey);
+    	
         String errorMessage = "";
         if (firstNameField.getText() == null || firstNameField.getText().length() == 0){
             errorMessage += "No valid first name provided.\n";
@@ -87,7 +93,7 @@ public class LoginRegistrantController {
             errorMessage += "No valid social security number.\n";
         }
 
-        if (errorMessage.length() == 0 && (!registrantList.checkForRegistrant(firstNameField.getText(),lastNameField.getText(),socSecField.getText()))){
+        if (errorMessage.length() == 0 && (!registrantList.checkForRegistrant(encryptedFirstName,encryptedLastName,encryptedSocSecNum))){
             errorMessage += "Invalid login.\n";
         }
 
