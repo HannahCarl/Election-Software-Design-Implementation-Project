@@ -6,6 +6,7 @@ import com.csci360.electionapp.model.VoterList;
 import com.csci360.electionapp.model.Admin;
 import com.csci360.electionapp.model.AdminList;
 import com.csci360.electionapp.model.Ballot;
+import com.csci360.electionapp.model.Candidate;
 import com.csci360.electionapp.model.Election;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
@@ -42,6 +43,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class MainApp extends Application {
@@ -68,6 +70,7 @@ public class MainApp extends Application {
     	
     	buildAdminList();
     	buildRegistrantList();
+    	buildElection();
     	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     }
     
@@ -118,15 +121,57 @@ public class MainApp extends Application {
     	
     }
     
-  //setter for mainapp's voter object
+    //setter for mainapp's voter object
     public void setVoter(Voter voter) {
     	this.voter = voter;
     }
-    
+    //getter for when ballot is created  
     public Voter getVoter() {
     	return this.voter;
     }
-
+    
+    //setter for mainapp's ballot object, used for voting
+    public void setBallot(Ballot ballot) {
+    	this.ballot = ballot;
+    }
+    
+    //getter for when ballot is created
+    public Ballot getBallot() {
+    	return this.ballot;
+    }
+  
+    //builder for the election fills in the list of candidates and things being run for as well as just acting as a thing to store the ballots cast
+    //Grasp - Creator
+    public void buildElection() {
+    	this.election = new Election();
+    	
+    	//creating the list of candidates for the first race (President)
+    	ArrayList<Candidate> presList = new ArrayList<Candidate>();
+    	presList.add(new Candidate("John Adams", "1", "Independence", "George Washington"));
+    	presList.add(new Candidate("Barack Obama", "2", "Democrat", "Joe Biden"));
+    	presList.add(new Candidate("Thomas Jefferson", "3", "Liberty", "Alexander Hamilton"));
+    	presList.add(new Candidate("Richard Nixon", "4", "Republican", "John Dole"));
+    	
+    	//creating the list of candidates for the second race (Senate)
+    	ArrayList<Candidate> senList = new ArrayList<Candidate>();
+    	senList.add(new Candidate("Tim Scott","1","Republican"));
+    	senList.add(new Candidate("Thomas Dixon","2","Democrat"));
+    	senList.add(new Candidate("Bill Bledsoe","3","Green"));
+    	senList.add(new Candidate("Rebel Scarborough","4","Libertarian"));
+    	
+    	//creating the list of candidates for the third race (House)
+    	ArrayList<Candidate> houseList = new ArrayList<Candidate>();
+    	houseList.add(new Candidate("Joe Cunningham","1","Democrat"));
+    	houseList.add(new Candidate("Katie Arrington","2","Republican"));
+    	houseList.add(new Candidate("Sean Carrigan","3","Green"));
+    	houseList.add(new Candidate("Joe Wilson","4","Libertarian"));
+    	
+    	//Adding the fields with their list of candidates
+    	election.addField("President", presList);
+    	election.addField("Senate", senList);
+    	election.addField("House", houseList);
+    	
+    }
 
     public VoterList getVoterList() {
         return voterList;

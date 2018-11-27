@@ -18,17 +18,10 @@ public class Election {
 	//A list to hold the results
 	private ArrayList<Ballot> ballotList;
 	
-	//date of the election
-	private Date date;
-	
-	public Election() {
-		
-	}
 	
 	//Constructor for the election
 	//GRASP - Creator
-	public Election(Date date) {
-		this.date = date;
+	public Election() {
 		this.titleList = new ArrayList<String>();
 		this.selectionList = new ArrayList<ArrayList<Candidate>>();
 		this.ballotList = new ArrayList<Ballot>();
@@ -115,10 +108,9 @@ public class Election {
 		return returnList;
 	}
 	
-	//INCOMPLETE
-	//A method for ending the election, setting it to finished after recording the results to an encrypted file
+	//A method for recording the election, adding the tallied results to a cvs file
 	//GRASP - Creator
-	public void endElection() {
+	public void exportResults() {
 		
 		int totalVotes = 0;
 		
