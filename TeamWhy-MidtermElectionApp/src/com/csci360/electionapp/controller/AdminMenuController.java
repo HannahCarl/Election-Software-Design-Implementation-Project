@@ -55,9 +55,11 @@ public class AdminMenuController {
     private boolean logOutClicked = false;
     private boolean viewResultsClicked = false;
     private boolean backClicked = false;
+    public boolean registrationInProgress = false;
     
     private TestDriverAdmin testDriveAdmin;
     private MainApp mainApp;
+    private AdminLoginController adminLogCont = new AdminLoginController();
     
     
     @FXML
@@ -68,11 +70,34 @@ public class AdminMenuController {
     private void handleLogOut() throws IOException{
         
             logOutClicked = true;
-            //System.out.println("Logout successful.");
-            mainApp.showAdminLogin();
+            backClicked = true;
+            
+        	if(registrationInProgress==true) {
+        		mainApp.showLoginRegistrant();
+        	}
+        	else {
+                
+        		mainApp.showAdminLogin();
+        	}
+            
+            
 
         
     }
+    @FXML
+    private void handleStartRegistration() throws IOException{
+    	registrationInProgress=true;
+    	adminLogCont.setRegistrationStatus(registrationInProgress);
+    	
+    	
+    	
+    }
+    @FXML
+    private void handleEndRegistration() throws IOException{
+    	registrationInProgress=false;
+    	adminLogCont.setRegistrationStatus(registrationInProgress);
+    }
+    
     @FXML
     private void handleViewResults() throws IOException{
         

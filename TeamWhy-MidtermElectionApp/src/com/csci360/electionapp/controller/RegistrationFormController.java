@@ -146,7 +146,7 @@ public class RegistrationFormController implements Initializable{
             
             
             
-            testDriveRegForm.showForm02Registrant();
+            mainApp.showForm02Registrant();
         	}
         	catch(IOException ex) {
         		
@@ -174,7 +174,7 @@ public class RegistrationFormController implements Initializable{
             
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
-            	testDriveRegForm.showForm03Registrant();
+            	mainApp.showForm03Registrant();
             
             
             	birthDate += birthMonthChoiceBox.getValue().toString() + " ";
@@ -227,7 +227,7 @@ public class RegistrationFormController implements Initializable{
             System.out.println("Info Confirm submitted successfully.");
             
             
-            testDriveRegForm.showLoginRegistrant();
+            mainApp.showLoginRegistrant();
 
         
     }

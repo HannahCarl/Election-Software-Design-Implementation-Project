@@ -40,6 +40,7 @@ public class AdminLoginController {
     private AdminSession aSession;
     private boolean submitClicked = false;
     private boolean backClicked = false;
+    public boolean registrationInProgress;
 
     private TestDriverAdmin testDriveAdmin;
     private MainApp mainApp;
@@ -47,9 +48,19 @@ public class AdminLoginController {
     @FXML
     private void initialize(){
     }
+    
+    public AdminLoginController() {
+    	
+    }
 
     public void setDialogueStage(Stage dialogueStage){
         this.dialogueStage = dialogueStage;
+    }
+    
+    public void setRegistrationStatus(boolean regStatus) {
+    	this.registrationInProgress = regStatus;
+    	
+    	System.out.println("Set Reg called, regInProgress: " + registrationInProgress);
     }
 
     public void setTestDriverAdmin(TestDriverAdmin tesDrAdForm) {
@@ -82,10 +93,15 @@ public class AdminLoginController {
     }
     @FXML
     private void handleBack() throws IOException{
+    	backClicked = true;
         
-            backClicked = true;
-            //System.out.println("Back successful.");
+    	if(registrationInProgress==true) {
+    		mainApp.showLoginRegistrant();
+    	}
+    	else {
+            
             mainApp.showLoginVoter();
+    	}
 
         
     }

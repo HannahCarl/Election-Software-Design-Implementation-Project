@@ -1,5 +1,7 @@
 package com.csci360.electionapp.controller;
 
+import java.io.IOException;
+
 import com.csci360.electionapp.MainApp;
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
@@ -22,6 +24,9 @@ public class LoginRegistrantController {
     private TextField socSecField;
     @FXML
     private Button submitButton;
+    
+    @FXML
+    private Button adminButton;
     
     private Stage dialogueStage;
     private Registrant registrant;
@@ -64,7 +69,7 @@ public class LoginRegistrantController {
 
             submitClicked = true;
             System.out.println("Login successful.");
-            testDriveRegForm.showForm01Registrant();
+            mainApp.showForm01Registrant();
 
         }
     }
@@ -99,6 +104,11 @@ public class LoginRegistrantController {
 
             return false;
         }
+    }
+    public void adminBClick () throws IOException {
+
+        mainApp.showAdminLogin();
+
     }
 
 

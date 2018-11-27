@@ -31,9 +31,9 @@
           </font>
         </Button>
         <Button id="admMenuB" fx:id="viewResults" font="$x1" layoutX="342.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleViewResults" prefHeight="66.0" prefWidth="159.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true" />
-        <Button id="admMenuB" fx:id="startRegistrationPeriod" font="$x1" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" text="Start Registration Period" textAlignment="CENTER" wrapText="true" />
+        <Button id="admMenuB" fx:id="startRegistrationPeriod" font="$x1" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleStartRegistration" prefHeight="66.0" prefWidth="159.0" text="Start Registration Period" textAlignment="CENTER" wrapText="true" />
         <Button id="admMenuB" fx:id="endVotingPeriod" font="$x1" layoutX="178.0" layoutY="157.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" text="End Voting Period" textAlignment="CENTER" wrapText="true" />
-            <Button id="admMenuB" fx:id="endRegistrationPeriod" layoutX="178.0" layoutY="77.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="159.0" style="&#10;" text="End Registration Period" textAlignment="CENTER" wrapText="true">
+            <Button id="admMenuB" fx:id="endRegistrationPeriod" layoutX="178.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleEndRegistration" prefHeight="66.0" prefWidth="159.0" style="&#10;" text="End Registration Period" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="14.0" fx:id="x11" />
                </font>
