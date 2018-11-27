@@ -27,11 +27,5 @@ public class HelpController {
         this.mainApp = mainApp;
     }
 
-    public void helpClose(ActionEvent event) throws IOException {
-
-    	
-
-    }
-
 
 }

@@ -13,11 +13,6 @@
   <children>
     <Rectangle arcHeight="0.0" arcWidth="0.0" fill="#005a66" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
     <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#dfdfdf" height="81.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="572.0" />
-    <Button id="helpCloseB" fx:id="close" layoutX="473.0" layoutY="35.0" mnemonicParsing="false" onAction="#helpClose" text="Close">
-      <font>
-        <Font size="22.0" fx:id="x3" />
-      </font>
-    </Button>
     <Label layoutX="165.0" layoutY="32.0" text="Voting Instruction">
       <font>
         <Font size="34.0" />
@@ -37,7 +32,11 @@
     </Label>
     <Label font="$x2" layoutX="261.0" layoutY="114.0" text="Step 2" />
     <Label font="$x2" layoutX="458.0" layoutY="114.0" text="Step 3" />
-    <Label font="$x3" layoutX="44.0" layoutY="154.0" text="Review your" />
+    <Label layoutX="44.0" layoutY="154.0" text="Review your">
+      <font>
+        <Font size="22.0" fx:id="x3" />
+      </font>
+    </Label>
     <Label font="$x3" layoutX="63.0" layoutY="177.0" text="Choices" />
     <Label font="$x3" layoutX="248.0" layoutY="154.0" text="Make Your" />
     <Label font="$x3" layoutX="255.0" layoutY="177.0" text="Selection" />
