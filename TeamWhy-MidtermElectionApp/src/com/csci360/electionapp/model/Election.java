@@ -1,5 +1,9 @@
 package com.csci360.electionapp.model;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -112,9 +116,148 @@ public class Election {
 	}
 	
 	//INCOMPLETE
-	//A method for ending the election, setting it to null after recording the results to an encrypted file
+	//A method for ending the election, setting it to finished after recording the results to an encrypted file
 	//GRASP - Creator
 	public void endElection() {
 		
+		int totalVotes = 0;
+		
+		//initializes the list of presidential candidates that received votes, and initializes their tally to 0 
+		ArrayList<Candidate> presidentCandidates = selectionList.get(0);
+		ArrayList<Integer> presidentTally = new ArrayList<Integer>();
+		
+		for (int i = 0; i < presidentCandidates.size(); i++) {
+			presidentTally.add(0);
+		}
+		
+		//initializes the list of senate candidates that received votes, and initializes their tally to 0 
+		ArrayList<Candidate> senateCandidates = selectionList.get(1);
+		ArrayList<Integer> senateTally = new ArrayList<Integer>();
+				
+		for (int i = 0; i < senateCandidates.size(); i++) {
+			senateTally.add(0);
+		}
+		
+		//initializes the list of house candidates that received votes, and initializes their tally to 0 
+		ArrayList<Candidate> houseCandidates = selectionList.get(2);
+		ArrayList<Integer> houseTally = new ArrayList<Integer>();
+						
+		for (int i = 0; i < houseCandidates.size(); i++) {
+			houseTally.add(0);
+		}
+		
+		for (Ballot vote : ballotList) {
+			ArrayList<Candidate> voteList = vote.getVoteList();
+			
+			//adds the vote to the presidential tally
+			Candidate presVote = voteList.get(0);
+			
+			boolean presCanExists = false; // used to check if the candidate is in the list already, useful for write in functionality
+			int presCounter = 0; //counter to make sure the candidates list lines up with their tallies
+			for (Candidate candidate: presidentCandidates) {
+				if (candidate.getCandidateName().equals(presVote.getCandidateName())) { //this checks if the candidate is on the list already
+					presCanExists = true;
+					presidentTally.set(presCounter, presidentTally.get(presCounter) + 1); //adds one to the vote number for the candidate
+				}
+				presCounter++;
+			}
+			
+			if (presCanExists == false) { //if they didnt exist this will add them to the list and add the vote they just received
+				presidentCandidates.add(presVote);
+				presidentTally.add(1);
+			}
+			
+			//adds the vote to the senate tally
+			Candidate senVote = voteList.get(1);
+			
+			boolean senCanExists = false; // used to check if the candidate is in the list already, useful for write in functionality
+			int senCounter = 0; //counter to make sure the candidates list lines up with their tallies
+			for (Candidate candidate: senateCandidates) {
+				if (candidate.getCandidateName().equals(senVote.getCandidateName())) { //this checks if the candidate is on the list already
+					senCanExists = true;
+					senateTally.set(senCounter, senateTally.get(senCounter) + 1); //adds one to the vote number for the candidate
+				}
+				presCounter++;
+			}
+			
+			if (senCanExists == false) { //if they didnt exist this will add them to the list and add the vote they just received
+				senateCandidates.add(presVote);
+				senateTally.add(1);
+			}
+			
+			//adds the vote to the house tally
+			Candidate houseVote = voteList.get(2);
+			
+			boolean houseCanExists = false; // used to check if the candidate is in the list already, useful for write in functionality
+			int houseCounter = 0; //counter to make sure the candidates list lines up with their tallies
+			for (Candidate candidate: houseCandidates) {
+				if (candidate.getCandidateName().equals(houseVote.getCandidateName())) { //this checks if the candidate is on the list already
+					houseCanExists = true;
+					houseTally.set(houseCounter, houseTally.get(presCounter) + 1); //adds one to the vote number for the candidate
+				}
+				houseCounter++;
+			}
+			
+			if (houseCanExists == false) { //if they didnt exist this will add them to the list and add the vote they just received
+				houseCandidates.add(presVote);
+				houseTally.add(1);
+			}
+			
+			//adds to the total votes
+			totalVotes++;
+			
+			try{
+				File presFile = new File("src/com/csci360/electionapp/input/presidentResults.txt");
+				File senFile = new File("src/com/csci360/electionapp/input/senateResults.txt");
+				File houseFile = new File("src/com/csci360/electionapp/input/houseResults.txt");
+				File totalFile = new File("src/com/csci360/electionapp/input/totalVoteCounts.txt");
+			
+				presFile.delete();
+				senFile.delete();
+				houseFile.delete();
+				
+				totalFile.delete();
+				
+				//outputs the president results into a results file
+				BufferedWriter presWriter = new BufferedWriter(new FileWriter(presFile));
+				
+				for (int i = 0; i < presidentCandidates.size(); i++) {
+					presWriter.append(presidentCandidates.get(i) + ", " + presidentTally.get(i));
+					presWriter.newLine();
+				}
+				presWriter.close();
+				
+				//outputs the senate results to a results file
+				BufferedWriter senWriter = new BufferedWriter(new FileWriter(senFile));
+				
+				for (int i = 0; i < senateCandidates.size(); i++) {
+					senWriter.append(senateCandidates.get(i) + ", " + senateTally.get(i));
+					senWriter.newLine();
+				}
+				senWriter.close();
+				
+				//outputs the house results into a results file
+				BufferedWriter houseWriter = new BufferedWriter(new FileWriter(houseFile));
+				
+				for (int i = 0; i < houseCandidates.size(); i++) {
+					houseWriter.append(houseCandidates.get(i) + ", " + houseTally.get(i));
+					houseWriter.newLine();
+				}
+				houseWriter.close();
+				
+				//outputs the final result
+				BufferedWriter totalWriter = new BufferedWriter(new FileWriter(totalFile));
+				totalWriter.append("1, " + totalVotes);
+				
+				totalWriter.close();
+				
+				//be sure to either reinitialize election or what have after calling this to record results
+			}
+			catch (IOException ex) {
+				ex.printStackTrace();
+			}
+			
+			
+		}
 	}
 }
