@@ -5,6 +5,8 @@ import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
 import com.csci360.electionapp.model.Admin;
 import com.csci360.electionapp.model.AdminList;
+import com.csci360.electionapp.model.Ballot;
+import com.csci360.electionapp.model.Election;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
 import com.csci360.electionapp.model.ResultsDisplay;
@@ -49,6 +51,9 @@ public class MainApp extends Application {
     private BorderPane rootLayout;
     private BorderPane helpLayout;
 
+    private Voter voter;
+    private Ballot ballot;
+    private Election election;
     private VoterList voterList = new VoterList();
     private RegistrantList registrantList = new RegistrantList();
     private AdminList adminList = new AdminList();
@@ -112,6 +117,11 @@ public class MainApp extends Application {
     		
     	}
     	
+    }
+    
+  //setter for mainapp's voter object
+    public void setVoter(Voter voter) {
+    	this.voter = voter;
     }
 
     public VoterList getVoterList() {

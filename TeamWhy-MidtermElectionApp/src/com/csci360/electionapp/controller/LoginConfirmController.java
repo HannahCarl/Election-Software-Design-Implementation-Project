@@ -16,7 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
-import com.csci360.electionapp.model.VotingSession;
+
 
 import java.io.IOException;
 

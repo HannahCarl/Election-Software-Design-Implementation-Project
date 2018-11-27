@@ -16,7 +16,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
-import com.csci360.electionapp.model.VotingSession;
+
 
 import java.io.IOException;
 
@@ -34,9 +34,8 @@ public class LoginVoterController {
     private Button adminMenu;
 
     private Stage dialogueStage;
-    private Voter voter;
+    //private Voter voter;
     private VoterList voterList;
-    private VotingSession session;
     private boolean submitClicked = false;
 
     private MainApp mainApp;
@@ -61,14 +60,17 @@ public class LoginVoterController {
     }
 
     @FXML
-    private void handleSubmit(  ) throws  IOException {
+    private void handleSubmit() throws  IOException {
         if (isInputValid()){
-                session = new VotingSession(voterIDField.getText(),socSecField.getText(),voterList);
+                Voter voter = voterList.getVoterByLoginInfo(voterIDField.getText(),socSecField.getText());
 
                 submitClicked = true;
                 System.out.println("Login successful.");
+                
+                //sends the voter to the mainapp for later use
+                mainApp.setVoter(voter);
 
-                // After Log in conformation Sends user to can_select ---- Levi ----
+                // After Log in confirmation Sends user to can_select ---- Levi ----
                 mainApp.showLoginConfirm();
 
             }
