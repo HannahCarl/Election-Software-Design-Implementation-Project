@@ -51,6 +51,7 @@ public class CanSelectController {
         this.mainApp = mainApp;
     }
 
+    // ------------- P ---------------
     public void select_canidate_1 () throws IOException {
 
         //ADD Information to pass to ballot class
@@ -79,6 +80,73 @@ public class CanSelectController {
 
     }
     public void select_canidate_writeIn () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    
+ // ------------- Senate ---------------
+    public void select_canidate_S_1 () throws IOException {
+
+        //ADD Information to pass to ballot class
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_S_2 () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_S_3 () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_S_4 () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_S_5 () throws IOException {
+
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_S_writeIn () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+ // ------------- House ---------------
+    public void select_canidate_H_1 () throws IOException {
+
+        //ADD Information to pass to ballot class
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_H_2 () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_H_3 () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_H_4 () throws IOException {
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_H_5 () throws IOException {
+
+
+        mainApp.showSingleVConfirm();
+
+    }
+    public void select_canidate_H_writeIn () throws IOException {
 
         mainApp.showSingleVConfirm();
 

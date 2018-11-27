@@ -49,7 +49,6 @@ public class MainApp extends Application {
     public Stage primaryStage; // Changed to Public ---- Levi ----
     public Stage helpStage;
     private BorderPane rootLayout;
-    private BorderPane helpLayout;
 
     private Voter voter;
     private Ballot ballot;
@@ -352,12 +351,53 @@ public class MainApp extends Application {
     }
 
 
-    // Show Can_select_ui on Submit ---- Levi ----
-    public void showCanSelect() throws IOException {
+    // Show president select_ui on Submit ---- Levi ----
+    public void showPselect() throws IOException {
         try {
             // Load person overview.
             FXMLLoader can_select_loader = new FXMLLoader();
-            can_select_loader.setLocation( MainApp.class.getResource( "view/can_select_ui.fxml" ) );
+            can_select_loader.setLocation( MainApp.class.getResource( "view/p_select_ui.fxml" ) );
+            AnchorPane canSelect = can_select_loader.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( canSelect );
+
+            // Give the controller access to the main app.
+            CanSelectController controller = can_select_loader.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
+ // Show senate select_ui on Submit ---- Levi ----
+    public void showSselect() throws IOException {
+        try {
+            // Load person overview.
+            FXMLLoader can_select_loader = new FXMLLoader();
+            can_select_loader.setLocation( MainApp.class.getResource( "view/sen_select_ui.fxml" ) );
+            AnchorPane canSelect = can_select_loader.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( canSelect );
+
+            // Give the controller access to the main app.
+            CanSelectController controller = can_select_loader.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+ // Show house select_ui on Submit ---- Levi ----
+    public void showHselect() throws IOException {
+        try {
+            // Load person overview.
+            FXMLLoader can_select_loader = new FXMLLoader();
+            can_select_loader.setLocation( MainApp.class.getResource( "view/h_select_ui.fxml" ) );
             AnchorPane canSelect = can_select_loader.load();
 
             // Set login into the center of root layout.
@@ -420,13 +460,9 @@ public class MainApp extends Application {
     public void showHelp() throws IOException {
     	
     	try {
-    		//You Know those mistakes you make that take forever to figure out?
-    		// Then when you fix it you want to throw your Laptop out a window?
-    		// Ya, this one really got me within a someone breathing in my direction of doing that.
-    		// All Fixed Now Though YAY! ----Levi----
     		FXMLLoader helpLoad = new FXMLLoader(getClass().getResource("view/Help_ui.fxml"));
     		Parent helpRoot = (Parent) helpLoad.load();
-    		Stage helpStage = new Stage();
+    		helpStage = new Stage();
     		helpStage.setTitle("Help Menu");
     		helpStage.setScene(new Scene(helpRoot));
     		helpStage.show();
@@ -434,13 +470,6 @@ public class MainApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    	
-    }
-    
-    //Closes Help window ---- Levi ----
-    public void closeHelp() {
-    
-    	helpStage.close();
     	
     }
     

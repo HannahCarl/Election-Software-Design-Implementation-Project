@@ -33,21 +33,48 @@ public class VoteConfrimationController {
 
     private MainApp mainApp;
 
-
+//--------- P -------------------
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
 
     public void voteConfirm () throws IOException {
 
-        mainApp.showVoteConfirm();
+        mainApp.showSselect();
 
     }
 
     public  void voteCancel () throws IOException {
 
-        mainApp.showCanSelect();
+        mainApp.showPselect();
+
+    }
+    
+    //-----------Senate ---------------------
+    
+    public void voteConfirmS () throws IOException {
+
+        mainApp.showHselect();
 
     }
 
+    public  void voteCancelS () throws IOException {
+
+        mainApp.showPselect();
+
+    }
+    //-----------House-----------------------
+
+    public void voteConfirmH () throws IOException {
+
+        mainApp.showVoteConfirm();
+
+    }
+
+    public  void voteCancelH () throws IOException {
+
+        mainApp.showPselect();
+
+    }
+    
 }

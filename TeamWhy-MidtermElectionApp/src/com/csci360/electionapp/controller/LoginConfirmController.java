@@ -34,7 +34,7 @@ public class LoginConfirmController {
 
     public void toCanSelect() throws IOException {
 
-        mainApp.showCanSelect();
+        mainApp.showPselect();
 
     }
 
