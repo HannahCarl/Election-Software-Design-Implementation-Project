@@ -60,7 +60,7 @@ public class AdminLoginController {
     public void setRegistrationStatus(boolean regStatus) {
     	this.registrationInProgress = regStatus;
     	
-    	System.out.println("Set Reg called, regInProgress: " + registrationInProgress);
+    	
     }
 
     public void setTestDriverAdmin(TestDriverAdmin tesDrAdForm) {
