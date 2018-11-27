@@ -48,7 +48,7 @@ Nonfunctional Requirements:
 
 -Usability
 
-# How to login as admin 
+# To login as admin 
 
 -Use one of the (userName,password) combinations below
 
@@ -61,4 +61,14 @@ ferrelW,222WWW
 kutcherA,333QWE
 
 pittB,456uiY
+
+# To login as registrant
+
+-Use one of the (voterId,firstName, lastName, midInt, socSecNum) combinations below
+
+vote123,John,Smith,A,111223333
+
+vote122,Bill,Smith,B,222334444
+
+vote134,Janet,Leon,C,444556666
 
