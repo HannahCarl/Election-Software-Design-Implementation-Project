@@ -30,6 +30,7 @@ public class LoginRegistrantController {
     private boolean submitClicked = false;
 
     private TestDriverRegistrationForm testDriveRegForm;
+    private MainApp mainApp;
     
     @FXML
     private void initialize(){
@@ -44,6 +45,12 @@ public class LoginRegistrantController {
 
         // Add registrantList data to the controller
         registrantList = tesDrRegForm.getRegistrantList();
+    }
+    public void setMainApp(MainApp mainA) {
+    	this.mainApp = mainA;
+    	
+    	//Add registrantList data to the controller
+    	registrantList = mainA.getRegistrantList();
     }
 
     public boolean isSubmitClicked(){

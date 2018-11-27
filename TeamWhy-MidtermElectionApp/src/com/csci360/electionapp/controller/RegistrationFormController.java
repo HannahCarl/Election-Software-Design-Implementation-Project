@@ -13,6 +13,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
+import com.csci360.electionapp.MainApp;
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
 import javafx.event.ActionEvent;
@@ -102,6 +103,7 @@ public class RegistrationFormController implements Initializable{
     
 
     private TestDriverRegistrationForm testDriveRegForm;
+    private MainApp mainApp;
     
     @FXML
     private void initialize(){
@@ -119,6 +121,13 @@ public class RegistrationFormController implements Initializable{
 
         // Add registrantList data to the controller
         registrantList = tesDrRegForm.getRegistrantList();
+    }
+    
+    public void setMainApp(MainApp mainA) {
+    	this.mainApp = mainA;
+    	
+    	//Add registrantList data to the controller
+    	registrantList = mainA.getRegistrantList();
     }
 
     public boolean isSubmitClicked(){
