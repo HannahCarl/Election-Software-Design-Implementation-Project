@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.csci360.electionapp.controller.HelpController">
+  <children>
+    <Rectangle arcHeight="0.0" arcWidth="0.0" fill="#005a66" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#dfdfdf" height="81.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="572.0" />
+    <Button id="helpCloseB" fx:id="close" layoutX="473.0" layoutY="35.0" mnemonicParsing="false" onAction="#helpClose" text="Close">
+      <font>
+        <Font size="22.0" fx:id="x3" />
+      </font>
+    </Button>
+    <Label layoutX="165.0" layoutY="32.0" text="Voting Instruction">
+      <font>
+        <Font size="34.0" />
+      </font>
+    </Label>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" height="278.0" layoutX="14.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="177.00010681152344">
+      <fill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="$x1" height="278.0" layoutX="409.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="177.00010681152344" />
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="$x1" height="278.0" layoutX="211.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="177.00010681152344" />
+    <Label layoutX="63.0" layoutY="114.0" text="Step 1">
+      <font>
+        <Font size="28.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label font="$x2" layoutX="261.0" layoutY="114.0" text="Step 2" />
+    <Label font="$x2" layoutX="458.0" layoutY="114.0" text="Step 3" />
+    <Label font="$x3" layoutX="44.0" layoutY="154.0" text="Review your" />
+    <Label font="$x3" layoutX="63.0" layoutY="177.0" text="Choices" />
+    <Label font="$x3" layoutX="248.0" layoutY="154.0" text="Make Your" />
+    <Label font="$x3" layoutX="255.0" layoutY="177.0" text="Selection" />
+    <Label font="$x3" layoutX="439.0" layoutY="154.0" text="Review your" />
+    <Label font="$x3" layoutX="465.0" layoutY="177.0" text="Choice" />
+    <ImageView id="VoteImage.png" fitHeight="109.5" fitWidth="169.0001220703125" layoutX="18.0" layoutY="221.0">
+      <image>
+        <Image url="@VoteImage.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="VoteConfirmImage.png" fitHeight="69.0" fitWidth="153.0" layoutX="422.0" layoutY="241.0">
+      <image>
+        <Image url="@VoteConfirmImage.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="VoteSelectImage.png" fitHeight="109.5" fitWidth="169.0001220703125" layoutX="216.0" layoutY="221.0">
+      <image>
+        <Image url="@VoteSelectImage.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>

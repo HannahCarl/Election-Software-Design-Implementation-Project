@@ -55,7 +55,7 @@
     <Label fx:id="office" font="$x3" layoutX="355.0" layoutY="22.0" prefHeight="38.0" prefWidth="208.0" text="Label" />
     <Label font="$x3" layoutX="28.0" layoutY="54.0" prefHeight="38.0" prefWidth="496.0" text="Please select who you would like to cast your vote for." />
     <ScrollBar layoutX="547.0" layoutY="150.0" orientation="VERTICAL" prefHeight="195.0" />
-    <Button fx:id="helpButton" layoutX="500.0" layoutY="362.0" mnemonicParsing="false" prefWidth="74.0" text="Help">
+    <Button fx:id="helpButton" layoutX="500.0" layoutY="362.0" mnemonicParsing="false" onAction="#helpButtonClick" prefWidth="74.0" text="Help">
       <font>
         <Font size="14.0" />
       </font>

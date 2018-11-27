@@ -404,18 +404,28 @@ public class MainApp extends Application {
     
     public void showHelp() throws IOException {
     	
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/Instruction_HowToVote.fxml"));
-    	Parent helpRoot = (Parent) fxmlLoader.load();
-    	helpStage = new Stage();
-    	helpStage.setScene(new Scene(helpRoot));
-    	helpStage.show();
+    	try {
+    		//You Know those mistakes you make that take forever to figure out?
+    		// Then when you fix it you want to throw your Laptop out a window?
+    		// Ya, this one really got me within a someone breathing in my direction of doing that.
+    		// All Fixed Now Though YAY! ----Levi----
+    		FXMLLoader helpLoad = new FXMLLoader(getClass().getResource("view/Help_ui.fxml"));
+    		Parent helpRoot = (Parent) helpLoad.load();
+    		Stage helpStage = new Stage();
+    		helpStage.setTitle("Help Menu");
+    		helpStage.setScene(new Scene(helpRoot));
+    		helpStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     	
     }
     
     //Closes Help window ---- Levi ----
     public void closeHelp() {
-    	
-    	
+    
+    	helpStage.close();
     	
     }
     

@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.csci360.electionapp.MainApp;
 import com.csci360.electionapp.TestDriverRegistrationForm;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -109,6 +110,12 @@ public class LoginRegistrantController {
 
         mainApp.showAdminLogin();
 
+    }
+    
+    public void helpBclick(ActionEvent event) throws IOException {
+    	
+    	mainApp.showHelp();
+    	
     }
 
 
