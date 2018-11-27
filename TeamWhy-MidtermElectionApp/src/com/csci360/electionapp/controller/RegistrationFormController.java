@@ -34,6 +34,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import com.csci360.electionapp.model.Registrant;
 import com.csci360.electionapp.model.RegistrantList;
+import com.csci360.electionapp.model.AESEncryption;
 import com.csci360.electionapp.model.RegisteringSession;
 
 public class RegistrationFormController implements Initializable{
@@ -103,6 +104,7 @@ public class RegistrationFormController implements Initializable{
     
 
     private TestDriverRegistrationForm testDriveRegForm;
+    private AESEncryption aesObject = new AESEncryption();
     private MainApp mainApp;
     
     @FXML
@@ -159,6 +161,8 @@ public class RegistrationFormController implements Initializable{
         if (isInputValidForm()){
         	boolean willAppend = true;
         	boolean confirmClicked = false;
+        	String encryptedSocialSecurity = "";
+        	final String secretKey = "Registrant2018AZTREQW";
         	String birthDate = "";
         	try(BufferedWriter regForm = new BufferedWriter(new FileWriter("out/registrationInfo.txt", willAppend))){
            
@@ -182,6 +186,8 @@ public class RegistrationFormController implements Initializable{
             	birthDate += birthYearChoiceBox.getValue().toString();
 	            System.out.println("Form submitted successfully.");
 	            
+	            encryptedSocialSecurity = AESEncryption.encrypt(socSecField.getText().toString(), secretKey);
+	            
 	            
 	            regForm.append(lastNameField.getText() + ", ");
 	            regForm.append(firstNameField.getText() + ", ");
@@ -189,7 +195,7 @@ public class RegistrationFormController implements Initializable{
 	            regForm.append(suffixField.getText() + ", ");
 	            regForm.append(sexChoiceBox.getValue() + ", ");
 	            regForm.append(raceChoiceBox.getValue() + ", ");
-	            regForm.append(socSecField.getText() + ", ");
+	            regForm.append(encryptedSocialSecurity + ", ");
 	            regForm.append(birthDate + ", ");
 	            regForm.append(homeAddStreetField.getText() + ", ");
 	            regForm.append(homeAddAptNumField.getText() + ", ");

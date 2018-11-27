@@ -1,3 +1,1 @@
-Butler, Mary, , , Female, Asian, 222-55-6666, Oct 01 1993, 13 Lane, , Charleston, South Carolina, 55555, 13 Lane, , Charleston, South Carolina, 55555, 111-222-3333, 111-222-3333
-Clooney, George, M, , Male, White, 667-77-9999, Jan 01 1966, 45 George Street, , Charleston, South Carolina, 22222, 45 George Street, , Charleston, South Carolina, 22222, 111-333-9999, 111-444-4444
-Tomas, Mary, , , Female, Hispanic, 221-33-4444, May 19 1981, 123 Spring Street, , Charleston, South Carolina, 22345, 123 Spring Street, , Charleston, South Carolina, 22345, 555-222-4444, 555-222-4444
+Pitt, Tim, , , Male, White, 0BZfEiBIvJniqeOh8K6iKg==, Oct 15 1947, 1155 Tom St, , Charleston, South Carolina, 22222, 1155 Tom St, , Charleston, South Carolina, 22222, 333-333-3333, 333-333-3333
