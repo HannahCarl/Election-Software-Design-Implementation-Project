@@ -56,10 +56,40 @@ public class RegistrantList {
 
         return desiredRegistrant;
     }
+    
+    public boolean checkIfRegistered(String firstName, String lastName, String socSecNum) {
+    	
+    	boolean isRegistered = false;
+    	for (Registrant registrant: registeredPersonList) {
+            if (registrant.getFirstname().equals(firstName) && registrant.getLastname().equals(lastName) && registrant.getSocSecNumber().equals(socSecNum)) {
+                if(registrant.getHasRegistered() == true) {
+                	isRegistered = true;
+                }
+
+                break;
+            }
+        }
+    	
+    	return isRegistered;
+    	
+    }
+    
+    public void setRegistrantRegisteredStatus(String firstName, String lastName, String socSecNum) {
+    	
+    	for (Registrant registrant: registeredPersonList) {
+            if (registrant.getFirstname().equals(firstName) && registrant.getLastname().equals(lastName) && registrant.getSocSecNumber().equals(socSecNum)) {
+                registrant.setHasRegistered(true);
+            }
+                
+            
+        }
+    	
+    }
 
     //AddRegistrant - Low Coupling (GRASP)
     //This method adds a new registrant to the registeredPersonList.
     public void addRegistrant(Registrant registrant) {
+    	
     	registeredPersonList.add(registrant);
     }
  }
