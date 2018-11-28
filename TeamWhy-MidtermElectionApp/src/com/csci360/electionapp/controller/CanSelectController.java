@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.ArrayList;
 
 public class CanSelectController {
@@ -40,7 +41,8 @@ public class CanSelectController {
     private Label office;
 
     private MainApp mainApp;
-
+    
+    private Stage dialogueStage;
 
     private String can_name;
     private String can_title;
