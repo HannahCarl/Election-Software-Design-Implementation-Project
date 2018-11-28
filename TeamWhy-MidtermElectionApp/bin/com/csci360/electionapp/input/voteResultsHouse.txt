@@ -1,4 +1,4 @@
-com.csci360.electionapp.model.Candidate@365d2cad, 0
-com.csci360.electionapp.model.Candidate@1947b67e, 0
-com.csci360.electionapp.model.Candidate@3c230dc6, 0
-com.csci360.electionapp.model.Candidate@21ce2d46, 1
+Joe Cunningham, 0
+Katie Arrington, 0
+Sean Carrigan, 0
+Joe Wilson, 1

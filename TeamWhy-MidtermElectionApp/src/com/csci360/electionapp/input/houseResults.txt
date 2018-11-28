@@ -1,4 +1,0 @@
-com.csci360.electionapp.model.Candidate@120c8ec3, 0
-com.csci360.electionapp.model.Candidate@4c06198, 0
-com.csci360.electionapp.model.Candidate@469dafcd, 0
-com.csci360.electionapp.model.Candidate@4492cd58, 1

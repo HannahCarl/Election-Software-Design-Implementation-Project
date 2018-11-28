@@ -169,11 +169,11 @@ public class Election {
 					senCanExists = true;
 					senateTally.set(senCounter, senateTally.get(senCounter) + 1); //adds one to the vote number for the candidate
 				}
-				presCounter++;
+				senCounter++;
 			}
 			
 			if (senCanExists == false) { //if they didnt exist this will add them to the list and add the vote they just received
-				senateCandidates.add(presVote);
+				senateCandidates.add(senVote);
 				senateTally.add(1);
 			}
 			
@@ -191,7 +191,7 @@ public class Election {
 			}
 			
 			if (houseCanExists == false) { //if they didnt exist this will add them to the list and add the vote they just received
-				houseCandidates.add(presVote);
+				houseCandidates.add(houseVote);
 				houseTally.add(1);
 			}
 			

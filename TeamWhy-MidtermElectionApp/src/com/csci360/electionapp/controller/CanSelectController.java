@@ -70,7 +70,6 @@ public class CanSelectController {
         this.presCand = mainApp.getPresCand();
         this.senCand = mainApp.getSenCand();
         this.houseCand = mainApp.getHouseCand();
-        
     }
 
  // ------------- P ---------------

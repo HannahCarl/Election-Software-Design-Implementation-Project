@@ -75,6 +75,8 @@ public class MainApp extends Application {
     	buildRegistrantList();
     	buildElection();
     	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	voterList.addVoter(new Voter("2", "firstname", "lastname", 'M', "000220000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	voterList.addVoter(new Voter("3", "firstname", "lastname", 'M', "000330000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     }
     
     public void buildAdminList() {

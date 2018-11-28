@@ -1,4 +1,4 @@
 John Adams, 0
-Barack Obama, 0
-Thomas Jefferson, 1
+Barack Obama, 1
+Thomas Jefferson, 0
 Richard Nixon, 0
