@@ -80,7 +80,8 @@ public class MainApp extends Application {
     	//voterList.addVoter(new Voter("3", "firstname", "lastname", 'M', "000330000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     	buildVoterList();
     }
-    
+    //Gang of four - Adapter
+    //Takes the admin list text and adapts it to build an admin list object
     public void buildAdminList() {
     	//String hashPassword;
     	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/adminList.txt"))){
@@ -109,7 +110,8 @@ public class MainApp extends Application {
     	
     	
     }
-    
+    //Gang of four - Adapter
+    //Takes the registrant list and adapts it to build a registrant list object
     public void buildRegistrantList() {
     	try(BufferedReader br = new BufferedReader(new FileReader("src/com/csci360/electionapp/input/registrantList.txt"))){
         	String line;
@@ -127,7 +129,8 @@ public class MainApp extends Application {
     	}
     	
     }
-    
+    //Gang of four - Adapter
+    //Takes the registrant list and adapts it to build a voter list
     public void buildVoterList() {
     	final String secretKey = "Registrant2018AZTREQW";
     	try(BufferedReader br = new BufferedReader(new FileReader("out/registrationInfo.txt"))) {
@@ -217,7 +220,7 @@ public class MainApp extends Application {
     }
   
     //builder for the election fills in the list of candidates and things being run for as well as just acting as a thing to store the ballots cast
-    //Grasp - Creator
+    //GoF - Factory
     public void buildElection() {
     	this.election = new Election();
     	
@@ -396,8 +399,8 @@ public class MainApp extends Application {
 
     }
     
- // Show Election results
-
+    // Show Election results
+    //Gang of Four - Builder pattern
     public void showViewResults() {
     	Stage stage = new Stage();
     	Scene scene = new Scene(new Group());
@@ -564,7 +567,7 @@ public class MainApp extends Application {
     }
     
     //Opens Help in new Window ---- Levi ----
-    
+    //GoF- Builder pattern
     public void showHelp() throws IOException {
     	
     	try {
