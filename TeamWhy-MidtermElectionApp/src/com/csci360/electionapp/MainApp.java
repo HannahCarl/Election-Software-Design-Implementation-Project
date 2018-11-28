@@ -3,6 +3,7 @@ package com.csci360.electionapp;
 import com.csci360.electionapp.controller.*;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
+import com.csci360.electionapp.model.AESEncryption;
 import com.csci360.electionapp.model.Admin;
 import com.csci360.electionapp.model.AdminList;
 import com.csci360.electionapp.model.Ballot;
@@ -74,9 +75,9 @@ public class MainApp extends Application {
     	buildAdminList();
     	buildRegistrantList();
     	buildElection();
-    	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
-    	voterList.addVoter(new Voter("2", "firstname", "lastname", 'M', "000220000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
-    	voterList.addVoter(new Voter("3", "firstname", "lastname", 'M', "000330000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	//voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	//voterList.addVoter(new Voter("2", "firstname", "lastname", 'M', "000220000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	//voterList.addVoter(new Voter("3", "firstname", "lastname", 'M', "000330000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     	buildVoterList();
     }
     
@@ -128,12 +129,42 @@ public class MainApp extends Application {
     }
     
     public void buildVoterList() {
+    	final String secretKey = "Registrant2018AZTREQW";
     	try(BufferedReader br = new BufferedReader(new FileReader("out/registrationInfo.txt"))) {
     		String line;
     		while (((line = br.readLine()) != null)) {
-    			String[] voterList = line.split("[,]");
+    			String[] regArray = line.split(", ");
+    			
+    			ArrayList<String> voterArray = new ArrayList<String>();
+    			
     			//Add line decrypt the registrent object
-    			System.out.println(voterList[0]);
+    			for (int i = 0; i < regArray.length; i++) {
+    				if ((i > 1) && (i < 6)) {
+    					voterArray.add(regArray[i]);
+    				}
+    				else {
+    					voterArray.add(AESEncryption.decrypt(regArray[i], secretKey));
+    				}
+    			}	
+    			String voterID = voterArray.get(0) + voterArray.get(1);
+    			String fname = voterArray.get(1);
+    			String lname = voterArray.get(0);
+    			
+    			String mInitialStr = voterArray.get(2);
+    			Character mInitial = " ".charAt(0);
+    			if (mInitialStr.length() == 1) {
+    				mInitial = mInitialStr.charAt(0);
+    			}
+    			
+    			String socSec = voterArray.get(6);
+    			String sex = voterArray.get(4);
+    			Date bday = new Date(voterArray.get(7));
+    			String hPhone = voterArray.get(18);
+    			String cPhone = voterArray.get(19);
+    			String hAdd = voterArray.get(8) + " " + voterArray.get(9) + " " + voterArray.get(10) + " " + voterArray.get(11) + " " + voterArray.get(12);
+    			String mAdd = voterArray.get(13) + " " + voterArray.get(14) + " " + voterArray.get(15) + " " + voterArray.get(16) + " " + voterArray.get(17);
+    			
+    			voterList.addVoter(new Voter(voterID, fname, lname, mInitial, socSec, sex, bday, hPhone, cPhone, hAdd, mAdd));
     		}
     	}
     		
