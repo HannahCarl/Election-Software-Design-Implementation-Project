@@ -14,6 +14,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+
+import com.csci360.electionapp.model.Ballot;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
 
@@ -33,7 +35,7 @@ public class LoginConfirmController {
     }
 
     public void toCanSelect() throws IOException {
-
+    	mainApp.setBallot(new Ballot (mainApp.getVoter()));
         mainApp.showPselect();
 
     }
