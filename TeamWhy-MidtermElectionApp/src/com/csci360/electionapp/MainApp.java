@@ -459,7 +459,7 @@ public class MainApp extends Application {
 
     // Confirm Single Can Vote ---- Levi ----
 
-    public void showPselect() throws IOException{
+    public void showVC_P() throws IOException{
         try {
             // Load person overview.
             FXMLLoader confirmOne = new FXMLLoader();
@@ -478,7 +478,7 @@ public class MainApp extends Application {
         }
     }
     
-    public void showSselect() throws IOException{
+    public void showVC_S() throws IOException{
         try {
             // Load person overview.
             FXMLLoader confirmOne = new FXMLLoader();
@@ -497,7 +497,7 @@ public class MainApp extends Application {
         }
     }
     
-    public void showHselect() throws IOException{
+    public void showVC_H() throws IOException{
         try {
             // Load person overview.
             FXMLLoader confirmOne = new FXMLLoader();

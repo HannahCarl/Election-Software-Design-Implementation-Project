@@ -25,7 +25,7 @@
       </font>
     </Label>
     <Label alignment="CENTER" font="$x1" layoutX="201.0" layoutY="192.0" prefHeight="17.0" prefWidth="198.0" text="running for" wrapText="true" />
-    <Label id="category" fx:id="can_title" alignment="CENTER" font="$x1" layoutX="201.0" layoutY="216.0" prefHeight="17.0" prefWidth="198.0" text="category" wrapText="true" />
+    <Label id="category" fx:id="can_title" alignment="CENTER" font="$x1" layoutX="201.0" layoutY="216.0" prefHeight="17.0" prefWidth="198.0" text="President" wrapText="true" />
     <ToolBar layoutX="207.0" prefHeight="55.0" prefWidth="187.0" style="-fx-background-color: #bfbfbf;" AnchorPane.bottomAnchor="104.0">
       <items>
         <Button id="cancelButton" fx:id="cancel" mnemonicParsing="false" onAction="#voteCancel" prefHeight="27.0" prefWidth="80.0" text="Go Back" />

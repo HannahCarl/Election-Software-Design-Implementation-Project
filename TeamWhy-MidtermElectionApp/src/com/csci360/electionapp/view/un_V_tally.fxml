@@ -9,50 +9,79 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.AdminMenuController">
-  <children>
-    <Rectangle id="background" arcHeight="5.0" arcWidth="5.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-    <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="54.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="572.0" />
-    <Rectangle id="unTallyVR" arcHeight="75.0" arcWidth="75.0" height="299.0" layoutX="24.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="257.9999694824219">
-      <fill>
-        <Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
-      </fill>
-    </Rectangle>
-    <Rectangle id="unTallyTCV" arcHeight="75.0" arcWidth="75.0" fill="$x1" height="299.0" layoutX="322.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="258.0" />
-    <Label alignment="CENTER" layoutX="28.0" layoutY="14.0" prefHeight="54.0" prefWidth="544.0" text="Unofficiall Vote Tally">
-      <font>
-        <Font size="24.0" />
-      </font>
-    </Label>
-    <AnchorPane layoutX="40.0" layoutY="137.0" prefHeight="229.0" prefWidth="203.0">
-      <children>
-        <TableView fx:id="voteResults" layoutX="0.0" layoutY="1.0" prefHeight="229.0" prefWidth="203.0">
-          <columns>
-            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Candidate" />
-            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="# of Votes" />
-          </columns>
-        </TableView>
-      </children>
-    </AnchorPane>
-    <ScrollBar layoutX="259.0" layoutY="173.0" orientation="VERTICAL" prefHeight="186.0" />
-    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="100.0" prefHeight="28.0" prefWidth="181.0" text="Vote Results">
-      <font>
-        <Font size="18.0" fx:id="x2" />
-      </font>
-    </Label>
-    <AnchorPane layoutX="337.0" layoutY="137.0" prefHeight="229.0" prefWidth="215.0">
-      <children>
-        <TableView fx:id="totalVotes" layoutX="0.0" layoutY="1.0" prefHeight="229.0" prefWidth="215.0">
-          <columns>
-            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Machine" />
-            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="# of Votes" />
-          </columns>
-        </TableView>
-      </children>
-    </AnchorPane>
-    <ScrollBar layoutX="558.0" layoutY="150.0" orientation="VERTICAL" prefHeight="208.0" />
-    <Label alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="361.0" layoutY="100.0" prefHeight="28.0" prefWidth="181.0" text="Total Vote Counts" />
-    <Button fx:id="recount" layoutX="495.0" layoutY="27.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="73.0" text="Recount" />
-      <Button fx:id="back" layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="73.0" text="Back" />
-  </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.csci360.electionapp.controller.AdminMenuController">
+	<children>
+		<Rectangle id="background" arcHeight="5.0" arcWidth="5.0"
+			fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0"
+			stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+		<Rectangle id="title" arcHeight="25.0" arcWidth="25.0"
+			fill="#9f9f9f" height="54.0" layoutX="14.0" layoutY="14.0"
+			stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="572.0" />
+		<Rectangle id="unTallyVR" arcHeight="75.0" arcWidth="75.0"
+			height="299.0" layoutX="24.0" layoutY="81.0" stroke="BLACK"
+			strokeType="INSIDE" strokeWidth="0.0" width="257.9999694824219">
+			<fill>
+				<Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
+			</fill>
+		</Rectangle>
+		<Rectangle id="unTallyTCV" arcHeight="75.0" arcWidth="75.0"
+			fill="$x1" height="299.0" layoutX="322.0" layoutY="81.0"
+			stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="258.0" />
+		<Label alignment="CENTER" layoutX="28.0" layoutY="14.0"
+			prefHeight="54.0" prefWidth="544.0" text="Unofficiall Vote Tally">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Label>
+		<AnchorPane layoutX="40.0" layoutY="137.0"
+			prefHeight="229.0" prefWidth="203.0">
+			<children>
+				<TableView fx:id="voteResults" layoutX="0.0" layoutY="1.0"
+					prefHeight="229.0" prefWidth="203.0">
+					<columns>
+						<TableColumn maxWidth="5000.0" minWidth="10.0"
+							prefWidth="104.0" text="Candidate" />
+						<TableColumn maxWidth="5000.0" minWidth="10.0"
+							prefWidth="109.0" text="# of Votes" />
+					</columns>
+				</TableView>
+			</children>
+		</AnchorPane>
+		<ScrollBar layoutX="259.0" layoutY="173.0"
+			orientation="VERTICAL" prefHeight="186.0" />
+		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="63.0"
+			layoutY="100.0" prefHeight="28.0" prefWidth="181.0"
+			text="Vote Results">
+			<font>
+				<Font size="18.0" fx:id="x2" />
+			</font>
+		</Label>
+		<AnchorPane layoutX="337.0" layoutY="137.0"
+			prefHeight="229.0" prefWidth="215.0">
+			<children>
+				<TableView fx:id="totalVotes" layoutX="0.0" layoutY="1.0"
+					prefHeight="229.0" prefWidth="215.0">
+					<columns>
+						<TableColumn maxWidth="5000.0" minWidth="10.0"
+							prefWidth="104.0" text="Machine" />
+						<TableColumn maxWidth="5000.0" minWidth="10.0"
+							prefWidth="109.0" text="# of Votes" />
+					</columns>
+				</TableView>
+			</children>
+		</AnchorPane>
+		<ScrollBar layoutX="558.0" layoutY="150.0"
+			orientation="VERTICAL" prefHeight="208.0" />
+		<Label alignment="CENTER" contentDisplay="CENTER" font="$x2"
+			layoutX="361.0" layoutY="100.0" prefHeight="28.0" prefWidth="181.0"
+			text="Total Vote Counts" />
+		<Button fx:id="recount" layoutX="495.0" layoutY="27.0"
+			mnemonicParsing="false" prefHeight="28.0" prefWidth="73.0"
+			text="Recount" />
+		<Button fx:id="back" layoutX="27.0" layoutY="27.0"
+			mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0"
+			prefWidth="73.0" text="Back" />
+	</children>
 </AnchorPane>
