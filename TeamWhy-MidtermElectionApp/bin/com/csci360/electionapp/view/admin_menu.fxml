@@ -8,31 +8,55 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.csci360.electionapp.controller.AdminMenuController">
-  <children>
-    <Rectangle id="background" arcHeight="0.0" arcWidth="0.0" fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-    <Button fx:id="logOut" layoutX="451.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="32.0" prefWidth="99.0" text="Log Out">
-      <font>
-        <Font size="18.0" />
-      </font>
-    </Button>
-    <AnchorPane layoutX="43.0" layoutY="78.0" prefHeight="276.0" prefWidth="515.0">
-      <children>
-        <Rectangle id="title" arcHeight="25.0" arcWidth="25.0" fill="#9f9f9f" height="50.0" layoutX="6.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="501.0" />
-        <Rectangle id="midground" arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="195.0" layoutX="7.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="501.0" />
-        <Label layoutX="187.0" layoutY="19.0" text="Admin Menu">
-          <font>
-            <Font size="24.0" />
-          </font>
-        </Label>
-        <Button id="admMenuB" fx:id="viewResults" layoutX="342.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleViewResults" prefHeight="142.0" prefWidth="159.0" text="View Unoffical Tally" textAlignment="CENTER" wrapText="true">
-          <font>
-            <Font size="14.0" fx:id="x1" />
-          </font>
-        </Button>
-        <Button id="admMenuB" fx:id="startRegistrationPeriod" font="$x1" layoutX="14.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleStartRegistration" prefHeight="142.0" prefWidth="159.0" text="Start Registration Period" textAlignment="CENTER" wrapText="true" />
-        <Button id="admMenuB" fx:id="endRegistrationPeriod" font="$x1" layoutX="178.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleEndRegistration" prefHeight="142.0" prefWidth="159.0" style="&#10;" text="End Registration Period" textAlignment="CENTER" wrapText="true" />
-      </children>
-    </AnchorPane>
-  </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+	xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/2.2"
+	fx:controller="com.csci360.electionapp.controller.AdminMenuController">
+	<children>
+		<Rectangle id="background" arcHeight="0.0" arcWidth="0.0"
+			fill="#004166" height="400.0" layoutX="0.0" layoutY="0.0"
+			smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0"
+			width="600.0" />
+		<Button fx:id="logOut" layoutX="451.0" layoutY="351.0"
+			mnemonicParsing="false" onAction="#handleLogOut" prefHeight="32.0"
+			prefWidth="99.0" text="Log Out">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Button>
+		<AnchorPane layoutX="43.0" layoutY="78.0"
+			prefHeight="276.0" prefWidth="515.0">
+			<children>
+				<Rectangle id="title" arcHeight="25.0" arcWidth="25.0"
+					fill="#9f9f9f" height="50.0" layoutX="6.0" layoutY="8.0"
+					stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="501.0" />
+				<Rectangle id="midground" arcHeight="25.0" arcWidth="25.0"
+					fill="#bfbfbf" height="195.0" layoutX="7.0" layoutY="67.0"
+					stroke="BLACK" strokeType="INSIDE" strokeWidth="1.0" width="501.0" />
+				<Label layoutX="187.0" layoutY="19.0" text="Admin Menu">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<Button id="admMenuB" fx:id="viewResults" layoutX="342.0"
+					layoutY="91.0" mnemonicParsing="false"
+					onAction="#handleViewResults" prefHeight="142.0" prefWidth="159.0"
+					text="View Unoffical Tally" textAlignment="CENTER" wrapText="true">
+					<font>
+						<Font size="14.0" fx:id="x1" />
+					</font>
+				</Button>
+				<Button id="admMenuB" fx:id="startRegistrationPeriod"
+					font="$x1" layoutX="14.0" layoutY="91.0" mnemonicParsing="false"
+					onAction="#handleStartRegistration" prefHeight="142.0"
+					prefWidth="159.0" text="Start Registration Period"
+					textAlignment="CENTER" wrapText="true" />
+				<Button id="admMenuB" fx:id="endRegistrationPeriod"
+					font="$x1" layoutX="178.0" layoutY="91.0" mnemonicParsing="false"
+					onAction="#handleEndRegistration" prefHeight="142.0"
+					prefWidth="159.0" style="&#10;" text="End Registration Period"
+					textAlignment="CENTER" wrapText="true" />
+			</children>
+		</AnchorPane>
+	</children>
 </AnchorPane>

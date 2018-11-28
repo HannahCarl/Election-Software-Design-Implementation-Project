@@ -55,33 +55,33 @@ public class CanSelectController {
     public void select_canidate_1 () throws IOException {
 
         //ADD Information to pass to ballot class
-        mainApp.showSingleVConfirm();
+        mainApp.showVC_P();
 
     }
     public void select_canidate_2 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_P();
 
     }
     public void select_canidate_3 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_P();
 
     }
     public void select_canidate_4 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_P();
 
     }
     public void select_canidate_5 () throws IOException {
 
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_P();
 
     }
     public void select_canidate_writeIn () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_P();
 
     }
     
@@ -89,66 +89,66 @@ public class CanSelectController {
     public void select_canidate_S_1 () throws IOException {
 
         //ADD Information to pass to ballot class
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_S();
 
     }
     public void select_canidate_S_2 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_S();
 
     }
     public void select_canidate_S_3 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_S();
 
     }
     public void select_canidate_S_4 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_S();
 
     }
     public void select_canidate_S_5 () throws IOException {
 
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_S();
 
     }
     public void select_canidate_S_writeIn () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_S();
 
     }
  // ------------- House ---------------
     public void select_canidate_H_1 () throws IOException {
 
         //ADD Information to pass to ballot class
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_H();
 
     }
     public void select_canidate_H_2 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_H();
 
     }
     public void select_canidate_H_3 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_H();
 
     }
     public void select_canidate_H_4 () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_H();
 
     }
     public void select_canidate_H_5 () throws IOException {
 
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_H();
 
     }
     public void select_canidate_H_writeIn () throws IOException {
 
-        mainApp.showSingleVConfirm();
+    	mainApp.showVC_H();
 
     }
     

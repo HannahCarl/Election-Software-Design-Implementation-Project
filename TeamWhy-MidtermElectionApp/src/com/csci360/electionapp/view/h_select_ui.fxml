@@ -39,12 +39,12 @@
         <Label id="can_5" layoutX="24.0" layoutY="161.0" prefWidth="162.0" text="Label" />
         <Label layoutX="24.0" layoutY="183.0" prefWidth="162.0" text="Label" />
         <Label id="can_writeIn" layoutX="277.0" layoutY="165.0" prefWidth="162.0" text="Write In" />
-        <Button fx:id="can_1" layoutX="201.0" layoutY="25.0" mnemonicParsing="false" onAction="#select_canidate_1" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_2" layoutX="451.0" layoutY="25.0" mnemonicParsing="false" onAction="#select_canidate_2" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_3" layoutX="201.0" layoutY="94.0" mnemonicParsing="false" onAction="#select_canidate_3" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_4" layoutX="452.0" layoutY="94.0" mnemonicParsing="false" onAction="#select_canidate_4" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button id="writeIn" fx:id="can_5" layoutX="201.0" layoutY="166.0" mnemonicParsing="false" onAction="#select_canidate_5" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_writeIn" layoutX="451.0" layoutY="166.0" mnemonicParsing="false" onAction="#select_canidate_writeIn" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_1" layoutX="201.0" layoutY="25.0" mnemonicParsing="false" onAction="#select_canidate_H_1" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_2" layoutX="451.0" layoutY="25.0" mnemonicParsing="false" onAction="#select_canidate_H_2" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_3" layoutX="201.0" layoutY="94.0" mnemonicParsing="false" onAction="#select_canidate_H_3" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_4" layoutX="452.0" layoutY="94.0" mnemonicParsing="false" onAction="#select_canidate_H_4" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button id="writeIn" fx:id="can_5" layoutX="201.0" layoutY="166.0" mnemonicParsing="false" onAction="#select_canidate_H_5" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_writeIn" layoutX="451.0" layoutY="166.0" mnemonicParsing="false" onAction="#select_canidate_H_writeIn" prefHeight="35.0" prefWidth="35.0" text="" />
       </children>
     </AnchorPane>
     <Label layoutX="28.0" layoutY="22.0" prefHeight="38.0" prefWidth="327.0" text="Below are the Canadites running for">
