@@ -21,22 +21,22 @@
     <Rectangle id="selectCanaditeAnchor" arcHeight="25.0" arcWidth="25.0" fill="GREY" height="236.0" layoutX="29.0" layoutY="122.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="545.0" />
     <AnchorPane layoutX="33.0" layoutY="135.0" prefHeight="223.0" prefWidth="514.0">
       <children>
-        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
-        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="14.0" layoutY="84.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
-        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="265.0" layoutY="84.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
-        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="265.0" layoutY="14.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
-        <Label id="can_1" layoutX="24.0" layoutY="23.0" onDragDetected="#select_canidate_1" prefWidth="162.0" text="Joe Cunningham" />
-        <Label layoutX="24.0" layoutY="42.0" prefWidth="162.0" text="Democrat" />
-        <Label id="can_2" layoutX="277.0" layoutY="20.0" onDragDetected="#select_canidate_2" prefWidth="162.0" text="Katie Arrington" />
-        <Label layoutX="277.0" layoutY="39.0" prefWidth="162.0" text="Republican" />
-        <Label id="can_3" layoutX="24.0" layoutY="93.0" prefWidth="162.0" text="Sean Carrigan" />
-        <Label layoutX="24.0" layoutY="112.0" prefWidth="162.0" text="Green" />
-        <Label id="can_4" layoutX="277.0" layoutY="93.0" onDragDetected="#select_canidate_4" prefWidth="162.0" text="Joe Wilson" />
-        <Label layoutX="277.0" layoutY="112.0" prefWidth="162.0" text="Libertarian" />
-        <Button fx:id="can_1" layoutX="201.0" layoutY="25.0" mnemonicParsing="false" onAction="#select_canidate_H_1" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_2" layoutX="451.0" layoutY="25.0" mnemonicParsing="false" onAction="#select_canidate_H_2" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_3" layoutX="201.0" layoutY="94.0" mnemonicParsing="false" onAction="#select_canidate_H_3" prefHeight="35.0" prefWidth="35.0" text="" />
-        <Button fx:id="can_4" layoutX="452.0" layoutY="94.0" mnemonicParsing="false" onAction="#select_canidate_H_4" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="14.0" layoutY="32.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
+        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="14.0" layoutY="120.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
+        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="263.0" layoutY="120.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
+        <Rectangle id="selectCanadite" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="56.0" layoutX="264.0" layoutY="35.0" stroke="BLACK" strokeMiterLimit="10.0" strokeType="INSIDE" strokeWidth="0.0" width="231.0" />
+        <Label id="can_1" layoutX="24.0" layoutY="41.0" onDragDetected="#select_canidate_1" prefWidth="162.0" text="Joe Cunningham" />
+        <Label layoutX="24.0" layoutY="60.0" prefWidth="162.0" text="Democrat" />
+        <Label id="can_2" layoutX="276.0" layoutY="41.0" onDragDetected="#select_canidate_2" prefWidth="162.0" text="Katie Arrington" />
+        <Label layoutX="276.0" layoutY="60.0" prefWidth="162.0" text="Republican" />
+        <Label id="can_3" layoutX="24.0" layoutY="129.0" prefWidth="162.0" text="Sean Carrigan" />
+        <Label layoutX="24.0" layoutY="148.0" prefWidth="162.0" text="Green" />
+        <Label id="can_4" layoutX="275.0" layoutY="129.0" onDragDetected="#select_canidate_4" prefWidth="162.0" text="Joe Wilson" />
+        <Label layoutX="275.0" layoutY="148.0" prefWidth="162.0" text="Libertarian" />
+        <Button fx:id="can_1" layoutX="201.0" layoutY="43.0" mnemonicParsing="false" onAction="#select_canidate_H_1" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_2" layoutX="450.0" layoutY="46.0" mnemonicParsing="false" onAction="#select_canidate_H_2" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_3" layoutX="201.0" layoutY="130.0" mnemonicParsing="false" onAction="#select_canidate_H_3" prefHeight="35.0" prefWidth="35.0" text="" />
+        <Button fx:id="can_4" layoutX="450.0" layoutY="129.0" mnemonicParsing="false" onAction="#select_canidate_H_4" prefHeight="35.0" prefWidth="35.0" text="" />
       </children>
     </AnchorPane>
     <Label layoutX="28.0" layoutY="22.0" prefHeight="38.0" prefWidth="327.0" text="Below are the Canadites running for">
@@ -46,7 +46,7 @@
     </Label>
     <Label fx:id="office" font="$x3" layoutX="355.0" layoutY="22.0" prefHeight="38.0" prefWidth="208.0" text="House Rep." />
     <Label font="$x3" layoutX="28.0" layoutY="54.0" prefHeight="38.0" prefWidth="496.0" text="Please select who you would like to cast your vote for." />
-    <ScrollBar layoutX="547.0" layoutY="150.0" orientation="VERTICAL" prefHeight="195.0" />
+    <ScrollBar layoutX="547.0" layoutY="143.0" orientation="VERTICAL" prefHeight="195.0" />
     <Button fx:id="helpButton" layoutX="500.0" layoutY="362.0" mnemonicParsing="false" onAction="#helpButtonClick" prefWidth="74.0" text="Help">
       <font>
         <Font size="14.0" />
