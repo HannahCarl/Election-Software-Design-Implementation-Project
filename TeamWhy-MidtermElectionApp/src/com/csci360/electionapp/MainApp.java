@@ -172,6 +172,10 @@ public class MainApp extends Application {
     	election.addField("House", houseList);
     	
     }
+    
+    public Election getElection() {
+    	return this.election;
+    }
 
     public VoterList getVoterList() {
         return voterList;

@@ -1,6 +1,8 @@
 package com.csci360.electionapp.controller;
 
 import com.csci360.electionapp.MainApp;
+import com.csci360.electionapp.model.Candidate;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class CanSelectController {
 
@@ -42,7 +45,10 @@ public class CanSelectController {
     private String can_name;
     private String can_title;
     private int can_ID;
-
+    private ArrayList<Candidate> presList = mainApp.getElection().getCandidateListByFieldTitle("President");
+    private ArrayList<Candidate> senList = mainApp.getElection().getCandidateListByFieldTitle("Senate");
+    private ArrayList<Candidate> houseList = mainApp.getElection().getCandidateListByFieldTitle("House");
+    
     @FXML
     private void initialize(){
     }
