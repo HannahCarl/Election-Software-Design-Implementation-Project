@@ -55,7 +55,6 @@ public class CanSelectController {
     public void select_canidate_1 () throws IOException {
 
         //ADD Information to pass to ballot class
-    	
         mainApp.showVC_P();
 
     }
@@ -70,6 +69,12 @@ public class CanSelectController {
 
     }
     public void select_canidate_4 () throws IOException {
+
+    	mainApp.showVC_P();
+
+    }
+    public void select_canidate_5 () throws IOException {
+
 
     	mainApp.showVC_P();
 
@@ -102,6 +107,12 @@ public class CanSelectController {
     	mainApp.showVC_S();
 
     }
+    public void select_canidate_S_5 () throws IOException {
+
+
+    	mainApp.showVC_S();
+
+    }
     public void select_canidate_S_writeIn () throws IOException {
 
     	mainApp.showVC_S();
@@ -125,6 +136,12 @@ public class CanSelectController {
 
     }
     public void select_canidate_H_4 () throws IOException {
+
+    	mainApp.showVC_H();
+
+    }
+    public void select_canidate_H_5 () throws IOException {
+
 
     	mainApp.showVC_H();
 
