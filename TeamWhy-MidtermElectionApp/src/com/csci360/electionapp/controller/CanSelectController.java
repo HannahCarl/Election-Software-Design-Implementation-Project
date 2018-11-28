@@ -38,19 +38,12 @@ public class CanSelectController {
     @FXML
     private Button can_5;
     @FXML
-    private Button can_writeIn;
-    @FXML
-    private TextField writeIn;
-    @FXML
     private Label office;
 
     private MainApp mainApp;
     
     private Stage dialogueStage;
-
-    private String can_name;
-    private String can_title;
-    private int can_ID; 
+ 
     private ArrayList<Candidate> presList;
     private ArrayList<Candidate> senList;
     private ArrayList<Candidate> houseList;
@@ -77,8 +70,9 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
-        alert.setHeaderText("Please confirm information");
+        alert.setTitle("Your Persidental Vote is for");
+        alert.setContentText("John Adams / Goerge Washington");
+        alert.setHeaderText("Please Review Your Selection");
         
         //Confirmation message
         Optional<ButtonType> result = alert.showAndWait();
@@ -95,7 +89,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Persidental Vote is for");
+        alert.setContentText("Barack Obama / Joe Biden");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -113,7 +108,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Persidental Vote is for");
+        alert.setContentText("Thomas Jefferson / Alexander Hamilton");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -131,7 +127,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Persidental Vote is for");
+        alert.setContentText("Richard Nixon / John Dole");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -145,22 +142,7 @@ public class CanSelectController {
         }
 
     }
-    public void select_canidate_writeIn () throws IOException {
-
-    	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
-        alert.setHeaderText("Please confirm information");
-        
-        //Confirmation message
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
-        	
-        	mainApp.showSselect();
-        	
-        }
-
-    }
+    
     
  // ------------- Senate ---------------
     public void select_canidate_S_1 () throws IOException {
@@ -168,7 +150,8 @@ public class CanSelectController {
         //ADD Information to pass to ballot class
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Senate Vote is for");
+        alert.setContentText("Tim Scott");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -186,7 +169,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Senate Vote is for");
+        alert.setContentText("Thomas Dixon");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -204,7 +188,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Senate Vote is for");
+        alert.setContentText("Bill Bledsoe");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -222,7 +207,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your Senate Vote is for");
+        alert.setContentText("Rebel ScarBorough");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -236,28 +222,15 @@ public class CanSelectController {
         }
 
     }
-    public void select_canidate_S_writeIn () throws IOException {
 
-    	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
-        alert.setHeaderText("Please confirm information");
-        
-        //Confirmation message
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
-        	
-        	mainApp.showHselect();
-        	
-        }
-
-    }
+    
  // ------------- House ---------------
     public void select_canidate_H_1 () throws IOException {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your House Vote is for");
+        alert.setContentText("Joe Cunningham");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -283,7 +256,8 @@ public class CanSelectController {
     	
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your House Vote is for");
+        alert.setContentText("Katie Arrington");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -311,7 +285,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your House Vote is for");
+        alert.setContentText("Sean Carrigan");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -337,7 +312,8 @@ public class CanSelectController {
 
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
+        alert.setTitle("Your House Vote is for");
+        alert.setContentText("Joe Wilson");
         alert.setHeaderText("Please confirm information");
         
         //Confirmation message
@@ -359,22 +335,7 @@ public class CanSelectController {
         }
 
     }
-    public void select_canidate_H_writeIn () throws IOException {
 
-    	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.initOwner(dialogueStage);
-        alert.setTitle("Confirm Information");
-        alert.setHeaderText("Please confirm information");
-        
-        //Confirmation message
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
-        	
-        	mainApp.showVoteConfirm ();
-        	
-        }
-
-    }
     
     public void helpButtonClick(ActionEvent event) throws IOException {
 
