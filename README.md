@@ -92,6 +92,8 @@ SmithJill, 333-44-5555
 
 3) Log out, and UI will have Registration Login
 
+** If newly registered, restart the application to allow the voterlist to update and then the user will be able to login as a confirmed voter and vote. We did this to prevent a voter from registering on the same day as the day they would vote, which is the rule for South Carolina.
+
 # To change from registration to voting
 
 1) Log in as admin via admin button in bottom corner
