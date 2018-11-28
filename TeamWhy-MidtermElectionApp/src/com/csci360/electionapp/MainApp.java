@@ -174,7 +174,7 @@ public class MainApp extends Application {
     }
     
     public Election getElection() {
-    	return this.election;
+    	return election;
     }
 
     public VoterList getVoterList() {

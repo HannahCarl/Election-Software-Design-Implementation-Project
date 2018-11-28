@@ -48,10 +48,10 @@ public class CanSelectController {
 
     private String can_name;
     private String can_title;
-    private int can_ID;
-    private ArrayList<Candidate> presList = mainApp.getElection().getCandidateListByFieldTitle("President");
-    private ArrayList<Candidate> senList = mainApp.getElection().getCandidateListByFieldTitle("Senate");
-    private ArrayList<Candidate> houseList = mainApp.getElection().getCandidateListByFieldTitle("House");
+    private int can_ID; 
+    private ArrayList<Candidate> presList;
+    private ArrayList<Candidate> senList;
+    private ArrayList<Candidate> houseList;
     
     @FXML
     private void initialize(){
@@ -59,6 +59,10 @@ public class CanSelectController {
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
+        this.presList = mainApp.getElection().getCandidateListByFieldNumber(0);
+        this.senList = mainApp.getElection().getCandidateListByFieldNumber(1);
+        this.houseList = mainApp.getElection().getCandidateListByFieldNumber(2);
+        
     }
 
  // ------------- P ---------------
