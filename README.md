@@ -72,3 +72,37 @@ vote122,Bill,Smith,B,222334444
 
 vote134,Janet,Leon,C,444556666
 
+# To login as voter
+
+-Use one of the (voter ID, social security number) combinations below
+
+JimmyJohn, 222-33-2222
+
+JohnsJane, 333-33-3333
+
+JimmyJohnny, 333-55-9999
+
+SmithJill, 333-44-5555
+
+# To change from voting to registration
+
+1) Log in as admin via admin button in bottom corner
+
+2) In admin menu, select "Start Registration period"
+
+3) Log out, and UI will have Registration Login
+
+# To change from registration to voting
+
+1) Log in as admin via admin button in bottom corner
+
+2) In admin menu, select "End Registration period"
+
+3) Log out, and select back and then Voting Login will be shown
+
+# To view results
+
+1) Log in as admin via admin button in bottom corner
+
+2) In admin menu, select "View Unofficial Tally"
+
