@@ -1,4 +1,4 @@
-Tim Scott, 1
-Thomas Dixon, 0
+Tim Scott, 0
+Thomas Dixon, 1
 Bill Bledsoe, 0
 Rebel Scarborough, 0

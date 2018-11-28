@@ -14,11 +14,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import com.csci360.electionapp.model.Ballot;
 import com.csci360.electionapp.model.Voter;
 import com.csci360.electionapp.model.VoterList;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LoginVoterController {
 
@@ -89,7 +92,13 @@ public class LoginVoterController {
         if (errorMessage.length() == 0 && (!voterList.checkForVoter(voterIDField.getText(),socSecField.getText()))){
             errorMessage += "Invalid login.\n";
         }
-
+        
+        ArrayList<Ballot> voteList = mainApp.getElection().getBallotList();
+        for (Ballot vote : voteList) {
+        	if (errorMessage.length() == 0 && (voterList.getVoterByLoginInfo(voterIDField.getText(), socSecField.getText())).equals(vote.getVoter())) {
+        		errorMessage += "You have already voted.\n";
+        	}
+        }
         if (errorMessage.length() == 0) {
             return true;
         } else {

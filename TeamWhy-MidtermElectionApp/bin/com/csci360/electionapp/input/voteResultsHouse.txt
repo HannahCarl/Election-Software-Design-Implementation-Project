@@ -1,4 +1,4 @@
-Joe Cunningham, 0
+Joe Cunningham, 1
 Katie Arrington, 0
 Sean Carrigan, 0
-Joe Wilson, 1
+Joe Wilson, 0

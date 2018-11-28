@@ -77,6 +77,7 @@ public class MainApp extends Application {
     	voterList.addVoter(new Voter("1", "firstname", "lastname", 'M', "000110000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     	voterList.addVoter(new Voter("2", "firstname", "lastname", 'M', "000220000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
     	voterList.addVoter(new Voter("3", "firstname", "lastname", 'M', "000330000", "male", new Date(), "444-444-4444", "444-444-4444", "homeAddress", "mailingAddress"));
+    	buildVoterList();
     }
     
     public void buildAdminList() {
@@ -124,6 +125,21 @@ public class MainApp extends Application {
     		
     	}
     	
+    }
+    
+    public void buildVoterList() {
+    	try(BufferedReader br = new BufferedReader(new FileReader("out/registrationInfo.txt"))) {
+    		String line;
+    		while (((line = br.readLine()) != null)) {
+    			String[] voterList = line.split("[,]");
+    			//Add line decrypt the registrent object
+    			System.out.println(voterList[0]);
+    		}
+    	}
+    		
+    	catch(IOException ex) {
+    		
+    	}
     }
     
     //setter for mainapp's voter object
