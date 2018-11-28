@@ -459,11 +459,49 @@ public class MainApp extends Application {
 
     // Confirm Single Can Vote ---- Levi ----
 
-    public void showSingleVConfirm () throws IOException{
+    public void showPselect() throws IOException{
         try {
             // Load person overview.
             FXMLLoader confirmOne = new FXMLLoader();
             confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmation.fxml" ) );
+            AnchorPane oneVoteCon = confirmOne.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( oneVoteCon );
+
+            // Give the controller access to the main app.
+            VoteConfrimationController controller = confirmOne.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void showSselect() throws IOException{
+        try {
+            // Load person overview.
+            FXMLLoader confirmOne = new FXMLLoader();
+            confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmationSen.fxml" ) );
+            AnchorPane oneVoteCon = confirmOne.load();
+
+            // Set login into the center of root layout.
+            rootLayout.setCenter( oneVoteCon );
+
+            // Give the controller access to the main app.
+            VoteConfrimationController controller = confirmOne.getController();
+            controller.setMainApp( this );
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void showHselect() throws IOException{
+        try {
+            // Load person overview.
+            FXMLLoader confirmOne = new FXMLLoader();
+            confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmationHouse.fxml" ) );
             AnchorPane oneVoteCon = confirmOne.load();
 
             // Set login into the center of root layout.
