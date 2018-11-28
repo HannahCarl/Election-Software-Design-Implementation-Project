@@ -9,31 +9,16 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="background" maxHeight="-Infinity"
-	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="400.0" prefWidth="600.0"
-	style="-fx-background-color: #004166;"
-	xmlns:fx="http://javafx.com/fxml/1"
-	xmlns="http://javafx.com/javafx/2.2"
-	fx:controller="com.csci360.electionapp.controller.VoteSubConController">
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #004166;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.electionapp.controller.VoteSubConController">
 	<children>
-		<Rectangle id="midground" arcHeight="30.0" arcWidth="30.0"
-			fill="#bfbfbf" height="200.0" stroke="BLACK" strokeType="INSIDE"
-			width="300.0" AnchorPane.bottomAnchor="100.0"
-			AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0"
-			AnchorPane.topAnchor="100.0" />
-		<Label alignment="CENTER" layoutX="177.0" layoutY="148.0"
-			text="Thank you for voting in" wrapText="true">
+		<Rectangle id="midground" arcHeight="30.0" arcWidth="30.0" fill="#bfbfbf" height="200.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0" />
+		<Label alignment="CENTER" layoutX="177.0" layoutY="148.0" text="Thank you for voting in" wrapText="true">
 			<font>
 				<Font size="24.0" fx:id="x1" />
 			</font>
 		</Label>
-		<Label fx:id="ElectionName" alignment="CENTER" font="$x1"
-			layoutX="201.0" layoutY="194.0" prefHeight="17.0" prefWidth="198.0"
-			text="Election Name" wrapText="true" />
-		<Button layoutX="251.0" layoutY="251.0" mnemonicParsing="false"
-			onAction="#finalConfirm" prefHeight="32.0" prefWidth="98.0"
-			text="Finish">
+		<Label fx:id="ElectionName" alignment="CENTER" font="$x1" layoutX="201.0" layoutY="194.0" prefHeight="17.0" prefWidth="198.0" text="the 2018 election" wrapText="true" />
+		<Button layoutX="251.0" layoutY="251.0" mnemonicParsing="false" onAction="#finalConfirm" prefHeight="32.0" prefWidth="98.0" text="Finish">
 			<font>
 				<Font size="18.0" />
 			</font>

@@ -35,6 +35,7 @@ public class LoginRegistrantController {
     private RegistrantList registrantList;
     private RegisteringSession rSession;
     private boolean submitClicked = false;
+    final String secretKey = "Registrant2018AZTREQW";
 
     private TestDriverRegistrationForm testDriveRegForm;
     private MainApp mainApp;
@@ -71,13 +72,17 @@ public class LoginRegistrantController {
 
             submitClicked = true;
             System.out.println("Login successful.");
+            String encryptedFirstName = AESEncryption.encrypt(firstNameField.getText().toString(), secretKey);
+        	String encryptedLastName = AESEncryption.encrypt(lastNameField.getText().toString(), secretKey);
+        	String encryptedSocSecNum = AESEncryption.encrypt(socSecField.getText().toString(), secretKey);
+            registrantList.setRegistrantRegisteredStatus(encryptedFirstName,encryptedLastName,encryptedSocSecNum);
             mainApp.showForm01Registrant();
 
         }
     }
 
     private boolean isInputValid(){
-    	final String secretKey = "Registrant2018AZTREQW";
+    	
     	String encryptedFirstName = AESEncryption.encrypt(firstNameField.getText().toString(), secretKey);
     	String encryptedLastName = AESEncryption.encrypt(lastNameField.getText().toString(), secretKey);
     	String encryptedSocSecNum = AESEncryption.encrypt(socSecField.getText().toString(), secretKey);
@@ -96,6 +101,10 @@ public class LoginRegistrantController {
         if (errorMessage.length() == 0 && (!registrantList.checkForRegistrant(encryptedFirstName,encryptedLastName,encryptedSocSecNum))){
             errorMessage += "Invalid login.\n";
         }
+        if (errorMessage.length() == 0 && (registrantList.checkIfRegistered(encryptedFirstName,encryptedLastName,encryptedSocSecNum))){
+            errorMessage += "Already registered.\n";
+        }
+        
 
         if (errorMessage.length() == 0) {
             return true;
