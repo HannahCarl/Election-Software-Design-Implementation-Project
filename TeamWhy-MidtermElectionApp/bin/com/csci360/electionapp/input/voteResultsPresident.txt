@@ -1,4 +1,4 @@
-John Adams, 123
-Barack Obama, 100
-Thomas Jefferson, 20
-Richard Nixon, 155
+com.csci360.electionapp.model.Candidate@2fc2b1de, 0
+com.csci360.electionapp.model.Candidate@73f560e2, 1
+com.csci360.electionapp.model.Candidate@32456484, 0
+com.csci360.electionapp.model.Candidate@3ec8ab00, 0

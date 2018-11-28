@@ -55,6 +55,9 @@ public class MainApp extends Application {
     private Voter voter;
     private Ballot ballot;
     private Election election;
+    private Candidate presCand;
+    private Candidate senCand;
+    private Candidate houseCand;
     private VoterList voterList = new VoterList();
     private RegistrantList registrantList = new RegistrantList();
     private AdminList adminList = new AdminList();
@@ -139,6 +142,30 @@ public class MainApp extends Application {
     public Ballot getBallot() {
     	return this.ballot;
     }
+    
+    public void setPresCand(Candidate candidate) {
+    	this.presCand = candidate;
+    }
+    
+    public Candidate getPresCand() {
+    	return presCand;
+    }
+    
+    public Candidate getSenCand() {
+    	return senCand;
+    }
+    
+    public void setSenCand(Candidate candidate) {
+    	this.senCand = candidate;
+    }
+    
+    public Candidate getHouseCand() {
+    	return houseCand;
+    }
+    
+    public void setHouseCand(Candidate candidate) {
+    	this.houseCand = candidate;
+    }
   
     //builder for the election fills in the list of candidates and things being run for as well as just acting as a thing to store the ballots cast
     //Grasp - Creator
@@ -171,6 +198,10 @@ public class MainApp extends Application {
     	election.addField("Senate", senList);
     	election.addField("House", houseList);
     	
+    }
+    
+    public void setElection(Election election) {
+    	this.election = election;
     }
     
     public Election getElection() {

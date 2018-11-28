@@ -1,4 +1,4 @@
-Joe Cunningham, 100
-Katie Arrington, 10
-Sean Carrigan, 120
-Joe Wilson, 155
+Joe Cunningham, 0
+Katie Arrington, 0
+Sean Carrigan, 1
+Joe Wilson, 0

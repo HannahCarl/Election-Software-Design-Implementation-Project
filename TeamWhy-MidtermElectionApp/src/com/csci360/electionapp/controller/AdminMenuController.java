@@ -103,7 +103,7 @@ public class AdminMenuController {
         
             viewResultsClicked = true;
             
-            
+            mainApp.getElection().exportResults();
             
             mainApp.showViewResults();
 

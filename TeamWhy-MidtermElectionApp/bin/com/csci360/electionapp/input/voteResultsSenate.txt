@@ -1,4 +1,4 @@
-Tim Scott, 153
-Thomas Dixon, 260
-Bill Bledsoe, 20
-Rebel Scarborough, 56
+com.csci360.electionapp.model.Candidate@6e3821b1, 1
+com.csci360.electionapp.model.Candidate@544e31e9, 0
+com.csci360.electionapp.model.Candidate@11c7a407, 0
+com.csci360.electionapp.model.Candidate@4d360ea0, 0

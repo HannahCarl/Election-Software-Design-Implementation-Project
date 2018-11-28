@@ -76,7 +76,7 @@ public class Election {
 		//Date birthday = ballot.getVoter().getBirthDate();
 		//Add a check to make sure the voter is of age here
 		
-		
+		System.out.println(ballot.getVoteList());
 		ballotList.add(ballot); //adds the ballot to the list
 	}
 	
@@ -185,7 +185,7 @@ public class Election {
 			for (Candidate candidate: houseCandidates) {
 				if (candidate.getCandidateName().equals(houseVote.getCandidateName())) { //this checks if the candidate is on the list already
 					houseCanExists = true;
-					houseTally.set(houseCounter, houseTally.get(presCounter) + 1); //adds one to the vote number for the candidate
+					houseTally.set(houseCounter, houseTally.get(houseCounter) + 1); //adds one to the vote number for the candidate
 				}
 				houseCounter++;
 			}
@@ -199,9 +199,9 @@ public class Election {
 			totalVotes++;
 			
 			try{
-				File presFile = new File("src/com/csci360/electionapp/input/presidentResults.txt");
-				File senFile = new File("src/com/csci360/electionapp/input/senateResults.txt");
-				File houseFile = new File("src/com/csci360/electionapp/input/houseResults.txt");
+				File presFile = new File("src/com/csci360/electionapp/input/voteResultsPresident.txt");
+				File senFile = new File("src/com/csci360/electionapp/input/voteResultsSenate.txt");
+				File houseFile = new File("src/com/csci360/electionapp/input/voteResultsHouse.txt");
 				File totalFile = new File("src/com/csci360/electionapp/input/totalVoteCounts.txt");
 			
 				presFile.delete();
@@ -214,7 +214,7 @@ public class Election {
 				BufferedWriter presWriter = new BufferedWriter(new FileWriter(presFile));
 				
 				for (int i = 0; i < presidentCandidates.size(); i++) {
-					presWriter.append(presidentCandidates.get(i) + ", " + presidentTally.get(i));
+					presWriter.append(presidentCandidates.get(i).getCandidateName().toString() + ", " + presidentTally.get(i));
 					presWriter.newLine();
 				}
 				presWriter.close();
@@ -223,7 +223,7 @@ public class Election {
 				BufferedWriter senWriter = new BufferedWriter(new FileWriter(senFile));
 				
 				for (int i = 0; i < senateCandidates.size(); i++) {
-					senWriter.append(senateCandidates.get(i) + ", " + senateTally.get(i));
+					senWriter.append(senateCandidates.get(i).getCandidateName().toString() + ", " + senateTally.get(i));
 					senWriter.newLine();
 				}
 				senWriter.close();
@@ -232,7 +232,7 @@ public class Election {
 				BufferedWriter houseWriter = new BufferedWriter(new FileWriter(houseFile));
 				
 				for (int i = 0; i < houseCandidates.size(); i++) {
-					houseWriter.append(houseCandidates.get(i) + ", " + houseTally.get(i));
+					houseWriter.append(houseCandidates.get(i).getCandidateName().toString() + ", " + houseTally.get(i));
 					houseWriter.newLine();
 				}
 				houseWriter.close();

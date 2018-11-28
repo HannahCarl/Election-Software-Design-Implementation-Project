@@ -1,4 +1,4 @@
-Joe Cunningham, 100
-Katie Arrington, 10
-Sean Carrigan, 120
-Joe Wilson, 155
+com.csci360.electionapp.model.Candidate@365d2cad, 0
+com.csci360.electionapp.model.Candidate@1947b67e, 0
+com.csci360.electionapp.model.Candidate@3c230dc6, 0
+com.csci360.electionapp.model.Candidate@21ce2d46, 1

@@ -1,7 +1,9 @@
 package com.csci360.electionapp.controller;
 
 import com.csci360.electionapp.MainApp;
+import com.csci360.electionapp.model.Ballot;
 import com.csci360.electionapp.model.Candidate;
+import com.csci360.electionapp.model.Election;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -52,6 +54,9 @@ public class CanSelectController {
     private ArrayList<Candidate> presList;
     private ArrayList<Candidate> senList;
     private ArrayList<Candidate> houseList;
+    private Candidate presCand;
+    private Candidate senCand;
+    private Candidate houseCand;
     
     @FXML
     private void initialize(){
@@ -62,6 +67,9 @@ public class CanSelectController {
         this.presList = mainApp.getElection().getCandidateListByFieldNumber(0);
         this.senList = mainApp.getElection().getCandidateListByFieldNumber(1);
         this.houseList = mainApp.getElection().getCandidateListByFieldNumber(2);
+        this.presCand = mainApp.getPresCand();
+        this.senCand = mainApp.getSenCand();
+        this.houseCand = mainApp.getHouseCand();
         
     }
 
@@ -77,6 +85,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	presCand = presList.get(0);
+        	mainApp.setPresCand(presCand);
         	mainApp.showSselect();
         	
         }
@@ -93,6 +103,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	presCand = presList.get(1);
+        	mainApp.setPresCand(presCand);
         	mainApp.showSselect();
         	
         }
@@ -109,6 +121,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	presCand = presList.get(2);
+        	mainApp.setPresCand(presCand);
         	mainApp.showSselect();
         	
         }
@@ -125,6 +139,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	presCand = presList.get(3);
+        	mainApp.setPresCand(presCand);
         	mainApp.showSselect();
         	
         }
@@ -160,6 +176,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	senCand = senList.get(0);
+        	mainApp.setSenCand(senCand);
         	mainApp.showHselect();
         	
         }
@@ -176,6 +194,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	senCand = senList.get(1);
+        	mainApp.setSenCand(senCand);
         	mainApp.showHselect();
         	
         }
@@ -192,6 +212,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	senCand = senList.get(2);
+        	mainApp.setSenCand(senCand);
         	mainApp.showHselect();
         	
         }
@@ -208,6 +230,8 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	senCand = senList.get(3);
+        	mainApp.setSenCand(senCand);
         	mainApp.showHselect();
         	
         }
@@ -241,6 +265,16 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	houseCand = houseList.get(0);
+        	mainApp.setHouseCand(houseCand);
+        	Ballot ballot = new Ballot(mainApp.getVoter());
+        	ballot.addVote(mainApp.getPresCand());
+        	ballot.addVote(mainApp.getSenCand());
+        	ballot.addVote(mainApp.getHouseCand());
+        	Election election = mainApp.getElection();
+        	election.castBallot(ballot);
+        	mainApp.setElection(election);
+        	
         	mainApp.showVoteConfirm ();
         	
         }
@@ -256,6 +290,16 @@ public class CanSelectController {
         //Confirmation message
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
+        	
+        	houseCand = houseList.get(1);
+        	mainApp.setHouseCand(houseCand);
+        	Ballot ballot = new Ballot(mainApp.getVoter());
+        	ballot.addVote(mainApp.getPresCand());
+        	ballot.addVote(mainApp.getSenCand());
+        	ballot.addVote(mainApp.getHouseCand());
+        	Election election = mainApp.getElection();
+        	election.castBallot(ballot);
+        	mainApp.setElection(election);
         	
         	mainApp.showVoteConfirm ();
         	
@@ -275,6 +319,16 @@ public class CanSelectController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
         	
+        	houseCand = houseList.get(2);
+        	mainApp.setHouseCand(houseCand);
+        	Ballot ballot = new Ballot(mainApp.getVoter());
+        	ballot.addVote(mainApp.getPresCand());
+        	ballot.addVote(mainApp.getSenCand());
+        	ballot.addVote(mainApp.getHouseCand());
+        	Election election = mainApp.getElection();
+        	election.castBallot(ballot);
+        	mainApp.setElection(election);
+        	
         	mainApp.showVoteConfirm ();
         	
         }
@@ -290,6 +344,16 @@ public class CanSelectController {
         //Confirmation message
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
+        	
+        	houseCand = houseList.get(3);
+        	mainApp.setHouseCand(houseCand);
+        	Ballot ballot = new Ballot(mainApp.getVoter());
+        	ballot.addVote(mainApp.getPresCand());
+        	ballot.addVote(mainApp.getSenCand());
+        	ballot.addVote(mainApp.getHouseCand());
+        	Election election = mainApp.getElection();
+        	election.castBallot(ballot);
+        	mainApp.setElection(election);
         	
         	mainApp.showVoteConfirm ();
         	

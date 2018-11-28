@@ -1,4 +1,4 @@
-John Adams, 123
-Barack Obama, 100
-Thomas Jefferson, 20
-Richard Nixon, 155
+John Adams, 0
+Barack Obama, 0
+Thomas Jefferson, 1
+Richard Nixon, 0
