@@ -461,65 +461,6 @@ public class MainApp extends Application {
         }
     }
 
-    // Confirm Single Can Vote ---- Levi ----
-
-    public void showVC_P() throws IOException{
-        try {
-            // Load person overview.
-            FXMLLoader confirmOne = new FXMLLoader();
-            confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmation.fxml" ) );
-            AnchorPane oneVoteCon = confirmOne.load();
-
-            // Set login into the center of root layout.
-            rootLayout.setCenter( oneVoteCon );
-
-            // Give the controller access to the main app.
-            VoteConfrimationController controller = confirmOne.getController();
-            controller.setMainApp( this );
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
-    public void showVC_S() throws IOException{
-        try {
-            // Load person overview.
-            FXMLLoader confirmOne = new FXMLLoader();
-            confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmationSen.fxml" ) );
-            AnchorPane oneVoteCon = confirmOne.load();
-
-            // Set login into the center of root layout.
-            rootLayout.setCenter( oneVoteCon );
-
-            // Give the controller access to the main app.
-            VoteConfrimationController controller = confirmOne.getController();
-            controller.setMainApp( this );
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
-    public void showVC_H() throws IOException{
-        try {
-            // Load person overview.
-            FXMLLoader confirmOne = new FXMLLoader();
-            confirmOne.setLocation( MainApp.class.getResource( "view/VoteConfirmationHouse.fxml" ) );
-            AnchorPane oneVoteCon = confirmOne.load();
-
-            // Set login into the center of root layout.
-            rootLayout.setCenter( oneVoteCon );
-
-            // Give the controller access to the main app.
-            VoteConfrimationController controller = confirmOne.getController();
-            controller.setMainApp( this );
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 
     // Confirm Vote Submission ---- Levi ----
 
