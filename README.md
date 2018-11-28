@@ -108,3 +108,7 @@ SmithJill, 333-44-5555
 
 2) In admin menu, select "View Unofficial Tally"
 
+# Special Instructions for Jar File
+
+1) Jar file must be in folder TeamWhy-MidtermElectionApp. Jar file will sit next to bin, out, src files to ensure proper reading of input files
+
